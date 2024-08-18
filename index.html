@@ -6,10 +6,10 @@
     <title>Edward Lu Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
     <style>
-        /* Additional styles for smooth scrolling */
+        /* Ensure no CSS rules affect scrolling */
         .section {
-            height: 100vh; /* Full viewport height for each section */
-            overflow: hidden; /* Hide overflow to prevent scrolling */
+            height: 100vh; /* Full viewport height for testing */
+            overflow-y: auto; /* Allow vertical scrolling */
         }
     </style>
 </head>
@@ -20,25 +20,25 @@
             <img src="images/spin.gif" alt="My Logo">
         </div>
         <div class="option option-north">
-            <a href="#section-art" data-file="art-portfolio.html">
+            <a href="#section-art" data-file="art-portfolio.html" data-scroll="north">
                 <img src="images/lake.jpg" alt="ART">
                 <span>art</span>
             </a>
         </div>
         <div class="option option-south">
-            <a href="#section-data" data-file="data-portfolio.html">
+            <a href="#section-data" data-file="data-portfolio.html" data-scroll="south">
                 <img src="images/shark.png" alt="DATA">
                 <span>data</span>
             </a>
         </div>
         <div class="option option-east">
-            <a href="#section-resume" data-file="resume.html">
+            <a href="#section-resume" data-file="resume.html" data-scroll="east">
                 <img src="images/dumpling.png" alt="RESUME">
                 <span>resume</span>
             </a>
         </div>
         <div class="option option-west">
-            <a href="#section-about" data-file="contact.html">
+            <a href="#section-about" data-file="contact.html" data-scroll="west">
                 <img src="images/krab.png" alt="contact">
                 <span>about</span>
             </a>
@@ -54,59 +54,61 @@
     <!-- Include JavaScript for loading content and smooth scrolling -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            let isScrolling = false;
-            let currentTargetId = null;
-            let currentFile = null;
+            let activeScroll = null;
+            let scrollTimeout = null;
 
-            function scrollToSection(targetElement, file) {
-                if (isScrolling) {
-                    // If already scrolling, stop and reset
-                    document.querySelector(currentTargetId).style.transition = 'none';
-                    window.scrollTo(0, 0);
-                    isScrolling = false;
-                    currentTargetId = null;
-                    return;
-                }
-
-                // Start scrolling
-                isScrolling = true;
-                currentTargetId = targetElement.id;
-
-                // Load content into the target section
-                fetch(file)
-                    .then(response => response.text())
-                    .then(html => {
-                        targetElement.innerHTML = html;
-                        targetElement.style.transition = 'transform 0.6s ease-out';
-                        targetElement.style.transform = 'translateY(0)';
-                    })
-                    .catch(err => console.warn('Error loading content:', err));
-
-                // Scroll to the target section with a more drastic effect
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-
-                // Reset scrolling after animation
-                setTimeout(() => {
-                    isScrolling = false;
-                    currentTargetId = null;
-                }, 600);
-            }
-
+            // Smooth scrolling and content loading
             document.querySelectorAll('.option a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    const file = this.getAttribute('data-file');
 
-                    if (currentTargetId === `#${targetId}`) {
-                        // If the same link is clicked again, undo scroll
-                        scrollToSection(targetElement, file);
-                    } else {
-                        scrollToSection(targetElement, file);
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const scrollDirection = this.getAttribute('data-scroll');
+
+                    if (activeScroll === scrollDirection) {
+                        // If the same scroll direction is clicked again, return to compass
+                        if (scrollTimeout) clearTimeout(scrollTimeout);
+                        document.querySelector('.compass-container').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        activeScroll = null;
+                        return;
+                    }
+
+                    // Only activate one scroll at a time
+                    if (activeScroll) {
+                        // Undo the previous scroll
+                        document.querySelector(`#section-${activeScroll}`).scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        activeScroll = null;
+                    }
+
+                    // Activate new scroll
+                    if (targetElement) {
+                        // Load content into the target section
+                        const file = this.getAttribute('data-file');
+                        fetch(file)
+                            .then(response => response.text())
+                            .then(html => {
+                                targetElement.innerHTML = html;
+                            })
+                            .catch(err => console.warn('Error loading content:', err));
+
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Ensure the page can still be scrolled
+                        setTimeout(() => {
+                            targetElement.style.overflowY = 'auto';
+                        }, 300);
+
+                        activeScroll = scrollDirection;
                     }
                 });
             });
