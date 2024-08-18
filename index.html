@@ -32,7 +32,7 @@
         </div>
         <div class="option option-west">
             <a href="#section-about" data-file="contact.html" data-scroll="west">
-                <img src="images/krab.png" alt="contact">
+                <img src="images/krab.png" alt="about">
                 <span>about</span>
             </a>
         </div>
@@ -57,50 +57,26 @@
                     const targetElement = document.querySelector(targetId);
                     const scrollDirection = this.getAttribute('data-scroll');
 
-                    if (activeScroll === scrollDirection) {
-                        // Scroll back to compass and reset state if the same section is clicked again
-                        document.querySelector('.compass-container').scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        activeScroll = null;
-                        return;
-                    }
+                    // Reset all sections
+                    document.querySelectorAll('.section').forEach(section => {
+                        section.innerHTML = '';
+                    });
 
-                    // Do nothing if another scroll is already active
-                    if (activeScroll) return;
+                    // Reset active scroll
+                    activeScroll = scrollDirection;
 
-                    // Activate new scroll
-                    if (targetElement) {
-                        activeScroll = scrollDirection;
-
-                        // Load content into the target section
-                        const file = this.getAttribute('data-file');
-                        fetch(file)
-                            .then(response => response.text())
-                            .then(html => {
-                                targetElement.innerHTML = `
-                                    <button class="back-button">Back to Compass</button>
-                                    ${html}
-                                `;
-                                targetElement.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                });
-
-                                // Add event listener to the back button
-                                const backButton = targetElement.querySelector('.back-button');
-                                backButton.addEventListener('click', function() {
-                                    document.querySelector('.compass-container').scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: 'start'
-                                    });
-                                    activeScroll = null;
-                                    targetElement.innerHTML = ''; // Clear the section's content
-                                });
-                            })
-                            .catch(err => console.warn('Error loading content:', err));
-                    }
+                    // Load content into the target section
+                    const file = this.getAttribute('data-file');
+                    fetch(file)
+                        .then(response => response.text())
+                        .then(html => {
+                            targetElement.innerHTML = html;
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        })
+                        .catch(err => console.warn('Error loading content:', err));
                 });
             });
         });
