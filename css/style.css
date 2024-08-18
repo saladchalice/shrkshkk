@@ -172,22 +172,25 @@ nav ul li a:hover {
 /* Art Gallery */
 .art-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts columns based on screen width */
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+    grid-template-rows: repeat(3, auto); /* Automatically adjust row height */
     gap: 10px; /* Space between items */
     padding: 20px;
     width: 100%;
+    
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflow to maintain aspect ratio */
-    background-color: #f4f4f4; /* Light background for better image visibility */
+    height: 300px;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio of images */
+    height: 100%; /* Fill the grid cell */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
     display: block;
     transition: transform 0.3s ease; /* Smooth scaling effect */
     border-radius: 0; /* Hard edges */
@@ -207,14 +210,14 @@ nav ul li a:hover {
 /* Ensure responsive adjustments */
 @media only screen and (max-width: 600px) {
     .art-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+        grid-template-rows: repeat(auto-fit, minmax(200px, auto)); /* Auto-fit rows for better responsiveness */
     }
 
     .caption {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
-
 /* Captions */
 .caption {
     text-align: center;

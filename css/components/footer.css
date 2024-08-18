@@ -1,19 +1,22 @@
 footer {
-    background-color: black;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 50px 0;
-    position: relative;
+    padding: 10px 20px; /* Adjust padding to make it smaller */
+    position: fixed; /* Fixed position to keep it at the bottom */
     bottom: 0;
-    width: 100%;
+    left: 0; /* Align to the bottom left */
+    width: 100%; /* Full width of the screen */
+    background-color: #333; /* Ensure background color is consistent */
 }
 
 footer p {
     margin: 0;
+    font-size: 12px; /* Smaller font size for a compact footer */
 }
 
 footer .social-media a {
-    margin: 0 10px;
-    color: black;
+    margin: 0 5px; /* Adjust margin for smaller spacing */
+    color: white; /* Change color to white for better visibility */
     text-decoration: none;
+    font-size: 12px; /* Smaller font size for social media links */
 }
