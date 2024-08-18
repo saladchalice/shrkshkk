@@ -1,0 +1,14 @@
+/* layout.css */
+header, footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}

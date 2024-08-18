@@ -1,0 +1,16 @@
+/* colors.css */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #333;
+    --accent-color: #ff6600;
+    --background-color: #f4f4f4;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--primary-color);
+}

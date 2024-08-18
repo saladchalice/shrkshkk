@@ -1,0 +1,16 @@
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
