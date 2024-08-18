@@ -54,6 +54,7 @@ body, html {
     flex-direction: column;
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
+    padding: 10px; /* Add some padding if needed */
 }
 
 .option img {
@@ -75,6 +76,7 @@ body, html {
     font-family: 'Syne', sans-serif; /* Apply Syne font if needed */
 }
 
+/* Adjust span inside option to have less margin */
 .option span {
     display: block;
     margin-top: 5px; /* Reduced margin to bring text closer to the image */
