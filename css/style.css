@@ -20,11 +20,17 @@ body, html {
     padding: 0;
 }
 
+/* Body text */
+body {
+    font-family: 'Syne', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
+
 /* Compass Container */
 .compass-container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 }
 
 /* Center Logo */
@@ -37,10 +43,9 @@ body, html {
 }
 
 .center-logo img {
-    width: 200; /* Adjust width as needed */
+    width: 150px; /* Adjust width as needed */
     height: auto;
 }
-
 
 /* Options Positioning */
 .option {
@@ -60,10 +65,7 @@ body, html {
     width: 100%;  /* Ensure image scales with its container */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease;
-    font-family: 'Syne', sans-serif; /* Apply Syne font if needed */
     object-fit: contain; /* Ensure the entire image fits within its container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow to images */
-
 }
 
 .option a {
@@ -73,21 +75,20 @@ body, html {
     height: 100%; /* Ensure links take up the full height of their container */
     width: 100%; /* Ensure links take up the full width of their container */
     text-align: center; /* Center text within the link */
-    line-height: 150px; /* Vertically center text */
+    line-height: 20px; /* Vertically center text */
     font-family: 'Syne', sans-serif; /* Apply Syne font if needed */
 }
 
-/* Adjust span inside option to have less margin */
+/* Span and alt text inside option */
 .option span {
     display: block;
     margin-top: 5px; /* Reduced margin to bring text closer to the image */
     font-size: 20px;
     color: white;
-    font-family: 'Syne', sans-serif; /* Ensure Syne is applied to span elements */
+    font-family: 'Syne', sans-serif; /* Apply Syne font */
+    font-weight: 400; /* Bold weight for span and alt text */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add shadow to text */
-
 }
-
 
 /* Position the options around the center logo */
 .option-north {
