@@ -1,82 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist & Data Scientist Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#art-portfolio">Art Portfolio</a></li>
-                <li><a href="#data-science-portfolio">Data Science Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Art Portfolio Section -->
-        <section id="art-portfolio">
-            <h2>Art Portfolio</h2>
-            <p>Explore my collection of paintings, illustrations, and digital art.</p>
-            <div class="gallery">
-                <img src="images/art1.jpg" alt="Artwork 1">
-                <img src="images/art2.jpg" alt="Artwork 2">
-                <img src="images/art3.jpg" alt="Artwork 3">
-                <!-- Add more images as needed -->
-            </div>
-        </section>
-
-        <!-- Data Science Portfolio Section -->
-        <section id="data-science-portfolio">
-            <h2>Data Science Portfolio</h2>
-            <p>Discover my projects in data analysis, machine learning, and visualization.</p>
-            <div class="projects">
-                <div class="project">
-                    <h3>Project 1: Predictive Modeling</h3>
-                    <p>A predictive model for customer behavior using Python and Scikit-learn.</p>
-                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Project 2: Data Visualization</h3>
-                    <p>Interactive visualizations of global trends using D3.js and Tableau.</p>
-                    <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you would like to get in touch, please fill out the form below or reach out through my social media channels.</p>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <div class="compass-container">
+        <div class="center-logo">
+            <img src="images/logo.png" alt="My Logo">
         </div>
-    </footer>
-
-    <script src="js/app.js"></script> <!-- Link to your JavaScript file -->
+        <div class="option option-north">
+            <a href="#art-portfolio">
+                <img src="images/art-logo.png" alt="Art Portfolio">
+                <span>Art Portfolio</span>
+            </a>
+        </div>
+        <div class="option option-south">
+            <a href="#data-portfolio">
+                <img src="images/data-logo.png" alt="Data Portfolio">
+                <span>Data Portfolio</span>
+            </a>
+        </div>
+        <div class="option option-east">
+            <a href="#resume">
+                <img src="images/resume-logo.png" alt="Resume">
+                <span>Resume</span>
+            </a>
+        </div>
+        <div class="option option-west">
+            <a href="#contact">
+                <img src="images/contact-logo.png" alt="Contact">
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,102 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen Background */
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+/* Compass Container */
+.compass-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+/* Center Logo */
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.center-logo img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Options Positioning */
+.option {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.option img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.option span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Position the options around the center logo */
+.option-north {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.option-south {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.option-east {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.option-west {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* Hover Effect: Pop Out */
+.option:hover img {
+    transform: scale(1.2);
+}
+
+.option:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Optional: Make non-hovered options fade slightly */
+.option {
+    opacity: 0.8;
+}
+
+.option:hover ~ .option {
+    opacity: 0.5;
+}
