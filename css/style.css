@@ -11,11 +11,11 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../images/heights.png'); /* Path to your image */
+    background-image: url('../images/background.png'); /* Path to your image */
     background-size: cover;  /* Ensures the image covers the entire page */
     background-position: center;  /* Centers the image */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
-    background-attachment: fixed;  /* Keeps the background fixed during scroll */
+    background-attachment: scroll;  /* Keeps the background fixed during scroll */
     margin: 0;
     padding: 0;
 }
@@ -92,11 +92,11 @@ body, html {
 
 /* Hover Effect: Pop Out */
 .option:hover img {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 .option:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
     opacity: 1;
 }
 

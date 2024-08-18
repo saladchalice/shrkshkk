@@ -15,7 +15,7 @@ body, html {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif; /* Use the same or different font */
+    font-family: 'Syne', sans-serif; /* Apply Syne font globally */
     font-weight: 700; /* Bold headings */
     margin-bottom: 1rem;
     color: #222; /* Slightly darker color for headings */
@@ -59,7 +59,7 @@ blockquote {
 
 /* Code */
 code {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Syne', sans-serif; /* Apply Syne font globally */
     font-size: 0.875em;
     background-color: #f8f8f8;
     padding: 0.2rem 0.4rem;
