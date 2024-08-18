@@ -25,7 +25,7 @@ body, html {
 body {
     font-family: 'Syne', sans-serif;
     font-weight: 400;
-    color: #333;
+    color: #151515;
 }
 
 /* Compass Container */
@@ -170,19 +170,22 @@ nav ul li a:hover {
 /* Art Gallery */
 .art-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Minimum size of 250px per item */
     gap: 10px;
     padding: 20px;
 }
 
 .gallery-item {
     position: relative;
+    overflow: hidden; /* Ensures content doesn't overflow */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 100%; /* Ensure the image covers the item */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-radius: 0; /* Hard edges for images */
+    display: block; /* Remove any spacing below images */
 }
 
 .caption {
