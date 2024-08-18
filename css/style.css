@@ -171,18 +171,40 @@ body {
     transform: scale(1.2); /* Slightly enlarge the logo on hover */
 }
 
+/* photo */
+#photo {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+    margin: 20px 0; /* Optional margin to adjust spacing */
+}
+
+#photo img {
+    width: 150px; /* Set width */
+    height: 150px; /* Set height */
+    object-fit: cover; /* Ensures the image covers the specified area */
+}
+
 /* Art Gallery */
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: relative;
-    z-index: 1; /* Ensure header stays above other content */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align it to the top of the page */
+    left: 0;
+    width: 100%; /* Make it span the full width */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 header h1 {
     margin-bottom: 10px;
+}
+
+/* Ensure that content doesn’t hide behind the fixed header */
+body {
+    padding-top: 80px; /* Adjust this value according to header height */
 }
 
 nav ul {
@@ -212,10 +234,9 @@ nav ul li a:hover {
     padding: 20px;
     width: 100%;
     box-sizing: border-box; /* Include padding in width */
-    margin: 200px; /* Center the gallery container */
     max-width: 1200px; /* Ensure it doesn’t stretch too wide */
-    margin-bottom: 60px; /* Add margin to avoid overlap with footer */
-    }
+    margin: 0 auto; /* Center the gallery */
+}
 
 /* Ensure gallery-item fits within its container */
 .gallery-item {
