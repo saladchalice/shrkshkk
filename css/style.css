@@ -318,25 +318,27 @@ footer {
     body {
         font-size: 14px;
     }
+    
     .compass-container {
-        width: 90vw; /* Adjust width for mobile */
+        width: 80vw; /* Adjust width for mobile */
         height: auto; /* Height will be adjusted automatically */
         padding-top: 20px; /* Adjust padding if needed */
+        position: relative; /* Ensure correct positioning */
     }
 
     .center-logo img {
-        width: 120px;
+        width: 100px;
     }
 
     .option {
-        width: 100px;
-        height: 100px;
-        padding: 5px;
+        width: 80px; /* Adjust width for mobile */
+        height: 80px; /* Adjust height for mobile */
+        font-size: 14px; /* Smaller font size */
+        padding: 5px; /* Adjust padding */
     }
 
     .option span {
-        font-size: 16px;
-        margin-top: 10px;
+        font-size: 14px;
         font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
     }
 
@@ -346,6 +348,19 @@ footer {
 
     body {
         font-size: 14px;
+    }
+    
+    .option-north, .option-south, .option-east, .option-west {
+        top: auto; /* Reset top for mobile */
+        bottom: auto; /* Reset bottom for mobile */
+        left: auto; /* Reset left for mobile */
+        right: auto; /* Reset right for mobile */
+        transform: none; /* Reset transform for mobile */
+    }
+    
+    .option {
+        position: relative; /* Change to relative to avoid overlapping */
+        margin: 10px; /* Add margin to space out options */
     }
 }
 
