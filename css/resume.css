@@ -1,0 +1,74 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen Background */
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Syne', sans-serif;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Resume Container */
+.resume-container {
+    text-align: center;
+}
+
+.resume-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff; /* White text for the heading */
+}
+
+/* Embed PDF */
+.resume-iframe {
+    border: none;
+    border-radius: 8px; /* Optional: rounded corners for the iframe */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: shadow for better visibility */
+}
+
+/* Footer */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Darker background for footer */
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Mobile Styles (up to 600px) */
+@media only screen and (max-width: 600px) {
+    .resume-container h1 {
+        font-size: 20px; /* Adjust heading size for mobile */
+    }
+
+    .resume-iframe {
+        height: 400px; /* Adjust iframe height for mobile */
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 10px; /* Smaller font size for footer on mobile */
+    }
+}

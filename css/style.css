@@ -173,33 +173,36 @@ nav ul li a:hover {
 .art-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
-    grid-template-rows: repeat(3, auto); /* Automatically adjust row height */
+    grid-template-rows: repeat(auto-fit, minmax(400px, 1fr)); /* Rows adapt to content */
     gap: 10px; /* Space between items */
     padding: 20px;
     width: 100%;
-    
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflow to maintain aspect ratio */
-    height: 300px;
+    height: 400px; /* Set the height for each item */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%; /* Fill the grid cell */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    display: block;
+    height: auto; /* Allow height to adjust based on aspect ratio */
+    max-height: 100%; /* Ensure image does not exceed container height */
+    object-fit: contain; /* Fit image without cropping */
     transition: transform 0.3s ease; /* Smooth scaling effect */
     border-radius: 0; /* Hard edges */
 }
 
 .gallery-item:hover img {
-    transform: scale(1.50); /* Slightly scale up image on hover */
+    transform: scale(1.2); /* Scale up image on hover */
 }
 
+/* Caption Styling */
 .caption {
     text-align: center;
     margin-top: 5px;
@@ -211,7 +214,7 @@ nav ul li a:hover {
 @media only screen and (max-width: 600px) {
     .art-gallery {
         grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
-        grid-template-rows: repeat(auto-fit, minmax(200px, auto)); /* Auto-fit rows for better responsiveness */
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit rows for better responsiveness */
     }
 
     .caption {
