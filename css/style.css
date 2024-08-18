@@ -296,7 +296,6 @@ footer {
         font-size: 16px;
         margin-top: 10px;
         font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
-
     }
 
     header, footer {
@@ -306,5 +305,4 @@ footer {
     body {
         font-size: 14px;
     }
-    
 }

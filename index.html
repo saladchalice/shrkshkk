@@ -31,7 +31,7 @@
             </a>
         </div>
         <div class="option option-west">
-            <a href="#section-about" data-file="contact.html" data-scroll="west">
+            <a href="#section-about" data-file="about.html" data-scroll="west">
                 <img src="images/krab.png" alt="about">
                 <span>about</span>
             </a>
@@ -49,6 +49,24 @@
         document.addEventListener('DOMContentLoaded', function() {
             let activeScroll = null;
 
+            function resetCompass() {
+                // Reset all sections
+                document.querySelectorAll('.section').forEach(section => {
+                    section.innerHTML = '';
+                });
+
+                // Reset active scroll
+                activeScroll = null;
+                document.querySelector('.compass-container').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+
+            document.querySelector('.center-logo img').addEventListener('click', function() {
+                resetCompass();
+            });
+
             document.querySelectorAll('.option a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -57,13 +75,10 @@
                     const targetElement = document.querySelector(targetId);
                     const scrollDirection = this.getAttribute('data-scroll');
 
-                    // Reset all sections
-                    document.querySelectorAll('.section').forEach(section => {
-                        section.innerHTML = '';
-                    });
-
-                    // Reset active scroll
-                    activeScroll = scrollDirection;
+                    // Check if we are resetting the compass
+                    if (activeScroll === null) {
+                        resetCompass();
+                    }
 
                     // Load content into the target section
                     const file = this.getAttribute('data-file');
@@ -75,6 +90,7 @@
                                 behavior: 'smooth',
                                 block: 'start'
                             });
+                            activeScroll = scrollDirection;
                         })
                         .catch(err => console.warn('Error loading content:', err));
                 });

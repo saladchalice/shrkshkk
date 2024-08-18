@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resume</title>
+    <title>Resume</title>
+    <!-- Link to Google Fonts for Syne -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400&display=swap">
     <style>
         /* Basic Reset */
         * {
@@ -13,7 +15,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Syne', Arial, sans-serif; /* Use Syne with fallback */
+            font-weight: 400; /* Apply weight 400 */
             line-height: 1.6;
             color: #fff; /* Text color for dark background */
             background-color: #000; /* Black background */
@@ -39,20 +42,22 @@
         .resume-container {
             position: relative;
             width: 100%;
-            height: 100vh; /* Full viewport height for responsiveness */
+            height: 80vh; /* Adjust height to use most of the viewport height */
             margin-bottom: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* Hide overflow to keep iframe within bounds */
         }
 
         .resume-container iframe {
-            width: 90%;
-            height: 90%;
+            width: 90vw; /* Use viewport width for better scaling */
+            height: 90vh; /* Use viewport height for better scaling */
             border: none;
+            max-width: 100%;
+            max-height: 100%;
         }
 
- 
         /* Mobile Styles */
         @media only screen and (max-width: 600px) {
             header h1 {
@@ -61,6 +66,10 @@
 
             header p {
                 font-size: 0.9em;
+            }
+
+            .resume-container {
+                height: 80vh; /* Adjust height for mobile */
             }
 
             .resume-container iframe {
@@ -72,8 +81,8 @@
 </head>
 <body>
     <header>
-        <h1>edward lu 2024 resume</h1>
-        <p>b.s business economics, data science</p>
+        <h1>Edward Lu 2024 Resume</h1>
+        <p>B.S. Business Economics, Data Science</p>
     </header>
 
     <div class="resume-container">
@@ -81,4 +90,7 @@
     </div>
 
     <footer>
-        <p>© 2024 Edward Lu. All 
+        <p>© 2024 Edward Lu. All rights reserved.</p>
+    </footer>
+</body>
+</html>
