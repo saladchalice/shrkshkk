@@ -8,29 +8,29 @@
 /* Fullscreen Background */
 body, html {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background-image: url('../images/background.png'); /* Path to your image */
     background-size: cover;  /* Ensures the image covers the entire page */
     background-position: center;  /* Centers the image */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
     background-attachment: fixed;  /* Keeps the background fixed during scroll */
-    margin: 0;
-    padding: 0;
 }
 
 /* Body text */
 body {
     font-family: 'Syne', sans-serif;
     font-weight: 400; /* Regular weight */
+    color: #333; /* Default text color */
 }
 
 /* Compass Container */
 .compass-container {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto; 
 }
 
 /* Center Logo */
@@ -58,7 +58,6 @@ body {
     flex-direction: column;
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
-    padding: 10px; /* Add some padding if needed */
 }
 
 .option img {
@@ -131,4 +130,29 @@ body {
 
 .option:hover ~ .option {
     opacity: 0.5;
+}
+
+/* Art Gallery */
+.art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+}
+
+.art-gallery img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
 }
