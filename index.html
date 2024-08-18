@@ -6,35 +6,73 @@
     <title>Edward Lu Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
 </head>
-<body>    
+<body>
+    <!-- Compass Navigation -->
     <div class="compass-container">
         <div class="center-logo">
             <img src="images/spin.gif" alt="My Logo">
         </div>
         <div class="option option-north">
-            <a href="art-portfolio.html">
+            <a href="#section-art" data-file="art-portfolio.html">
                 <img src="images/lake.jpg" alt="ART">
                 <span>art</span>
             </a>
         </div>
         <div class="option option-south">
-            <a href="data-portfolio.html">
+            <a href="#section-data" data-file="data-portfolio.html">
                 <img src="images/shark.png" alt="DATA">
                 <span>data</span>
             </a>
         </div>
         <div class="option option-east">
-            <a href="resume.html">
+            <a href="#section-resume" data-file="resume.html">
                 <img src="images/dumpling.png" alt="RESUME">
                 <span>resume</span>
             </a>
         </div>
         <div class="option option-west">
-            <a href="about.html">
+            <a href="#section-about" data-file="contact.html">
                 <img src="images/krab.png" alt="contact">
                 <span>about</span>
             </a>
         </div>
     </div>
+
+    <!-- Sections -->
+    <div id="section-art" class="section"></div>
+    <div id="section-data" class="section"></div>
+    <div id="section-resume" class="section"></div>
+    <div id="section-about" class="section"></div>
+
+    <!-- Include JavaScript for loading content and smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('.option a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Scroll to the target section
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Load content into the target section
+                        const file = this.getAttribute('data-file');
+                        fetch(file)
+                            .then(response => response.text())
+                            .then(html => {
+                                targetElement.innerHTML = html;
+                            })
+                            .catch(err => console.warn('Error loading content:', err));
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

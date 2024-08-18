@@ -9,66 +9,85 @@
 body, html {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
     background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    font-family: 'Syne', sans-serif;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+/* Body text */
+body {
+    font-family: 'Syne', sans-serif;
+    font-weight: 400;
+    color: white;
 }
 
 /* Resume Container */
 .resume-container {
-    text-align: center;
+    width: 90vw; /* Ensure responsiveness */
+    max-width: 1000px; /* Max width for larger screens */
+    height: 90vh; /* Ensure it fits within the viewport */
+    max-height: 90vh; /* Limit height to viewport height */
+    margin: 0 auto; /* Center the container */
+    padding: 10px; /* Add padding for spacing */
+    overflow: hidden; /* Hide overflow if needed */
+    background-color: #000; /* Black background for the container */
+    border-radius: 8px; /* Optional: rounded corners */
 }
 
-.resume-container h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #fff; /* White text for the heading */
-}
-
-/* Embed PDF */
-.resume-iframe {
+/* Responsive Iframe */
+.resume-container iframe {
+    width: 100%;
+    height: 100%;
     border: none;
-    border-radius: 8px; /* Optional: rounded corners for the iframe */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: shadow for better visibility */
+    display: block; /* Block display for full width */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
 }
 
 /* Footer */
 footer {
+    background-color: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    background-color: #333; /* Darker background for footer */
-}
-
-footer p {
-    margin: 0;
-    font-size: 12px;
 }
 
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
-    .resume-container h1 {
-        font-size: 20px; /* Adjust heading size for mobile */
+    .resume-container {
+        width: 95vw; /* Adjust width for mobile */
+        height: auto; /* Auto height to fit content */
+        max-height: none; /* Remove max-height for mobile */
+        padding: 5px; /* Adjust padding */
     }
 
-    .resume-iframe {
-        height: 400px; /* Adjust iframe height for mobile */
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 16px;
     }
 
     footer {
-        padding: 10px;
-    }
-
-    footer p {
-        font-size: 10px; /* Smaller font size for footer on mobile */
+        padding: 15px;
     }
 }

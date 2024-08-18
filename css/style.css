@@ -169,6 +169,12 @@ nav ul li a:hover {
 }
 
 /* Art Gallery Grid */
+header, footer {
+    position: relative;
+    z-index: 1; /* Ensure they stay above other content */
+}
+
+/* Art Gallery Container */
 .art-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3-column grid */
@@ -176,16 +182,19 @@ nav ul li a:hover {
     padding: 20px;
     width: 100%;
     box-sizing: border-box; /* Include padding in width */
+    margin-top: 60px; /* Add margin to push content below the header */
+    margin-bottom: 60px; /* Add margin to avoid overlap with footer */
 }
 
+/* Ensure gallery-item fits within its container */
 .gallery-item {
     position: relative;
-    overflow: hidden; /* Hide overflow to maintain aspect ratio */
+    overflow: hidden;
     aspect-ratio: 1 / 1; /* Ensure items are square */
     max-height: 400px; /* Maximum height for gallery items */
-    display: flex; /* Flexbox for centering content */
-    align-items: center; /* Center images vertically */
-    justify-content: center; /* Center images horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-item img {
@@ -193,22 +202,22 @@ nav ul li a:hover {
     max-height: 100%;
     object-fit: contain; /* Ensure the entire image is visible */
     display: block;
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
     transform: scale(1.1); /* Slightly scale up image on hover */
 }
 
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    position: relative; /* Ensure it stays in place */
-    z-index: 1; /* Keep header above other content */
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    .art-gallery {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+
+    .gallery-item {
+        width: 100%; /* Full width of the container */
+    }
 }
 
 /* Footer */
