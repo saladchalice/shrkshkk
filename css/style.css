@@ -1,3 +1,6 @@
+/* Import Syne font */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -17,8 +20,8 @@ body, html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Body text */
@@ -64,6 +67,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
 }
 
 .option img {
@@ -89,7 +93,7 @@ body {
     margin-top: 15px;
     font-size: 20px;
     color: white;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Syne', sans-serif; /* Ensure span text uses Syne */
     font-weight: 700;
 }
 
@@ -209,17 +213,6 @@ header, footer {
     transform: scale(1.1); /* Slightly scale up image on hover */
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 600px) {
-    .art-gallery {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
-    }
-
-    .gallery-item {
-        width: 100%; /* Full width of the container */
-    }
-}
-
 /* Footer */
 footer {
     background-color: #333;
@@ -229,10 +222,11 @@ footer {
     position: relative;
     width: 100%;
 }
+
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
     .art-gallery {
-        grid-template-columns: 3fr; /* Single column layout */
+        grid-template-columns: 1fr; /* Single column layout for mobile */
     }
 
     .gallery-item {
