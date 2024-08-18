@@ -208,16 +208,14 @@ nav ul li a:hover {
 .art-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3-column grid */
-    grid-gap: 10px; /* Space between items */
+    grid-gap: 5px; /* Space between items */
     padding: 20px;
     width: 100%;
     box-sizing: border-box; /* Include padding in width */
-    margin: 0 auto; /* Center the gallery container */
+    margin: 200px; /* Center the gallery container */
     max-width: 1200px; /* Ensure it doesn’t stretch too wide */
-    margin-top: 80px; /* Add margin to push content below the header */
     margin-bottom: 60px; /* Add margin to avoid overlap with footer */
-    position: relative; /* Position relative for any absolute children */
-}
+    }
 
 /* Ensure gallery-item fits within its container */
 .gallery-item {
