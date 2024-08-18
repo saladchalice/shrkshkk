@@ -37,7 +37,6 @@ body {
     align-items: center;
     justify-content: center;
     aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
-
 }
 
 /* Center Logo */
@@ -169,83 +168,33 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Art Gallery */
-/* Art Gallery */
+/* Art Gallery Grid */
 .art-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
-    grid-template-rows: repeat(auto-fit, minmax(200px, auto)); /* Auto-fit rows based on content */
-    gap: 10px; /* Space between items */
+    grid-template-columns: repeat(3, 1fr); /* 3-column grid */
+    grid-gap: 10px; /* Space between items */
     padding: 20px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflow to maintain aspect ratio */
-    height: 300px; /* Fixed height */
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    height: 400px; /* Fixed height */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 100%;
+    object-fit: cover; /* Cover the area without distortion */
     display: block;
-    transition: opacity 0.3s ease;
-}
-
-/* Hover Effect */
-.gallery-item:hover {
-    transform: scale(1.5); /* Scale up the entire item */
-    z-index: 2; /* Bring item to the front */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 .gallery-item:hover img {
-    opacity: 1; /* Ensure image is fully visible */
-}
-
-/* Overlay for full image view */
-.gallery-item:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1;
-}
-
-.caption {
-    text-align: center;
-    margin-top: 5px;
-    font-size: 16px;
-    font-weight: 400; /* Regular weight for captions */
-    color: #fff;
-    position: relative;
-    z-index: 2; /* Ensure caption is above overlay */
-}
-
-/* Ensure responsive adjustments */
-@media only screen and (max-width: 600px) {
-    .art-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
-        grid-template-rows: repeat(auto-fit, minmax(200px, auto)); /* Auto-fit rows for better responsiveness */
-    }
-
-    .caption {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-}
-
-
-/* Captions */
-.caption {
-    text-align: center;
-    margin-top: 5px;
-    font-size: 16px;
-    font-weight: 400; /* Regular weight for captions */
+    transform: scale(1.5); /* Scale up image on hover */
+    object-fit: contain; /* Ensure the whole image is visible */
 }
 
 /* Footer */
@@ -268,9 +217,6 @@ footer {
         width: 100%; /* Full width of the container */
     }
 
-    .caption {
-        font-size: 14px; /* Adjust font size for mobile */
-    }
     header h1 {
         font-size: 24px;
     }
@@ -285,20 +231,16 @@ footer {
         margin: 5px 0;
     }
 
-    /* Adjust the compass container */
     .compass-container {
         width: 90vw; /* Adjust width for mobile */
         height: auto; /* Height will be adjusted automatically */
         padding-top: 20px; /* Adjust padding if needed */
     }
 
-
-    /* Adjust center logo size */
     .center-logo img {
         width: 120px;
     }
 
-    /* Adjust option size and positioning */
     .option {
         width: 100px;
         height: 100px;
@@ -310,27 +252,10 @@ footer {
         margin-top: 10px;
     }
 
-    /* Adjust header and footer padding */
     header, footer {
         padding: 15px;
     }
 
-    header h1 {
-        font-size: 24px;
-    }
-
-    /* Adjust navigation */
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    /* Make text more readable */
     body {
         font-size: 14px;
     }
