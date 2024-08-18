@@ -58,7 +58,7 @@
                     const scrollDirection = this.getAttribute('data-scroll');
 
                     if (activeScroll === scrollDirection) {
-                        // Scroll back to compass if the same section is clicked again
+                        // Scroll back to compass and reset state if the same section is clicked again
                         document.querySelector('.compass-container').scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -72,6 +72,8 @@
 
                     // Activate new scroll
                     if (targetElement) {
+                        activeScroll = scrollDirection;
+
                         // Load content into the target section
                         const file = this.getAttribute('data-file');
                         fetch(file)
@@ -82,7 +84,6 @@
                                     behavior: 'smooth',
                                     block: 'start'
                                 });
-                                activeScroll = scrollDirection;
                             })
                             .catch(err => console.warn('Error loading content:', err));
                     }

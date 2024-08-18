@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+span {
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 400;
+}
+
 /* Fullscreen Background */
 body, html {
     height: 100%;
