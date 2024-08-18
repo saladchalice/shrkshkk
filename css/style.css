@@ -30,7 +30,11 @@ body {
     position: relative;
     width: 450px;
     height: 450px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px; /* Add padding-top if needed to avoid overlap with header */
 }
 
 /* Center Logo */
@@ -220,11 +224,7 @@ footer {
     nav ul li {
         margin: 5px 0;
     }
-}
 
-
-/* Mobile Styles (up to 600px) */
-@media only screen and (max-width: 600px) {
     /* Adjust the compass container */
     .compass-container {
         width: 100%;
@@ -247,15 +247,6 @@ footer {
     .option span {
         font-size: 16px;
         margin-top: 10px;
-    }
-
-    /* Adjust art gallery */
-    .art-gallery {
-        flex-direction: column;
-    }
-
-    .art-gallery img {
-        width: 100%;
     }
 
     /* Adjust header and footer padding */
