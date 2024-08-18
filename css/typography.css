@@ -1,11 +1,11 @@
 /* typography.css */
 
 /* Import a Google Font (example: Roboto) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
 
 /* Basic Typography Reset */
 body, html {
-    font-family: 'Roboto', sans-serif; /* Default font */
+    font-family: 'Syne', sans-serif; /* Apply Syne font globally */
     font-size: 16px; /* Base font size */
     line-height: 1.5; /* Base line height */
     color: #333; /* Default text color */

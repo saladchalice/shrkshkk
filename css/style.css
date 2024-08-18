@@ -22,8 +22,8 @@ body, html {
 /* Compass Container */
 .compass-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 700px;
 }
 
 /* Center Logo */
@@ -36,8 +36,8 @@ body, html {
 }
 
 .center-logo img {
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
 }
 
 
@@ -51,16 +51,18 @@ body, html {
 }
 
 .option img {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     transition: transform 0.3s ease;
+    font-family: 'Syne', sans-serif; /* Apply Syne font if needed */
 }
 
 .option span {
     display: block;
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 15px;
+    font-size: 20px;
     color: #333;
+    font-family: 'Syne', sans-serif; /* Ensure Syne is applied to span elements */
 }
 
 /* Position the options around the center logo */
