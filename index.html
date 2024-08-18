@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Lu Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
-    <style>
-        /* Ensure no CSS rules affect scrolling */
-        .section {
-            height: 100vh; /* Full viewport height for testing */
-            overflow-y: auto; /* Allow vertical scrolling */
-        }
-    </style>
 </head>
 <body>
     <!-- Compass Navigation -->
@@ -55,9 +48,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let activeScroll = null;
-            let scrollTimeout = null;
 
-            // Smooth scrolling and content loading
             document.querySelectorAll('.option a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -67,8 +58,7 @@
                     const scrollDirection = this.getAttribute('data-scroll');
 
                     if (activeScroll === scrollDirection) {
-                        // If the same scroll direction is clicked again, return to compass
-                        if (scrollTimeout) clearTimeout(scrollTimeout);
+                        // Scroll back to compass if the same section is clicked again
                         document.querySelector('.compass-container').scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -77,15 +67,8 @@
                         return;
                     }
 
-                    // Only activate one scroll at a time
-                    if (activeScroll) {
-                        // Undo the previous scroll
-                        document.querySelector(`#section-${activeScroll}`).scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        activeScroll = null;
-                    }
+                    // Do nothing if another scroll is already active
+                    if (activeScroll) return;
 
                     // Activate new scroll
                     if (targetElement) {
@@ -95,20 +78,13 @@
                             .then(response => response.text())
                             .then(html => {
                                 targetElement.innerHTML = html;
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                                activeScroll = scrollDirection;
                             })
                             .catch(err => console.warn('Error loading content:', err));
-
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-
-                        // Ensure the page can still be scrolled
-                        setTimeout(() => {
-                            targetElement.style.overflowY = 'auto';
-                        }, 300);
-
-                        activeScroll = scrollDirection;
                     }
                 });
             });
