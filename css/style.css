@@ -36,9 +36,10 @@ body, html {
 }
 
 .center-logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
 }
+
 
 /* Options Positioning */
 .option {

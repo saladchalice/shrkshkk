@@ -5,98 +5,39 @@
     box-sizing: border-box;
 }
 
-/* Fullscreen Background */
-body, html {
+/* Ensure that html and body take full height of the viewport */
+html, body {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4;
+    font-family: sans-serif; /* Default font family for consistency */
 }
 
-/* Compass Container */
-.compass-container {
-    position: relative;
-    width: 600px;  /* Increased size */
-    height: 600px; /* Increased size */
+/* Remove default list styling */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Center Logo */
-.center-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+/* Remove default table styling */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.center-logo img {
-    width: 150px;  /* Increased size */
-    height: 150px; /* Increased size */
+/* Remove default form styling */
+input, button, textarea, select {
+    font: inherit; /* Ensure form elements inherit font styles */
 }
 
-/* Options Positioning */
-.option {
-    position: absolute;
-    width: 150px;  /* Increased size */
-    height: 150px; /* Increased size */
-    text-align: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+/* Remove underline from links */
+a {
+    text-decoration: none;
+    color: inherit; /* Ensure links use the color inherited from parent */
 }
 
-.option img {
-    width: 120px;  /* Increased size */
-    height: 120px; /* Increased size */
-    transition: transform 0.3s ease;
-}
-
-.option span {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px; /* Slightly larger text */
-    color: #333;
-}
-
-/* Position the options around the center logo */
-.option-north {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.option-south {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.option-east {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-
-.option-west {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-/* Hover Effect: Pop Out */
-.option:hover img {
-    transform: scale(1.2);
-}
-
-.option:hover {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-/* Optional: Make non-hovered options fade slightly */
-.option {
-    opacity: 0.8;
-}
-
-.option:hover ~ .option {
-    opacity: 0.5;
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0; /* Remove default border from images */
 }
