@@ -172,22 +172,44 @@ nav ul li a:hover {
 /* Art Gallery */
 .art-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust as needed */
-    gap: 10px; /* Space between items */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
     padding: 20px;
 }
 
-/* Ensure images fit properly */
 .gallery-item {
     position: relative;
-    width: 100%; /* Full width of grid cell */
+    overflow: hidden; /* Ensure overflow is hidden when scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow effect */
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
-    display: block; /* Remove extra space below images */
-    border-radius: 0; /* No rounded edges */
+    display: block;
+    transition: transform 0.3s ease; /* Smooth scaling effect for the image */
+    border-radius: 0; /* Hard edges */
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Slightly scale up the entire gallery item */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Add shadow on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slightly scale up the image */
+}
+
+.caption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400; /* Regular weight for captions */
+    transition: opacity 0.3s ease; /* Smooth transition for caption opacity */
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Ensure caption is fully visible */
 }
 
 /* Captions */
