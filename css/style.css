@@ -25,7 +25,7 @@ body, html {
 body {
     font-family: 'Syne', sans-serif;
     font-weight: 400;
-    color: #151515;
+    color: white;
 }
 
 /* Compass Container */
@@ -197,7 +197,7 @@ nav ul li a:hover {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05); /* Slightly scale up image on hover */
+    transform: scale(1.50); /* Slightly scale up image on hover */
 }
 
 .caption {
