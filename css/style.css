@@ -16,6 +16,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
 }
 
 /* Body text */
@@ -30,11 +33,9 @@ body {
     position: relative;
     width: 450px;
     height: 450px;
-    margin: 0 auto; /* Center the container horizontally */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 50px; /* Add padding-top if needed to avoid overlap with header */
 }
 
 /* Center Logo */
