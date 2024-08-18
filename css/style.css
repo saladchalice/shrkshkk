@@ -172,24 +172,25 @@ nav ul li a:hover {
 /* Art Gallery */
 .art-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Minimum size of 250px per item */
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust as needed */
+    gap: 10px; /* Space between items */
     padding: 20px;
 }
 
+/* Ensure images fit properly */
 .gallery-item {
     position: relative;
-    overflow: hidden; /* Ensures content doesn't overflow */
+    width: 100%; /* Full width of grid cell */
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%; /* Ensure the image covers the item */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-    border-radius: 0; /* Hard edges for images */
-    display: block; /* Remove any spacing below images */
+    height: auto;
+    display: block; /* Remove extra space below images */
+    border-radius: 0; /* No rounded edges */
 }
 
+/* Captions */
 .caption {
     text-align: center;
     margin-top: 5px;
@@ -210,13 +211,16 @@ footer {
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
     .art-gallery {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .gallery-item {
+        width: 100%; /* Full width of the container */
     }
 
     .caption {
-        font-size: 14px; /* Smaller font size for captions on mobile */
+        font-size: 14px; /* Adjust font size for mobile */
     }
-
     header h1 {
         font-size: 24px;
     }
