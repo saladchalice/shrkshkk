@@ -15,7 +15,7 @@ body, html {
     background-size: cover;  /* Ensures the image covers the entire page */
     background-position: center;  /* Centers the image */
     background-repeat: no-repeat;  /* Prevents the image from repeating */
-    background-attachment: scroll;  /* Keeps the background fixed during scroll */
+    background-attachment: fixed;  /* Keeps the background fixed during scroll */
     margin: 0;
     padding: 0;
 }
@@ -29,8 +29,8 @@ body {
 /* Compass Container */
 .compass-container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
 }
 
 /* Center Logo */
@@ -82,7 +82,7 @@ body {
 /* Span and alt text inside option */
 .option span {
     display: block;
-    margin-top: 5px; /* Reduced margin to bring text closer to the image */
+    margin-top: 15px; /* Reduced margin to bring text closer to the image */
     font-size: 20px;
     color: white;
     font-family: 'Syne', sans-serif; /* Apply Syne font */
