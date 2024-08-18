@@ -181,20 +181,34 @@ nav ul li a:hover {
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflow to maintain aspect ratio */
-    height: 400px; /* Fixed height */
+    min-height: 200px; /* Minimum height for gallery items */
+    max-height: 400px; /* Maximum height for gallery items */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center images horizontally */
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the area without distortion */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the entire image is visible */
     display: block;
     transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 .gallery-item:hover img {
-    transform: scale(1.5); /* Scale up image on hover */
-    object-fit: contain; /* Ensure the whole image is visible */
+    transform: scale(1.1); /* Slightly scale up image on hover */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Ensure it stays in place */
+    z-index: 1; /* Keep header above other content */
 }
 
 /* Footer */
