@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Lu Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Additional styles for smooth scrolling */
+        .section {
+            height: 100vh; /* Full viewport height for each section */
+            overflow: hidden; /* Hide overflow to prevent scrolling */
+        }
+    </style>
 </head>
 <body>
     <!-- Compass Navigation -->
@@ -47,28 +54,59 @@
     <!-- Include JavaScript for loading content and smooth scrolling -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for anchor links
+            let isScrolling = false;
+            let currentTargetId = null;
+            let currentFile = null;
+
+            function scrollToSection(targetElement, file) {
+                if (isScrolling) {
+                    // If already scrolling, stop and reset
+                    document.querySelector(currentTargetId).style.transition = 'none';
+                    window.scrollTo(0, 0);
+                    isScrolling = false;
+                    currentTargetId = null;
+                    return;
+                }
+
+                // Start scrolling
+                isScrolling = true;
+                currentTargetId = targetElement.id;
+
+                // Load content into the target section
+                fetch(file)
+                    .then(response => response.text())
+                    .then(html => {
+                        targetElement.innerHTML = html;
+                        targetElement.style.transition = 'transform 0.6s ease-out';
+                        targetElement.style.transform = 'translateY(0)';
+                    })
+                    .catch(err => console.warn('Error loading content:', err));
+
+                // Scroll to the target section with a more drastic effect
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Reset scrolling after animation
+                setTimeout(() => {
+                    isScrolling = false;
+                    currentTargetId = null;
+                }, 600);
+            }
+
             document.querySelectorAll('.option a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const file = this.getAttribute('data-file');
 
-                    if (targetElement) {
-                        // Scroll to the target section
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-
-                        // Load content into the target section
-                        const file = this.getAttribute('data-file');
-                        fetch(file)
-                            .then(response => response.text())
-                            .then(html => {
-                                targetElement.innerHTML = html;
-                            })
-                            .catch(err => console.warn('Error loading content:', err));
+                    if (currentTargetId === `#${targetId}`) {
+                        // If the same link is clicked again, undo scroll
+                        scrollToSection(targetElement, file);
+                    } else {
+                        scrollToSection(targetElement, file);
                     }
                 });
             });
