@@ -25,6 +25,7 @@ body, html {
     position: relative;
     width: 500px;
     height: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds the shadow effect */
 }
 
 /* Center Logo */
@@ -49,6 +50,10 @@ body, html {
     height: 150px;
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
 }
 
 .option img {
@@ -72,7 +77,7 @@ body, html {
 
 .option span {
     display: block;
-    margin-top: 15px;
+    margin-top: 5px; /* Reduced margin to bring text closer to the image */
     font-size: 20px;
     color: white;
     font-family: 'Syne', sans-serif; /* Ensure Syne is applied to span elements */
