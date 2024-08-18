@@ -18,12 +18,13 @@ body, html {
     background-attachment: scroll;  /* Keeps the background fixed during scroll */
     margin: 0;
     padding: 0;
+    flex-direction: column;  /* Ensure footer is pushed to the bottom */
 }
 /* Compass Container */
 .compass-container {
     position: relative;
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
 }
 
 /* Center Logo */
@@ -44,17 +45,18 @@ body, html {
 /* Options Positioning */
 .option {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .option img {
-    width: 200px;
-    height: 200px;
+    width: 100%;  /* Ensure image scales with its container */
+    height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease;
     font-family: 'Syne', sans-serif; /* Apply Syne font if needed */
+    object-fit: contain; /* Ensure the entire image fits within its container */
 }
 
 .option span {
