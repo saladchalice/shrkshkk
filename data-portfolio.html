@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/data-portfolio.css"> <!-- Add your custom CSS for data portfolio -->
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Data Science Projects</h2>
+            <div class="data-gallery">
+                <!-- Project Item 1 -->
+                <div class="project-item" onclick="openProject('project1')">
+                    <img src="images/project1-preview.jpg" alt="Project 1 Preview">
+                    <h3>Project Title 1</h3>
+                    <p>Short description of the project.</p>
+                </div>
+                <!-- Project Item 2 -->
+                <div class="project-item" onclick="openProject('project2')">
+                    <img src="images/project2-preview.jpg" alt="Project 2 Preview">
+                    <h3>Project Title 2</h3>
+                    <p>Short description of the project.</p>
+                </div>
+                <!-- Project Item 3 -->
+                <div class="project-item" onclick="openProject('project3')">
+                    <img src="images/project3-preview.jpg" alt="Project 3 Preview">
+                    <h3>Project Title 3</h3>
+                    <p>Short description of the project.</p>
+                </div>
+                <!-- Add more project items as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for displaying project details -->
+    <div id="project-modal" class="modal">
+        <span class="close" onclick="closeProject()">&times;</span>
+        <div class="modal-content">
+            <div id="project1" class="modal-body">
+                <h2>Project Title 1</h2>
+                <img src="images/project1-full.jpg" alt="Project 1 Full">
+                <p>Full description of Project 1.</p>
+            </div>
+            <div id="project2" class="modal-body">
+                <h2>Project Title 2</h2>
+                <img src="images/project2-full.jpg" alt="Project 2 Full">
+                <p>Full description of Project 2.</p>
+            </div>
+            <div id="project3" class="modal-body">
+                <h2>Project Title 3</h2>
+                <img src="images/project3-full.jpg" alt="Project 3 Full">
+                <p>Full description of Project 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Edward Lu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openProject(projectId) {
+            document.getElementById('project-modal').style.display = 'block';
+            document.querySelector('.modal-body').style.display = 'none';
+            document.getElementById(projectId).style.display = 'block';
+        }
+
+        function closeProject() {
+            document.getElementById('project-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
