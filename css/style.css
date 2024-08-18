@@ -170,9 +170,11 @@ nav ul li a:hover {
 }
 
 /* Art Gallery */
+/* Art Gallery */
 .art-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+    grid-template-rows: repeat(auto-fit, minmax(200px, auto)); /* Auto-fit rows based on content */
     gap: 10px; /* Space between items */
     padding: 20px;
     width: 100%;
@@ -182,43 +184,47 @@ nav ul li a:hover {
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflow to maintain aspect ratio */
-    height: 400px; /* Set height for consistent preview size */
+    height: 300px; /* Fixed height */
     transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    transition: opacity 0.3s ease;
 }
 
+/* Hover Effect */
 .gallery-item:hover {
-    transform: scale(1.1); /* Slightly scale up the entire item on hover */
+    transform: scale(1.5); /* Scale up the entire item */
+    z-index: 2; /* Bring item to the front */
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* Slightly scale up the image on hover */
+    opacity: 1; /* Ensure image is fully visible */
+}
+
+/* Overlay for full image view */
+.gallery-item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1;
 }
 
 .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: #fff;
     text-align: center;
-    padding: 10px;
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 400; /* Regular weight for captions */
-    opacity: 0; /* Hide caption by default */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
-}
-
-.gallery-item:hover .caption {
-    opacity: 1; /* Show caption on hover */
+    color: #fff;
+    position: relative;
+    z-index: 2; /* Ensure caption is above overlay */
 }
 
 /* Ensure responsive adjustments */
@@ -232,6 +238,7 @@ nav ul li a:hover {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
+
 
 /* Captions */
 .caption {
