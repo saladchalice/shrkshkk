@@ -18,8 +18,8 @@ body, html {
     background-attachment: scroll;  /* Keeps the background fixed during scroll */
     margin: 0;
     padding: 0;
-    flex-direction: column;  /* Ensure footer is pushed to the bottom */
 }
+
 /* Compass Container */
 .compass-container {
     position: relative;
@@ -38,7 +38,7 @@ body, html {
 
 .center-logo img {
     width: 300px; /* Adjust width as needed */
-    height: 300px; /* Adjust height as needed */
+    height: auto;
 }
 
 
@@ -59,11 +59,22 @@ body, html {
     object-fit: contain; /* Ensure the entire image fits within its container */
 }
 
+.option a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Ensure links fill the container */
+    height: 100%; /* Ensure links take up the full height of their container */
+    width: 100%; /* Ensure links take up the full width of their container */
+    text-align: center; /* Center text within the link */
+    line-height: 150px; /* Vertically center text */
+    font-family: 'Syne', sans-serif; /* Apply Syne font if needed */
+}
+
 .option span {
     display: block;
     margin-top: 15px;
     font-size: 20px;
-    color: #333;
+    color: white;
     font-family: 'Syne', sans-serif; /* Ensure Syne is applied to span elements */
 }
 
