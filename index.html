@@ -48,6 +48,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let activeScroll = null;
+            let currentSection = null;
 
             function resetCompass() {
                 // Reset all sections
@@ -57,6 +58,7 @@
 
                 // Reset active scroll
                 activeScroll = null;
+                currentSection = null;
                 document.querySelector('.compass-container').scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -74,14 +76,19 @@
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
                     const scrollDirection = this.getAttribute('data-scroll');
+                    const file = this.getAttribute('data-file');
 
-                    // Check if we are resetting the compass
-                    if (activeScroll === null) {
+                    // Check if the clicked section is the same as the current active section
+                    if (activeScroll === scrollDirection && currentSection === targetId) {
+                        // Unload content if the same button is clicked
                         resetCompass();
+                        return;
                     }
 
+                    // Clear all content and reset active state
+                    resetCompass();
+
                     // Load content into the target section
-                    const file = this.getAttribute('data-file');
                     fetch(file)
                         .then(response => response.text())
                         .then(html => {
@@ -91,6 +98,7 @@
                                 block: 'start'
                             });
                             activeScroll = scrollDirection;
+                            currentSection = targetId;
                         })
                         .catch(err => console.warn('Error loading content:', err));
                 });

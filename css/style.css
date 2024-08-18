@@ -34,6 +34,7 @@ body {
     font-family: 'Syne', sans-serif;
     font-weight: 400;
     color: white;
+    background-color: #000; /* Black background for entire page */
 }
 
 /* Compass Container */
@@ -176,6 +177,8 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure header stays above other content */
 }
 
 header h1 {
@@ -202,12 +205,6 @@ nav ul li a:hover {
 }
 
 /* Art Gallery Grid */
-header, footer {
-    position: relative;
-    z-index: 1; /* Ensure they stay above other content */
-}
-
-/* Art Gallery Container */
 .art-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3-column grid */
@@ -215,8 +212,11 @@ header, footer {
     padding: 20px;
     width: 100%;
     box-sizing: border-box; /* Include padding in width */
-    margin-top: 60px; /* Add margin to push content below the header */
+    margin: 0 auto; /* Center the gallery container */
+    max-width: 1200px; /* Ensure it doesn’t stretch too wide */
+    margin-top: 80px; /* Add margin to push content below the header */
     margin-bottom: 60px; /* Add margin to avoid overlap with footer */
+    position: relative; /* Position relative for any absolute children */
 }
 
 /* Ensure gallery-item fits within its container */
@@ -256,6 +256,7 @@ footer {
 @media only screen and (max-width: 600px) {
     .art-gallery {
         grid-template-columns: 1fr; /* Single column layout for mobile */
+        padding: 10px; /* Adjust padding for mobile */
     }
 
     .gallery-item {
@@ -276,6 +277,28 @@ footer {
         margin: 5px 0;
     }
 
+    .center-logo img {
+        width: 120px;
+    }
+
+    .option {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+
+    .option span {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    header, footer {
+        padding: 15px;
+    }
+
+    body {
+        font-size: 14px;
+    }
     .compass-container {
         width: 90vw; /* Adjust width for mobile */
         height: auto; /* Height will be adjusted automatically */
@@ -306,3 +329,4 @@ footer {
         font-size: 14px;
     }
 }
+
