@@ -11,19 +11,14 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../images/heights.png'); /* Path to your image */
-    background-size: cover;  /* Ensures the image covers the entire page */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents the image from repeating */
-    background-attachment: fixed;  /* Keeps the background fixed during scroll */
-    margin: 0;
-    padding: 0;
+    background-color: #f4f4f4;
 }
+
 /* Compass Container */
 .compass-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 600px;  /* Increased size */
+    height: 600px; /* Increased size */
 }
 
 /* Center Logo */
@@ -36,29 +31,29 @@ body, html {
 }
 
 .center-logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px;  /* Increased size */
+    height: 150px; /* Increased size */
 }
 
 /* Options Positioning */
 .option {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;  /* Increased size */
+    height: 150px; /* Increased size */
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .option img {
-    width: 80px;
-    height: 80px;
+    width: 120px;  /* Increased size */
+    height: 120px; /* Increased size */
     transition: transform 0.3s ease;
 }
 
 .option span {
     display: block;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px; /* Slightly larger text */
     color: #333;
 }
 
