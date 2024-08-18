@@ -181,7 +181,7 @@ nav ul li a:hover {
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflow to maintain aspect ratio */
-    min-height: 200px; /* Minimum height for gallery items */
+    aspect-ratio: 1 / 1; /* Ensure items are square */
     max-height: 400px; /* Maximum height for gallery items */
     display: flex; /* Flexbox for centering content */
     align-items: center; /* Center images vertically */
@@ -220,11 +220,10 @@ footer {
     position: relative;
     width: 100%;
 }
-
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
     .art-gallery {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 3fr; /* Single column layout */
     }
 
     .gallery-item {
