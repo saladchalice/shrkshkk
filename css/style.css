@@ -308,7 +308,7 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1; /* Ensure items are square */
-    height: 300px; /* Maximum height for gallery items */
+    height: 50px; /* Maximum height for gallery items */
     display: flex;
     align-items: center;
     justify-content: center;
