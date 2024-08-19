@@ -1,9 +1,11 @@
 .data-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
     box-sizing: border-box; /* Include padding in total width and height */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-item {
