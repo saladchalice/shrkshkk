@@ -338,8 +338,9 @@ nav ul li a:hover {
     height: 100vh;
     gap: 10px; 
     box-sizing: border-box;
-    margin-top: 80px;
-    height: calc(100vh - 80px);
+    margin-top: 30%;
+    margin-bottom:0;
+    height: 100vh;
 }
 
 /* Ensure gallery-item fits within its container */
@@ -347,7 +348,7 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1; /* Ensure items are square */
-    max-height: 400px; /* Maximum height for gallery items */
+    height: 350px; /* Maximum height for gallery items */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,7 +370,7 @@ nav ul li a:hover {
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
     .art-gallery {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
+        grid-template-columns: 2fr; /* Single column layout for mobile */
         padding: 10px; /* Adjust padding for mobile */
         margin-top: 60px; 
     }
@@ -383,29 +384,21 @@ nav ul li a:hover {
         background-color: black;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
+    /*compass container*/
 
     .center-logo img {
-        width: 100px;
+        width: 70px;
     }
 
     .option {
-        width: 80px; /* Adjust width for mobile */
-        height: 80px; /* Adjust height for mobile */
-        font-size: 14px; /* Smaller font size */
+        width: 60px; /* Adjust width for mobile */
+        height: 60px; /* Adjust height for mobile */
+        font-size: 11px; /* Smaller font size */
         padding: 5px; /* Adjust padding */
     }
 
     .option span {
-        font-size: 14px;
+        font-size: 11px;
         font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
     }
 

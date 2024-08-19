@@ -6,8 +6,20 @@
     grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
     gap: 20px;
     padding: 20px;
+    margin-top: 80px; /* Adjust based on the height of your fixed header */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Optional: Adjust for mobile view */
+@media (max-width: 768px) {
+    .data-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 10px;
+        margin-top: 60px; /* Adjust as needed for mobile */
+    }
+}
+
+/* Project Item Styles */
 .project-item {
     position: relative;
     cursor: pointer;
