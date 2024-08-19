@@ -1,70 +1,87 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+    <!-- Link to Google Fonts for Syne -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400&display=swap">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Syne', Arial, sans-serif; /* Use Syne with fallback */
-    font-weight: 400; /* Apply weight 400 */
-    line-height: 1.6;
-    color: #fff; /* Text color for dark background */
-    background-color: #000; /* Black background */
-    padding: 20px;
-    max-width: 100vw;
-    margin: 0;
-}
+        body {
+            font-family: 'Syne', Arial, sans-serif; /* Use Syne with fallback */
+            font-weight: 400; /* Apply weight 400 */
+            line-height: 1.6;
+            color: #fff; /* Text color for dark background */
+            background-color: #000; /* Black background */
+            padding: 20px;
+            max-width: 100vw;
+            margin: 0;
+        }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
 
-header p {
-    font-size: 1em;
-}
+        header p {
+            font-size: 1em;
+        }
 
-.resume-container {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Adjust height to use most of the viewport height */
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Hide overflow to keep iframe within bounds */
-}
+        .resume-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Adjust height to use most of the viewport height */
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Hide overflow to keep iframe within bounds */
+        }
 
-.resume-container iframe {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    border: none;
-    max-width: 100%;
-    max-height: 100%;
-}
+        .resume-container iframe {
+            width: 90vw; /* Use viewport width for better scaling */
+            height: 90vh; /* Use viewport height for better scaling */
+            border: none;
+            max-width: 100%;
+            max-height: 100%;
+        }
 
-/* Mobile Styles */
-@media only screen and (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
-    }
+        /* Mobile Styles */
+        @media only screen and (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
 
-    header p {
-        font-size: 0.9em;
-    }
+            header p {
+                font-size: 0.9em;
+            }
 
-    .resume-container {
-        height: 80vh; /* Adjust height for mobile */
-    }
+            .resume-container {
+                height: 80vh; /* Adjust height for mobile */
+            }
 
-    .resume-container iframe {
-        width: 100%; /* Ensure iframe takes full width */
-        height: 100%; /* Ensure iframe takes full height */
-    }
-}
+            .resume-container iframe {
+                width: 100%;
+                height: 80vh; /* Adjust height for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <iframe src="images/2024 Resume.pdf" title="Resume"></iframe>
+    </div>
+</body>
+</html>
