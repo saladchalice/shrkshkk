@@ -4,9 +4,9 @@
     gap: 20px;
     padding: 20px;
     box-sizing: border-box; /* Include padding in total width and height */
-    max-width: 1200px;
+    max-width: 80%;
     margin-top: 200;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .project-item {
