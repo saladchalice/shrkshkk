@@ -28,10 +28,9 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 20px;
     box-sizing: border-box;
-    margin-top: 0px; /* Ensure the grid starts below the header */
-    margin-bottom:100px;
+    margin-top: 50px; /* Ensure the grid starts below the header */
     padding-bottom: 20px; /* Add padding at the bottom to avoid content being cut off */
-    max-width: 100vw;
+    width:100%;
     overflow-y: auto; /* Enable vertical scrolling */
     /*max-height: calc(100vh - 80px); /* Limit grid height to viewport minus header */
 }
@@ -50,10 +49,9 @@ h2 {
 }
 
 .gallery-item img {
-    width:100%;
-    height:100%;
+    max-width: 400px;
+    max-height: 400px;
     object-fit: cover; /* Ensure the entire image is visible */
-    display: block;
     transition: transform 0.3s ease;
 }
 
