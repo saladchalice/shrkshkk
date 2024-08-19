@@ -92,7 +92,7 @@ header h2 {
 /* Compass Container */
 .compass-container {
     position: relative;
-    max-width: 450px;
+    max-width: 400px;
     width: 90vw;
     display: flex;
     align-items: center;
@@ -111,15 +111,15 @@ header h2 {
 }
 
 .center-logo img {
-    width: 150px;
+    width: 125px;
     height: auto;
 }
 
 /* Options Positioning */
 .option {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
