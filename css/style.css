@@ -228,14 +228,9 @@ nav ul li a:hover {
 
 /* Art Gallery Grid */
 .art-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3-column grid */
-    grid-gap: 5px; /* Space between items */
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box; /* Include padding in width */
-    max-width: 1200px; /* Ensure it doesn’t stretch too wide */
-    margin: 0 auto; /* Center the gallery */
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    padding: 20px; /* Adjust padding if necessary */
+    box-sizing: border-box; /* Ensure padding is included in the height */
 }
 
 /* Ensure gallery-item fits within its container */
