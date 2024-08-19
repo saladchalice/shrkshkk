@@ -192,7 +192,7 @@ header {
     padding: 20px;
     text-align: center;
     position: fixed; /* Fix the header at the top */
-    top: 2000px; /* Align it to the top of the page */
+    top: 2000; /* Align it to the top of the page */
     left: 0;
     width: 100%; /* Make it span the full width */
     z-index: 1000; /* Ensure it stays above other content */
@@ -297,18 +297,19 @@ footer {
     }
 
     .center-logo img {
-        width: 120px;
+        width: 100px;
     }
 
     .option {
-        width: 100px;
-        height: 100px;
-        padding: 5px;
+        width: 80px; /* Adjust width for mobile */
+        height: 80px; /* Adjust height for mobile */
+        font-size: 14px; /* Smaller font size */
+        padding: 5px; /* Adjust padding */
     }
 
     .option span {
-        font-size: 16px;
-        margin-top: 10px;
+        font-size: 14px;
+        font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
     }
 
     header, footer {
@@ -317,6 +318,66 @@ footer {
 
     body {
         font-size: 14px;
+    }
+    
+    .compass-container {
+        width: 80vw; /* Adjust width for mobile */
+        height: auto; /* Height will be adjusted automatically */
+        padding-top: 20px; /* Adjust padding if needed */
+        position: fixed; /* Ensure correct positioning */
+        bottom: 20px; /* Fixed 20px from the bottom of the screen */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        z-index: 1000; /* Ensure it floats above content */
+    }
+
+    .center-logo img {
+        width: 100px;
+    }
+
+    .option {
+        width: 80px; /* Adjust width for mobile */
+        height: 80px; /* Adjust height for mobile */
+        font-size: 14px; /* Smaller font size */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .option span {
+        font-size: 14px;
+        font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
+    }
+
+    /* Disable hover functionality on mobile */
+    .option:hover img {
+        transform: none;
+    }
+
+    .option:hover {
+        transform: none;
+        opacity: 1;
+    }
+
+    /* Reset hover effect for other options */
+    .option {
+        opacity: 1;
+    }
+
+    .option:hover ~ .option {
+        opacity: 1;
+    }
+
+    /* Reset positioning for options */
+    .option-north, .option-south, .option-east, .option-west {
+        top: auto; /* Reset top for mobile */
+        bottom: auto; /* Reset bottom for mobile */
+        left: auto; /* Reset left for mobile */
+        right: auto; /* Reset right for mobile */
+        transform: none; /* Reset transform for mobile */
+    }
+
+    .option {
+        position: relative; /* Change to relative to avoid overlapping */
+        margin: 10px; /* Add margin to space out options */
     }
     
     /* compass container*/
