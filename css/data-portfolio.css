@@ -1,11 +1,9 @@
-/* Data Portfolio Styles */
-
-/* Grid Layout for Projects */
 .data-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
     gap: 20px;
     padding: 20px;
+    box-sizing: border-box; /* Include padding in total width and height */
 }
 
 .project-item {
