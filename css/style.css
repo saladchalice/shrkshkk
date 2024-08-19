@@ -64,12 +64,10 @@ section {
     align-items: center; /* Center-align child elements */
     text-align: center; /* Center-align text */
     max-width: 300px; /* Max width for consistency */
-    width: 100%; /* Full width within the container */
 }
 
 /* Project Image Styling */
 .project-item img {
-    width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px 8px 0 0; /* Rounded corners for top */
     object-fit: cover; /* Ensure image covers the area */
