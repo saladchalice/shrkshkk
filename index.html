@@ -5,38 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Lu Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Page Transition Animation */
+        body {
+            overflow: hidden; /* Prevent scrolling during animation */
+        }
+
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Color of the transition overlay */
+            z-index: 1000; /* Ensure it's on top of everything */
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .page-transition.active {
+            transform: translateX(0);
+        }
+
+        /* Back button styling */
+        .back-button {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .compass-container {
+                display: none; /* Hide compass on mobile */
+            }
+
+            .back-button {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+
     <!-- Compass Navigation -->
     <div class="compass-container">
         <div class="center-logo">
-            <img src="images/spin.gif" alt="My Logo">
+            <a href="#" data-file="https://open.spotify.com/playlist/45lMrjDlH4w4d0cJxGDyW3?si=3c0b430c3cad492b">
+                <img src="images/spin.gif" alt="My Logo">
+                <span>art</span>
+            </a>
         </div>
         <div class="option option-north">
-            <a href="#section-art" data-file="art-portfolio.html" data-scroll="north">
+            <a href="#" data-file="art-portfolio.html" data-scroll="north">
                 <img src="images/lake.jpg" alt="ART">
                 <span>art</span>
             </a>
         </div>
         <div class="option option-south">
-            <a href="#section-data" data-file="data-portfolio.html" data-scroll="south">
+            <a href="#" data-file="data-portfolio.html" data-scroll="south">
                 <img src="images/shark.png" alt="DATA">
                 <span>data</span>
             </a>
         </div>
         <div class="option option-east">
-            <a href="#section-resume" data-file="resume.html" data-scroll="east">
+            <a href="#" data-file="resume.html" data-scroll="east">
                 <img src="images/dumpling.png" alt="RESUME">
                 <span>resume</span>
             </a>
         </div>
         <div class="option option-west">
-            <a href="#section-about" data-file="about.html" data-scroll="west">
+            <a href="#" data-file="about.html" data-scroll="west">
                 <img src="images/krab.png" alt="about">
                 <span>about</span>
             </a>
         </div>
     </div>
+
+    <!-- Back Button -->
+    <button id="back-button" class="back-button">Back to Compass</button>
 
     <!-- Sections -->
     <div id="section-art" class="section"></div>
@@ -44,65 +99,78 @@
     <div id="section-resume" class="section"></div>
     <div id="section-about" class="section"></div>
 
-    <!-- Include JavaScript for loading content and smooth scrolling -->
     <script>
-        
         document.addEventListener('DOMContentLoaded', function() {
-            let activeScroll = null;
-            let currentSection = null;
+            const transitionOverlay = document.getElementById('page-transition');
+            const options = document.querySelectorAll('.option a');
+            const backButton = document.getElementById('back-button');
+
+            function isMobile() {
+                return window.matchMedia("(max-width: 768px)").matches;
+            }
 
             function resetCompass() {
-                // Reset all sections
                 document.querySelectorAll('.section').forEach(section => {
                     section.innerHTML = '';
                 });
-
-                // Reset active scroll
-                activeScroll = null;
-                currentSection = null;
                 document.querySelector('.compass-container').scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
             }
 
-            document.querySelector('.center-logo img').addEventListener('click', function() {
+            backButton.addEventListener('click', function() {
+                document.querySelector('.compass-container').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
                 resetCompass();
+                backButton.style.display = 'none';
             });
 
-            document.querySelectorAll('.option a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+            options.forEach(function(option) {
+                option.addEventListener('click', function(e) {
                     e.preventDefault();
 
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    const scrollDirection = this.getAttribute('data-scroll');
-                    const file = this.getAttribute('data-file');
+                    const targetFile = option.getAttribute('data-file');
 
-                    // Check if the clicked section is the same as the current active section
-                    if (activeScroll === scrollDirection && currentSection === targetId) {
-                        // Unload content if the same button is clicked
-                        resetCompass();
-                        return;
+                    if (isMobile()) {
+                        // Mobile: Load the new page directly
+                        window.location.href = targetFile;
+                        backButton.style.display = 'block';
+                    } else {
+                        // Desktop: Handle transition and content loading
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        const scrollDirection = this.getAttribute('data-scroll');
+
+                        // Trigger the transition overlay animation
+                        transitionOverlay.classList.add('active');
+
+                        setTimeout(function() {
+                            fetch(targetFile)
+                                .then(response => response.text())
+                                .then(html => {
+                                    targetElement.innerHTML = html;
+                                    targetElement.scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    });
+                                    transitionOverlay.classList.remove('active');
+                                })
+                                .catch(err => console.warn('Error loading content:', err));
+                        }, 500);
                     }
-
-                    // Clear all content and reset active state
-                    resetCompass();
-
-                    // Load content into the target section
-                    fetch(file)
-                        .then(response => response.text())
-                        .then(html => {
-                            targetElement.innerHTML = html;
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                            activeScroll = scrollDirection;
-                            currentSection = targetId;
-                        })
-                        .catch(err => console.warn('Error loading content:', err));
                 });
+            });
+
+            // Add listener for window resizing to handle dynamic changes
+            window.addEventListener('resize', function() {
+                if (isMobile()) {
+                    backButton.style.display = 'block';
+                } else {
+                    backButton.style.display = 'none';
+                }
             });
         });
     </script>

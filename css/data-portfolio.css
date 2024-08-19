@@ -3,7 +3,7 @@
 /* Grid Layout for Projects */
 .data-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
     gap: 20px;
     padding: 20px;
 }
