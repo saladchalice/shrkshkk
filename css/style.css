@@ -319,11 +319,15 @@ footer {
         font-size: 14px;
     }
     
+    /* compass container*/
     .compass-container {
+        position: fixed; /* Fixed position to float over content */
+        bottom: 20px; /* Adjust bottom position */
+        right: 20px; /* Adjust right position */
         width: 80vw; /* Adjust width for mobile */
         height: auto; /* Height will be adjusted automatically */
-        padding-top: 20px; /* Adjust padding if needed */
-        position: relative; /* Ensure correct positioning */
+        z-index: 1000; /* Ensure it floats above other content */
+        aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
     }
 
     .center-logo img {
