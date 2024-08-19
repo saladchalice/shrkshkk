@@ -92,7 +92,7 @@ header h2 {
 /* Compass Container */
 .compass-container {
     position: relative;
-    max-width: 400px;
+    max-width: 450px;
     width: 90vw;
     display: flex;
     align-items: center;
