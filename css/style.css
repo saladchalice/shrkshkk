@@ -11,14 +11,13 @@
 
 /* Main container styling */
 main {
-    background-color: #000; /* Black background */
     color: #fff; /* White text color */
     padding: 20px; /* Padding around the content */
     box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 section {
-    background-color: #000; /* Black background */
+    background-color: #0000002f; /* Black background */
     color: #fff; /* White text color for contrast */
     padding: 20px; /* Padding for spacing */
     margin-bottom: 20px; /* Space between sections */
