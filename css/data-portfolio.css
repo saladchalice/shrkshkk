@@ -33,18 +33,6 @@ h2 {
     margin-left: auto; /* Aligns the grid container to the right side */
 }
 
-.gallery-item {
-    position: relative;
-    cursor: pointer;
-    text-align: center;
-    background-color: black;
-    max-height: 400px;
-    overflow: hidden; /* Ensures content does not overflow the grid item */
-    padding: 10px; /* Add padding around the content */
-    display: flex;
-    flex-direction: column; /* Allows text to wrap properly */
-    justify-content: space-between; /* Space between image and text */
-}
 
 /* Project Item */
 .project-item {
