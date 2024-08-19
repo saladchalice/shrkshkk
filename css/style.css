@@ -295,6 +295,24 @@ header h2 {
         background-color:black;
     }
 
+    .option-north {
+        transform: none;
+    }
+    
+    .option-south {
+
+        transform: none;
+    }
+    
+    .option-east {
+
+        transform: none;
+    }
+    
+    .option-west {
+        transform: none;
+    }
+
     .option:hover img {
         transform: none;
     }

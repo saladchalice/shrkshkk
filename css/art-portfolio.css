@@ -14,10 +14,10 @@ main {
 
 /* Section Title */
 h2 {
-    margin-top: 100px;
+    margin-top: 250px;
     font-size: 2em;
     color: #131313;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -25,7 +25,7 @@ h2 {
 /* ----------------Art Gallery Grid --------------------------------------*/
 .art-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 columns equal size */
     gap: 20px;
     box-sizing: border-box;
     margin-top: 50px; /* Ensure the grid starts below the header */
@@ -41,11 +41,11 @@ h2 {
     cursor:pointer;
     overflow: hidden;
     max-height: 400px;
+    padding-top:10px;
     aspect-ratio: 1 / 1; /* Ensure items are square */
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 
 .gallery-item img {
