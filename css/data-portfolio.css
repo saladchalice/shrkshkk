@@ -11,6 +11,7 @@ main {
 
 /* Section Title */
 h2 {
+    margin-top: 50px;
     font-size: 2em;
     color: #131313;
     margin-bottom: 20px;
@@ -25,7 +26,7 @@ h2 {
     padding: 20px;
     box-sizing: border-box; /* Include padding in total width and height */
     max-width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     overflow: auto;
     margin-left: auto; /* Aligns the grid container to the right side */
 }
