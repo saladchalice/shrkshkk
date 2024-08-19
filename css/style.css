@@ -294,7 +294,7 @@ nav ul li a:hover {
 
 /* ----------------Art Gallery Grid --------------------------------------*/
 .art-gallery {
-    display: flex; 
+    display: grid; 
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     height: 100vh;
     gap: 10px; 
@@ -303,16 +303,12 @@ nav ul li a:hover {
     margin-top: 60px;
 }
 
-.col {
-    flex: 1;
-  }
-
 /* Ensure gallery-item fits within its container */
 .gallery-item {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1; /* Ensure items are square */
-    height: 200px; /* Maximum height for gallery items */
+    height: 50px; /* Maximum height for gallery items */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,7 +330,7 @@ nav ul li a:hover {
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
     .art-gallery {
-        display:block;
+        display: grid; 
         grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
         height: calc(100vh - 60px);
         gap: 10px; 
