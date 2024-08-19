@@ -17,8 +17,7 @@ h2 {
     text-align: center;
 }
 
-
-/* data gallery */
+/* Data Gallery */
 .data-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
@@ -31,6 +30,7 @@ h2 {
     margin-left: auto; /* Aligns the grid container to the right side */
 }
 
+/* Project Item */
 .project-item {
     position: relative;
     cursor: pointer;
@@ -38,33 +38,37 @@ h2 {
     background-color: black;
     max-height: 400px;
     overflow: hidden; /* Ensures content does not overflow the grid item */
-    white-space: nowrap; /* Prevents text from wrapping */
-    text-overflow: ellipsis; /* Adds ellipsis (…) when text overflows */
+    padding: 10px; /* Add padding around the content */
+    display: flex;
+    flex-direction: column; /* Allows text to wrap properly */
+    justify-content: space-between; /* Space between image and text */
 }
 
 .project-item img {
     width: 100%;
     max-height: 250px;
-    width: auto;
+    object-fit: cover; /* Ensures image fits within the container */
     border-radius: 0;
 }
 
 .project-item h3 {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px; /* Increased font size for better readability */
     font-weight: 700;
+    color: #fff; /* Text color to ensure readability on dark background */
     overflow: hidden; /* Ensures text does not overflow */
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal; /* Allows text to wrap */
 }
 
 .project-item p {
     margin-top: 5px;
-    font-size: 10px;
+    font-size: 12px; /* Increased font size for better readability */
+    color: #ddd; /* Text color to ensure readability on dark background */
     overflow: hidden; /* Ensures text does not overflow */
     text-overflow: ellipsis;
+    white-space: normal; /* Allows text to wrap */
 }
-
 
 /* Modal Styles */
 .modal {
@@ -106,7 +110,7 @@ h2 {
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .close:hover,
