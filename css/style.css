@@ -48,6 +48,7 @@ body {
     aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
 }
 
+
 /* Center Logo */
 .center-logo {
     position: absolute;
@@ -187,7 +188,7 @@ body {
 
 /* Art Gallery */
 header {
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -200,6 +201,7 @@ header {
 
 header h1 {
     margin-bottom: 10px;
+    background-color:black;
 }
 
 /* Ensure that content doesn’t hide behind the fixed header */
@@ -231,8 +233,12 @@ nav ul li a:hover {
     min-height: 100vh; /* Ensure it takes at least the full viewport height */
     padding: 20px; /* Adjust padding if necessary */
     box-sizing: border-box; /* Ensure padding is included in the height */
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+    grid-gap: 20px; /* Space between grid items */
+    margin-top: 0; /* Ensure the gallery is aligned with the top of the viewport */
+    width: 100%; /* Ensure the gallery takes the full width of its container */
 }
-
 /* Ensure gallery-item fits within its container */
 .gallery-item {
     position: relative;
@@ -279,6 +285,7 @@ footer {
 
     header h1 {
         font-size: 24px;
+        background-color: black;
     }
 
     nav ul {
