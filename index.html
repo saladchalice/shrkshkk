@@ -23,8 +23,24 @@
             transition: transform 0.5s ease;
         }
 
+        .page-transition.north {
+            transform: translateY(-100%);
+        }
+
+        .page-transition.south {
+            transform: translateY(100%);
+        }
+
+        .page-transition.east {
+            transform: translateX(100%);
+        }
+
+        .page-transition.west {
+            transform: translateX(-100%);
+        }
+
         .page-transition.active {
-            transform: translateX(0);
+            transform: translateX(0); /* Reset for visibility after animation */
         }
     </style>
 </head>
@@ -37,59 +53,52 @@
         <div class="center-logo">
             <img src="images/spin.gif" alt="My Logo">
         </div>
-        <div class="option option-north" data-target="art-portfolio.html">
-            <a href="#section-art">
+        <div class="option option-north" data-target="art-portfolio.html" data-direction="north">
+            <a href="#">
                 <img src="images/lake.jpg" alt="ART">
                 <span>art</span>
             </a>
         </div>
-        <div class="option option-south" data-target="data-portfolio.html">
-            <a href="#section-data">
+        <div class="option option-south" data-target="data-portfolio.html" data-direction="south">
+            <a href="#">
                 <img src="images/shark.png" alt="DATA">
                 <span>data</span>
             </a>
         </div>
-        <div class="option option-east" data-target="resume.html">
-            <a href="#section-resume">
+        <div class="option option-east" data-target="resume.html" data-direction="east">
+            <a href="#">
                 <img src="images/dumpling.png" alt="RESUME">
                 <span>resume</span>
             </a>
         </div>
-        <div class="option option-west" data-target="about.html">
-            <a href="#section-about">
+        <div class="option option-west" data-target="about.html" data-direction="west">
+            <a href="#">
                 <img src="images/krab.png" alt="about">
                 <span>about</span>
             </a>
         </div>
     </div>
 
-    <!-- Sections -->
-    <div id="section-art" class="section"></div>
-    <div id="section-data" class="section"></div>
-    <div id="section-resume" class="section"></div>
-    <div id="section-about" class="section"></div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const transitionOverlay = document.getElementById('page-transition');
             const options = document.querySelectorAll('.option');
 
-            function scrollToSection(targetId) {
-                document.querySelector(`#${targetId}`).scrollIntoView({ behavior: 'smooth' });
-            }
-
             options.forEach(function(option) {
                 option.addEventListener('click', function(e) {
                     e.preventDefault(); // Prevent default link behavior
-                    const targetId = option.getAttribute('data-target');
+                    const targetFile = option.getAttribute('data-target');
+                    const direction = option.getAttribute('data-direction');
+
+                    // Set the appropriate direction class
+                    transitionOverlay.className = 'page-transition ' + direction;
 
                     // Trigger the transition overlay animation
                     transitionOverlay.classList.add('active');
 
-                    // Delay the scroll to allow animation to complete
+                    // Delay loading the new page to allow animation to complete
                     setTimeout(function() {
-                        scrollToSection(targetId);
-                        transitionOverlay.classList.remove('active');
+                        window.location.href = targetFile; // Redirect to the new HTML file
                     }, 500); // Duration should match the CSS transition duration
                 });
             });
