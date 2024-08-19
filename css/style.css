@@ -39,13 +39,9 @@ body {
 
 /* Compass Container */
 .compass-container {
-    position: absolute; /* Ensure it is removed from normal document flow */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the container */
+    position: relative;
     max-width: 450px;
     width: 90vw;
-    height: 90vw; /* Maintain aspect ratio */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +171,7 @@ body {
     transform: scale(1.2); /* Slightly enlarge the logo on hover */
 }
 
-/* Photo */
+/* photo */
 #photo {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -325,7 +321,7 @@ footer {
     
     .compass-container {
         width: 80vw; /* Adjust width for mobile */
-        height: 80vw; /* Maintain aspect ratio */
+        height: auto; /* Height will be adjusted automatically */
         padding-top: 20px; /* Adjust padding if needed */
         position: relative; /* Ensure correct positioning */
     }
@@ -357,4 +353,14 @@ footer {
     .option-north, .option-south, .option-east, .option-west {
         top: auto; /* Reset top for mobile */
         bottom: auto; /* Reset bottom for mobile */
-       
+        left: auto; /* Reset left for mobile */
+        right: auto; /* Reset right for mobile */
+        transform: none; /* Reset transform for mobile */
+    }
+    
+    .option {
+        position: relative; /* Change to relative to avoid overlapping */
+        margin: 10px; /* Add margin to space out options */
+    }
+}
+
