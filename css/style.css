@@ -296,11 +296,12 @@ nav ul li a:hover {
 .art-gallery {
     display: grid; 
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    height: 100vh;
     gap: 10px; 
     box-sizing: border-box;
+    margin-top: 80px; /* Ensure the grid starts below the header */
+    height: calc(100vh - 80px); /* Subtract header height from the viewport height */
     max-width: 100vw;
-    margin-top: 60px;
+    overflow-y: auto; /* Allow scrolling if content exceeds grid height */
 }
 
 /* Ensure gallery-item fits within its container */
@@ -308,7 +309,7 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1; /* Ensure items are square */
-    height: 50px; /* Maximum height for gallery items */
+    height: 300px; /* Maximum height for gallery items */
     display: flex;
     align-items: center;
     justify-content: center;
