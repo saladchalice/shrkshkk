@@ -17,11 +17,80 @@ main {
 }
 
 section {
-    background-color: #0000002f; /* Black background */
     color: #fff; /* White text color for contrast */
     padding: 20px; /* Padding for spacing */
     margin-bottom: 20px; /* Space between sections */
     box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    line-height: 1.8; /* Increase line height for better readability */
+}
+
+/* text formatting */
+#text {
+    background-color: #0000002f; /* Semi-transparent black background */
+    color: #fff; /* White text color for contrast */
+    padding: 20px; /* Padding around the content */
+    margin-bottom: 20px; /* Space between sections */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+/* Heading Styling */
+#text h2 {
+    font-size: 1.8em; /* Larger font size for headings */
+    margin-bottom: 10px; /* Space below the heading */
+    color: #fff; /* White color for headings */
+}
+
+/* Paragraph Styling */
+#text p {
+    font-size: 1em; /* Font size for paragraphs */
+    margin-bottom: 15px; /* Space below paragraphs */
+    line-height: 1.8; /* Line height for better readability */
+    color: #fff; /* White color for paragraphs */
+}
+
+/* Project Item Styling */
+.project-item {
+    background-color: #000; /* Black background for the project item */
+    color: #fff; /* White text color for contrast */
+    padding: 20px; /* Padding inside the project item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    margin-bottom: 20px; /* Space between project items */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center-align child elements */
+    text-align: center; /* Center-align text */
+    max-width: 300px; /* Max width for consistency */
+    width: 100%; /* Full width within the container */
+}
+
+/* Project Image Styling */
+.project-item img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners for top */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+/* Project Heading Styling */
+.project-item h3 {
+    font-size: 1.2em; /* Font size for heading */
+    margin: 15px 0; /* Margin above and below the heading */
+}
+
+/* Project Description Styling */
+.project-item p {
+    font-size: 1em; /* Font size for description */
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Hover Effects */
+.project-item:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 span {
@@ -276,10 +345,9 @@ nav ul li a:hover {
     box-sizing: border-box; /* Ensure padding is included in the height */
     display: grid; /* Enable grid layout */
     grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
-    grid-template-rows: repeat(8, 5vw);
     grid-gap: 15px; /* Space between grid items */
     width: 100%; /* Ensure the gallery takes the full width of its container */
-    margin-top: 2000px;
+    margin-top: 500px;
 }
 /* Ensure gallery-item fits within its container */
 .gallery-item {
@@ -366,26 +434,44 @@ footer {
         background-color:black;
     }
     
+    /* compass container */
     .compass-container {
         width: 80vw; /* Adjust width for mobile */
         height: auto; /* Height will be adjusted automatically */
-        padding-top: 20px; /* Adjust padding if needed */
+        padding: 20px; /* Padding around the container */
         position: fixed; /* Ensure correct positioning */
-        bottom: 20px; /* Fixed 20px from the bottom of the screen */
+        bottom: 0; /* Root to the bottom of the screen */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center horizontally */
-        z-index: 1000; /* Ensure it floats above content */
+        z-index: 1000; /* Ensure it floats above other content */
+        display: flex; /* Flexbox for positioning options */
+        justify-content: center; /* Center options horizontally */
+        align-items: center; /* Center options vertically */
+    }
+
+    .center-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        margin: 20px; /* Add margin to ensure space around the center logo */
     }
 
     .center-logo img {
-        width: 100px;
+        width: 70px; /* Adjust width for mobile */
+        height: auto;
     }
 
     .option {
         width: 80px; /* Adjust width for mobile */
         height: 80px; /* Adjust height for mobile */
         font-size: 14px; /* Smaller font size */
-        padding: 5px; /* Adjust padding */
+        padding: 10px; /* Adjust padding */
+        position: absolute; /* Absolute positioning for flexibility */
+        display: flex; /* Flexbox for positioning content within option */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
     }
 
     .option span {
@@ -403,75 +489,35 @@ footer {
         opacity: 1;
     }
 
-    /* Reset hover effect for other options */
-    .option {
-        opacity: 1;
+     /* Adjust positions of compass options */
+    .option-north {
+        top: 10%; /* Move option north further down */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .option:hover ~ .option {
-        opacity: 1;
+    .option-south {
+        bottom: 10%; /* Move option south further up */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    /* Reset positioning for options */
-    .option-north, .option-south, .option-east, .option-west {
-        top: auto; /* Reset top for mobile */
-        bottom: auto; /* Reset bottom for mobile */
-        left: auto; /* Reset left for mobile */
-        right: auto; /* Reset right for mobile */
-        transform: none; /* Reset transform for mobile */
+    .option-east {
+        right: 10%; /* Move option east further left */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    .option {
-        position: relative; /* Change to relative to avoid overlapping */
-        margin: 10px; /* Add margin to space out options */
-    }
-    
-    /* compass container*/
-    .compass-container {
-        position: fixed; /* Fixed position to float over content */
-        bottom: 0; /* Root to the bottom of the screen */
-        right: 0; /* Adjust right position to align to the bottom right */
-        width: 80vw; /* Adjust width for mobile */
-        height: auto; /* Height will be adjusted automatically */
-        z-index: 1000; /* Ensure it floats above other content */
-        aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
-        display: flex; /* Flexbox for positioning options */
-        justify-content: center; /* Center options horizontally */
-        align-items: center; /* Center options vertically */
-    }
-
-    .center-logo img {
-        width: 70px;
-    }
-
-    .option {
-        width: 80px; /* Adjust width for mobile */
-        height: 80px; /* Adjust height for mobile */
-        font-size: 14px; /* Smaller font size */
-        padding: 10px; /* Adjust padding */
+    .option-west {
+        left: 10%; /* Move option west further right */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .option span {
-        font-size: 12px;
-        font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
+        font-size: 12px; /* Smaller font size for mobile */
     }
 
-    header, footer {
-        padding: 15px;
-    }
-
-    body {
-        font-size: 14px;
-    }
-    
-    .option-north, .option-south, .option-east, .option-west {
-        top: auto; /* Reset top for mobile */
-        bottom: auto; /* Reset bottom for mobile */
-        left: auto; /* Reset left for mobile */
-        right: auto; /* Reset right for mobile */
-        transform: none; /* Reset transform for mobile */
-    }
-    
     .option {
         position: relative; /* Change to relative to avoid overlapping */
         margin: 10px; /* Add margin to space out options */
@@ -480,12 +526,21 @@ footer {
 
     /* resume container */
     .resume-container {
-        height: 80vh; /* Adjust height for mobile */
+        position: relative;
+        width: 100%; /* Full width of the container */
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflow if needed */
+        padding: 20px; /* Add padding if needed */
+        box-sizing: border-box; /* Include padding in width/height calculations */
     }
-
+    
     .resume-container iframe {
-        width: 100%; /* Ensure iframe takes full width */
-        height: 100%; /* Ensure iframe takes full height */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        border: none; /* Remove border */
     }
 
 }
