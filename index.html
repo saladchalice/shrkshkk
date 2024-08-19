@@ -5,33 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Lu Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Page Transition Animation */
+        body {
+            overflow: hidden; /* Prevent scrolling during animation */
+        }
+
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Color of the transition overlay */
+            z-index: 1000; /* Ensure it's on top of everything */
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .page-transition.active {
+            transform: translateX(0);
+        }
+    </style>
 </head>
 <body>
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+
     <!-- Compass Navigation -->
     <div class="compass-container">
         <div class="center-logo">
             <img src="images/spin.gif" alt="My Logo">
         </div>
-        <div class="option option-north">
-            <a href="#section-art" data-file="art-portfolio.html" data-scroll="north">
+        <div class="option option-north" data-target="section-art">
+            <a href="#section-art">
                 <img src="images/lake.jpg" alt="ART">
                 <span>art</span>
             </a>
         </div>
-        <div class="option option-south">
-            <a href="#section-data" data-file="data-portfolio.html" data-scroll="south">
+        <div class="option option-south" data-target="section-data">
+            <a href="#section-data">
                 <img src="images/shark.png" alt="DATA">
                 <span>data</span>
             </a>
         </div>
-        <div class="option option-east">
-            <a href="#section-resume" data-file="resume.html" data-scroll="east">
+        <div class="option option-east" data-target="section-resume">
+            <a href="#section-resume">
                 <img src="images/dumpling.png" alt="RESUME">
                 <span>resume</span>
             </a>
         </div>
-        <div class="option option-west">
-            <a href="#section-about" data-file="about.html" data-scroll="west">
+        <div class="option option-west" data-target="section-about">
+            <a href="#section-about">
                 <img src="images/krab.png" alt="about">
                 <span>about</span>
             </a>
@@ -44,5 +69,31 @@
     <div id="section-resume" class="section"></div>
     <div id="section-about" class="section"></div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const transitionOverlay = document.getElementById('page-transition');
+            const options = document.querySelectorAll('.option');
+
+            function scrollToSection(targetId) {
+                document.querySelector(`#${targetId}`).scrollIntoView({ behavior: 'smooth' });
+            }
+
+            options.forEach(function(option) {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default link behavior
+                    const targetId = option.getAttribute('data-target');
+
+                    // Trigger the transition overlay animation
+                    transitionOverlay.classList.add('active');
+
+                    // Delay the scroll to allow animation to complete
+                    setTimeout(function() {
+                        scrollToSection(targetId);
+                        transitionOverlay.classList.remove('active');
+                    }, 500); // Duration should match the CSS transition duration
+                });
+            });
+        });
+    </script>
 </body>
 </html>

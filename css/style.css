@@ -227,11 +227,11 @@ header h2 {
 
 /* Hover Effect: Pop Out */
 .option:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .option:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: 1;
 }
 
