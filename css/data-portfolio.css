@@ -12,11 +12,13 @@
     position: relative;
     cursor: pointer;
     text-align: center;
+    background-color: black;
 }
 
 .project-item img {
     width: 100%;
-    height: auto;
+    max-height: 100;
+    width: auto;
     border-radius: 8px;
 }
 
