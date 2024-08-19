@@ -8,6 +8,23 @@
     box-sizing: border-box;
 }
 
+
+/* Main container styling */
+main {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around the content */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color for contrast */
+    padding: 20px; /* Padding for spacing */
+    margin-bottom: 20px; /* Space between sections */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+}
+
 span {
     font-family: 'Syne', sans-serif !important;
     font-weight: 400;
@@ -238,9 +255,10 @@ nav ul li a:hover {
     box-sizing: border-box; /* Ensure padding is included in the height */
     display: grid; /* Enable grid layout */
     grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
-    grid-gap: 20px; /* Space between grid items */
-    margin-top: 0; /* Ensure the gallery is aligned with the top of the viewport */
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px; /* Space between grid items */
     width: 100%; /* Ensure the gallery takes the full width of its container */
+    margin-top: 2000px;
 }
 /* Ensure gallery-item fits within its container */
 .gallery-item {
@@ -280,6 +298,7 @@ footer {
     .art-gallery {
         grid-template-columns: 1fr; /* Single column layout for mobile */
         padding: 10px; /* Adjust padding for mobile */
+        margin-top: 60px; 
     }
 
     .gallery-item {
