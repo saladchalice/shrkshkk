@@ -18,6 +18,8 @@ h2 {
     text-align: center;
 }
 
+
+
 /* Data Gallery */
 .data-gallery {
     display: grid;
@@ -69,6 +71,18 @@ h2 {
     overflow: hidden; /* Ensures text does not overflow */
     text-overflow: ellipsis;
     white-space: normal; /* Allows text to wrap */
+}
+
+.project-item a {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.project-item a img {
+    margin-right: 8px;
 }
 
 /* Modal Styles */
