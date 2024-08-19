@@ -308,8 +308,11 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: relative; /* Fix the header at the top */
+    position: fixed; /* Fix the header at the top */
     top: 0; /* Align it to the top of the page */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -334,21 +337,20 @@ nav ul li a:hover {
 /* ----------------Art Gallery Grid --------------------------------------*/
 .art-gallery {
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
     height: 100vh;
-    gap: 10px; 
+    gap: 15px; 
     box-sizing: border-box;
-    height: 100vh;
     max-width: 100vw;
-    position: relative;
+    margin-top: 60px;
 }
 
 /* Ensure gallery-item fits within its container */
 .gallery-item {
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     aspect-ratio: 1 / 1; /* Ensure items are square */
-    height: 350px; /* Maximum height for gallery items */
+    height: 300px; /* Maximum height for gallery items */
     display: flex;
     align-items: center;
     justify-content: center;
