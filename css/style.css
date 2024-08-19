@@ -294,14 +294,15 @@ nav ul li a:hover {
 
 /* ----------------Art Gallery Grid --------------------------------------*/
 .art-gallery {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 10px; 
+    gap: 20px;
     box-sizing: border-box;
-    margin-top: 80px; /* Ensure the grid starts below the header */
-    height: calc(100vh - 80px); /* Subtract header height from the viewport height */
+    margin-top: 200px; /* Ensure the grid starts below the header */
+    padding-bottom: 0px; /* Add padding at the bottom to avoid content being cut off */
     max-width: 100vw;
-    overflow-y: auto; /* Allow scrolling if content exceeds grid height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    /*max-height: calc(100vh - 80px); /* Limit grid height to viewport minus header */
 }
 
 /* Ensure gallery-item fits within its container */
@@ -309,7 +310,6 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1; /* Ensure items are square */
-    height: 300px; /* Maximum height for gallery items */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -317,7 +317,7 @@ nav ul li a:hover {
 
 .gallery-item img {
     max-width: 100%;
-    max-height: 100%;
+    height: 300;
     object-fit: contain; /* Ensure the entire image is visible */
     display: block;
     transition: transform 0.3s ease;
