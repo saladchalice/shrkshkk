@@ -317,7 +317,7 @@ nav ul li a:hover {
 
 .gallery-item img {
     max-width: 100%;
-    max-height: 300;
+    max-height: 250;
     object-fit: contain; /* Ensure the entire image is visible */
     display: block;
     transition: transform 0.3s ease;
