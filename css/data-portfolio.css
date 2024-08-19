@@ -5,7 +5,8 @@
     padding: 20px;
     box-sizing: border-box; /* Include padding in total width and height */
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 200;
+    overflow-y: scroll;
 }
 
 .project-item {
@@ -24,10 +25,13 @@
 
 .project-item h3 {
     margin-top: 10px;
+    font-size: 15;
+    font-weight: 700;
 }
 
 .project-item p {
     margin-top: 5px;
+    font-size: 12;
 }
 
 /* Modal Styles */
