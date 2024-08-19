@@ -263,15 +263,18 @@ header h2 {
 
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
-    /*compass container*/
+    /* Compass Container */
     .compass-container {
-        position: relative;
-        max-width: 250px;
+        max-width: 200px;
         width: 40vw;
+        position: absolute;
+        bottom: 10px; /* Position at the bottom */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
     }
 
     .center-logo img {
-        width: 70px;
+        width: 60px;
     }
 
     .option {
@@ -279,6 +282,7 @@ header h2 {
         height: 60px; /* Adjust height for mobile */
         font-size: 11px; /* Smaller font size */
         padding: 5px; /* Adjust padding */
+        transition: transform 0.2s ease, opacity 0.2s ease; /* Slightly faster transition */
     }
 
     .option span {
@@ -286,35 +290,32 @@ header h2 {
         font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
     }
 
-    header, footer {
-        padding: 15px;
-    }
-
-    body {
-        font-size: 14px;
-        background-color:black;
-    }
-
     .option-north {
-        transform: none;
+        top: 10%; /* Adjust position from top */
+        left: 50%;
+        transform: translate(-50%, 0); /* Center horizontally */
     }
-    
+
     .option-south {
-
-        transform: none;
+        bottom: 10%; /* Adjust position from bottom */
+        left: 50%;
+        transform: translate(-50%, 0); /* Center horizontally */
     }
-    
+
     .option-east {
-
-        transform: none;
+        top: 50%;
+        right: 10%; /* Adjust position from right */
+        transform: translate(0, -50%); /* Center vertically */
     }
-    
+
     .option-west {
-        transform: none;
+        top: 50%;
+        left: 10%; /* Adjust position from left */
+        transform: translate(0, -50%); /* Center vertically */
     }
 
     .option:hover img {
-        transform: none;
+        transform: none; /* Disable zoom effect on hover */
     }
     
     .option:hover {

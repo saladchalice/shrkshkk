@@ -18,7 +18,7 @@ h2 {
     font-size: 2em;
     color: #131313;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: view;
 }
 
 /*format rows and all that*/
