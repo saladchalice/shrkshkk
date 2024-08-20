@@ -21,10 +21,12 @@ body, html {
     background-image: url('../images/background.png');
     position: relative;
     width:100%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
+    text-align: center;
 }
 
 /* ----------------------main-page----------------------*/
@@ -40,11 +42,24 @@ body, html {
     width: 100%;
 }
 
+.website-intro {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically if needed */
+    padding: 20px; /* Adds padding around the content */
+    margin: 0 auto; /* Ensures the section is centered within its parent */
+    text-align: center; /* Centers the text inside the section */
+    font-family: 'Syne', sans-serif;
+}
+
+
+
 
 /* -------------------------------alt page-----------------------------------*/
 .alt-page .background-container {
     position: relative;
-    min-height: 100vh; /* Ensures the background covers the viewport height */
+    height: 100vh; /* Ensures the background covers the viewport height */
+    background-color: #000;
 }
 
 
@@ -84,7 +99,7 @@ span {
     background-color: #000000; 
     color: #fff;
     padding: 20px; 
-    max-width: 60%;
+    max-width: 40%;
     margin: 0 auto;
     box-sizing: border-box;
     line-height: 2; 
