@@ -68,9 +68,9 @@ body, html {
 
 .logo {
     position: fixed; /* Fixed relative to the viewport */
-    top: 10px; /* Distance from the top of the viewport */
-    right: 10px; /* Distance from the right of the viewport */
-    width: 100px; /* Adjust width as needed */
+    top: 20px; /* Distance from the top of the viewport */
+    right: 20x; /* Distance from the right of the viewport */
+    width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     z-index: 1000; /* Ensure it stays above other content */
 }
@@ -224,7 +224,7 @@ span {
 }
 
 .text .h3{
-    font-size: 2.6em; 
+    font-size: 3.6em; 
     margin-bottom: 10px; 
     color: #fff;
     font-weight: 700;
