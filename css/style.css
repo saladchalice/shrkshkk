@@ -168,6 +168,20 @@ body, html {
     background-color:#000;
 }
 
+.alt-page .black-space {
+    background-color: #000;
+    width: 100%;
+    height: auto; /* Automatically adjusts to content */
+    min-height: 100vh; /* Ensures it fills the viewport height */
+}
+
+@media only screen and (max-width: 600px) {
+    .alt-page .black-space {
+        min-height: auto; /* Removes viewport height minimum */
+        height: auto; /* Ensures the black space fits the content */
+    }
+}
+
 
 /* ----------------------------- basics --------------------------------------*/
 
@@ -477,28 +491,7 @@ span {
 }
 
 
-/* Mobile Styles (up to 600px) */
-@media only screen and (max-width: 768px) {
-    /* resume container */
-    .resume-container {
-        position: relative;
-        width: 100%; /* Full width of the container */
-        height: 100vh; /* Full viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden; /* Hide overflow if needed */
-        padding: 20px; /* Add padding if needed */
-        box-sizing: border-box; /* Include padding in width/height calculations */
-    }
-    
-    .resume-container iframe {
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        border: none; /* Remove border */
-    }
 
-}
 
 
 /*--------------------------------data gallery---------------------------*/
