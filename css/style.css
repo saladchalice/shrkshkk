@@ -20,13 +20,16 @@ body, html {
 .background-container {
     background-image: url('../images/background.png');
     position: relative;
-    width:100%;
+    width:100vh;
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
     border: none;
     text-align: center;
+    background-color:#000;
 }
 
 /* ----------------------main-page----------------------*/
@@ -53,12 +56,10 @@ body, html {
 }
 
 
-
-
 /* -------------------------------alt page-----------------------------------*/
 .alt-page .background-container {
-    position: relative;
     height: 100vh; /* Ensures the background covers the viewport height */
+    width:100%;
     background-color: #000;
 }
 
@@ -99,7 +100,6 @@ span {
     background-color: #000000; 
     color: #fff;
     padding: 20px; 
-    max-width: 40%;
     margin: 0 auto;
     box-sizing: border-box;
     line-height: 2; 
@@ -108,6 +108,12 @@ span {
 
 #text h2 {
     font-size: 1.8em; 
+    margin-bottom: 10px; 
+    color: #fff;
+}
+
+#text h3{
+    font-size: 2.6em; 
     margin-bottom: 10px; 
     color: #fff;
 }
@@ -292,13 +298,13 @@ span {
 /* --------------------------------Resume Container----------------------- */
 .resume-container {
     position: relative;
-    max-width: 100%;
-    max-height: 100%; /* Adjust height to use most of the viewport height */
+    width: 100%;
+    height: 100%; 
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Hide overflow to keep iframe within bounds */
+    overflow: hidden; 
 }
 
 .resume-container iframe {
@@ -418,6 +424,7 @@ h2 {
     flex-wrap: wrap;
     max-width: 90%;
     padding-top: 15px;
+    justify-content: center;
     padding-bottom: 15px;
 }
 
@@ -432,6 +439,16 @@ h2 {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.column h2 {
+    font-size: 1.5em; /* Adjust heading size */
+    margin-bottom: 10px;
+}
+
+.column p {
+    font-size: 1em; /* Adjust paragraph size */
+    line-height: 1.5;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
