@@ -14,49 +14,49 @@
             <h2>Data Science Projects</h2>
             <div class="data-gallery">
                 <!-- Project Item 1 -->
-                <div class="project-item" onclick="openProject('project1')">
+                <div class="project-item">
                     <img src="images/data/power.png" alt="Power Outages">
                     <h3>Power Outages: Predicting Severity and Evaluating Causes</h3>
                     <p>This project centers around the dataset “Data on major power outage events in the continental U.S.” compiled by Mukherjee et al., 2018 in order to identify and understand the most impactful characteristics that are associated with power outage severity and use them to predict future severity.</p>
                 </div>
                 <!-- Project Item 2 -->
-                <div class="project-item" onclick="openProject('project2')">
+                <div class="project-item">
                     <img src="images/data/azure.png" alt="VM Migration">
                     <h3>Developing Environmentally-Aware Algorithms to Recommend Virtual Machine Migration</h3>
                     <p>This project develops two forecasting techniques that consider emissions patterns to recommend to cloud computing users optimal times to migrate cloud resources. Algorithms were trained on cloud computing center data provided by Microsoft Azure as well as historic emissions from WattimeAPI.</p>
                 </div>
                 <!-- Project Item 3 -->
-                <div class="project-item" onclick="openProject('project3')">
+                <div class="project-item">
                     <img src="images/data/walk.png" alt="Urban Walkability">
                     <h3>Impacts of Urban Walkability and Wage on Car Ownership in California</h3>
                     <p>Utilized U.S EPA's Smart Location Dataset to analyze Californian areas' relationships between the EPA-rated Walkability (an aggregate index for traffic, access to public transit, and accessibility of labor), wage, and car ownership, modeling it with regression.</p>
                 </div>
                 <!-- Project Item 4 -->
-                <div class="project-item" onclick="openProject('project4')">
+                <div class="project-item">
                     <img src="images/data/zaf.png" alt="Race-Related Discourse">
                     <h3>Structural Topic Analysis of Race-Related Discourse in South African SOTN Speeches</h3>
                     <p>Utilized structural topic modeling techniques in RStudio to evaluate trends in topical frequency and significance across all State of the Nation addresses since 1994. Analyzed and tracked topics heavily interlinked with racial discourse and post-apartheid reform to discover their evolution over time.</p>
                 </div>
                 <!-- Project Item 5 -->
-                <div class="project-item" onclick="openProject('project5')">
+                <div class="project-item">
                     <img src="images/data/gstore.png" alt="Financial Performance">
                     <h3>General Store Co-Op Financial Performance and Forecasting</h3>
                     <p>Compiled sales data of my workplace over the past 16 months in Python pandas, cleaned the data to arrange it into tidy format, and generated summary statistics and visualizations to showcase demand trends and possible expansions. Also trained an ARIMA model for demand forecasting.</p>
                 </div>
                  <!-- Project Item 6 -->
-                 <div class="project-item" onclick="openProject('project6')">
+                 <div class="project-item">
                     <img src="images/data/uk.png" alt="Brexit Analysis">
                     <h3>RStudio Brexit Analysis: Demographic and Economic Differences in Pro-Brexit Councils</h3>
                     <p>Utilized RStudio to intake demographic data on English councils to attempt to evaluate factors that are correlated with voting Leave, including unemployment statistics, import-shock susceptibility, immigrant population, and population share above the age of 60, among others.</p>
                 </div>
                 <!-- Project Item 7 -->
-                <div class="project-item" onclick="openProject('project6')">
+                <div class="project-item" >
                     <img src="images/data/money.png" alt="Brexit Analysis">
                     <h3>XGBoost Credit Card Fraud Classifier</h3>
                     <p>Implements and trains an XGBoost machine learning algorithm in Python with the XGBoost package to classify financial transaction data as fraudulent or legitimate based on factors such as transaction time, category, merchant, amount, etc.</p>
                 </div>
                 <!-- Project Item 8 -->
-                <div class="project-item" onclick="openProject('project6')">
+                <div class="project-item" >
                     <img src="images/data/knn.png" alt="Brexit Analysis">
                     <h3>K-Nearest Neighbors Image Classifier</h3>
                     <p>Implemented an RGB image processing class in Python that reads in images and offers customization options as well as a KNN component to analyze image similarity and assign unlabeled images labels according to the labels of its nearest neighbors.</p>
@@ -66,61 +66,5 @@
             </div>
         </section>
     </main>
-
-    <!-- Modal for displaying project details -->
-    <div id="project-modal" class="modal">
-        <span class="close" onclick="closeProject()">&times;</span>
-        <div class="modal-content">
-            <div id="project1" class="modal-body">
-                <h2>Power Outages: Predicting Severity and Evaluating Causes</h2>
-                <img src="images/data/power-full.jpg" alt="Power Outages Full">
-                <p>This project centers around the dataset “Data on major power outage events in the continental U.S.” compiled by Mukherjee et al., 2018 in order to identify and understand the most impactful characteristics that are associated with power outage severity and use them to predict future severity.</p>
-                <a href="https://github.com/saladchalice/Power-Outages-Predicting-Severity-and-Evaluating-Causes" target="_blank">
-                    <img src="images/git.png" alt="GitHub" style="width: 24px; height: 24px;">
-                    View on GitHub
-                </a>
-            </div>
-            <div id="project2" class="modal-body">
-                <h2>Environmentally-Aware Virtual Machine Migration Algorithm</h2>
-                <img src="images/data/azure-full.jpg" alt="VM Migration Full">
-                <p>This project develops two forecasting techniques that consider emissions patterns to recommend to cloud computing users optimal times to migrate cloud resources. Algorithms were trained on cloud computing center data provided by Microsoft Azure as well as historic emissions from WattimeAPI.</p>
-            </div>
-            <div id="project3" class="modal-body">
-                <h2>Impacts of Urban Walkability and Wage on Car Ownership in California</h2>
-                <img src="images/data/walk-full.jpg" alt="Urban Walkability Full">
-                <p>Utilized U.S EPA's Smart Location Dataset to analyze Californian areas' relationships between the EPA-rated Walkability (an aggregate index for traffic, access to public transit, and accessibility of labor), wage, and car ownership, modeling it with regression.</p>
-            </div>
-            <div id="project4" class="modal-body">
-                <h2>Structural Topic Analysis of Race-Related Discourse in South African SOTN Speeches</h2>
-                <img src="images/data/zaf-full.jpg" alt="Race-Related Discourse Full">
-                <p>Utilized structural topic modeling techniques to evaluate trends in topical frequency and significance across all State of the Nation addresses since 1994. Analyzed and tracked topics heavily interlinked with racial discourse and post-apartheid reform to discover their evolution over time.</p>
-            </div>
-            <div id="project5" class="modal-body">
-                <h2>General Store Co-Op Financial Performance and Forecasting</h2>
-                <img src="images/data/gstore-full.jpg" alt="Financial Performance Full">
-                <p>Compiled sales data of my workplace over the past 16 months, cleaned the data to arrange it into tidy format, and generated summary statistics and visualizations to showcase demand trends and possible expansions. Also trained an ARIMA model for demand forecasting.</p>
-            </div>
-            <div id="project6" class="modal-body">
-                <h2>RStudio Brexit Analysis: Demographic and Economic Differences in Pro-Brexit Councils</h2>
-                <img src="images/data/uk-full.jpg" alt="Brexit Analysis Full">
-                <p>Utilized RStudio to intake demographic data on English councils to attempt to evaluate factors that are correlated with voting Leave, including unemployment statistics, import-shock susceptibility, immigrant population, and population share above the age of 60, among others.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openProject(projectId) {
-            document.getElementById('project-modal').style.display = 'block';
-            document.querySelectorAll('.modal-body').forEach(element => {
-                element.style.display = 'none';
-            });
-            document.getElementById(projectId).style.display = 'block';
-        }
-    
-        function closeProject() {
-            document.getElementById('project-modal').style.display = 'none';
-        }
-    </script>
-    
 </body>
 </html>
