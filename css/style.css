@@ -48,7 +48,7 @@ body, html {
     display: flex;
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically if needed */
-    padding: 20px; /* Adds padding around the content */
+    padding: 15px; /* Adds padding around the content */
     margin: 0 auto; /* Ensures the section is centered within its parent */
     text-align: center; /* Centers the text inside the section */
     font-family: 'Syne', sans-serif;
@@ -75,9 +75,18 @@ body, html {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(33.33% - 20px);
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 0px;
     z-index: 1;
+}
+
+.cool-col iframe {
+    border-radius: 12px;
+    width: 80%; /* Adjust the width to fit your needs */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set a maximum width if needed */
+    display: block; /* Remove extra space below the iframe */
+    margin: 0 auto; /* Center the iframe horizontally */
 }
 
 .cool-col:nth-child(2){
