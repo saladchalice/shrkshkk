@@ -9,7 +9,7 @@
 }
 
 
-/* Main container styling */
+/* Main container and text styling */
 main {
     color: #fff; /* White text color */
     padding: 20px; /* Padding around the content */
@@ -19,7 +19,7 @@ main {
 section {
     color: #fff; /* White text color for contrast */
     padding: 20px; /* Padding for spacing */
-    margin-bottom: 10px; /* Space between sections */
+    margin-bottom: 10px; 
     box-sizing: border-box; /* Ensure padding is included in width/height calculations */
     line-height: 1.8; /* Increase line height for better readability */
 }
@@ -29,7 +29,7 @@ section {
     background-color: #141414; /* Semi-transparent black background */
     color: #fff; /* White text color for contrast */
     padding: 20px; /* Padding around the content */
-    margin-bottom: 20px; /* Space between sections */
+    margin-bottom: 20px; 
     box-sizing: border-box; /* Include padding in width/height calculations */
     line-height: 2; /* Line height for better readability */
 }
@@ -200,7 +200,7 @@ header h2 {
     opacity: 0.5;
 }
 
-/* ----------------------Social Media Logos -----------------------------*/
+/* ---------------------- About------------ -----------------------------*/
 #socials {
     display: flex;
     justify-content: center;
@@ -222,6 +222,21 @@ header h2 {
 
 #socials a:hover img {
     transform: scale(1.2); /* Slightly enlarge the logo on hover */
+}
+
+
+/* photo */
+#photo {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (optional) */
+    margin: 20px 0; /* Optional margin to adjust spacing */
+}
+
+#photo img {
+    width: 200px; /* Set width */
+    height: 200px; /* Set height */
+    object-fit: cover; /* Ensures the image covers the specified area */
 }
 
 /* --------------------------------Resume Container----------------------- */
@@ -316,24 +331,24 @@ header h2 {
 
 /* Section Title */
 h2 {
-    margin-top: 50px; /* Adjusted margin to position the title */
+    margin-top: 50px;
     font-size: 2em;
     color: #131313;
     margin-bottom: 10px;
-    text-align: center; /* Center the title */
+    text-align: center; 
 }
 
-/*format rows and all that*/
 .row {
     display: flex;
     flex-wrap: wrap;
+    max-width: 80vw;
     padding: 0 4px;
 }
 
 /* Create four equal columns that sit next to each other */
 .column {
     flex: 25%;
-    max-width: 25%;
+    max-width: 20%;
     padding: 0 4px;
 }
 
@@ -358,24 +373,6 @@ h2 {
         max-width: 100%;
     }
 }
-
-
-
-
-/* photo */
-#photo {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically (optional) */
-    margin: 20px 0; /* Optional margin to adjust spacing */
-}
-
-#photo img {
-    width: 200px; /* Set width */
-    height: 200px; /* Set height */
-    object-fit: cover; /* Ensures the image covers the specified area */
-}
-
 
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
