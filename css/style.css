@@ -42,7 +42,7 @@ body, html {
     width: 100%;
 }
 
-.website-intro {
+.website-block {
     display: flex;
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically if needed */
@@ -55,12 +55,40 @@ body, html {
 .cool-row{
     display:flex;
     flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .cool-col{
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(33.33% - 20px);
+}
+
+.cool-col:nth-child(2){
+    transition-delay:200ms;
+}
+
+.cool-col:nth-child(2){
+    transition-delay:400ms;
+}
+
+.cool-col:nth-child(2){
+    transition-delay:600ms;
+}
+
+.hidden {
+    opacity:0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition:all 1s;
+
+}
+
+.show {
+    opacity:1;
+    filter: blur(0);
+    transform:translateX(0);
 }
 
 
@@ -111,31 +139,33 @@ span {
 }
 
 /*----------------------- about-me text formatting ---------------------------*/
-#text {
+.text {
+    display:grid;
+    place-items:center;
+    align-content:center;
     background-color: #000000; 
     color: #fff;
     padding: 20px; 
     margin: 0 auto;
     box-sizing: border-box;
     line-height: 2; 
-    text-align: center;
 }
 
-#text h2 {
+.text .h2 {
     font-size: 1.8em; 
     margin-bottom: 10px; 
     color: #fff;
     font-weight: 700;
 }
 
-#text h3{
+.text .h3{
     font-size: 2.6em; 
     margin-bottom: 10px; 
     color: #fff;
     font-weight: 700;
 }
 
-#text p {
+.text .p {
     font-size: 1em;
     margin-bottom: 15px; 
     line-height: 1.8;
