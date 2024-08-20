@@ -8,6 +8,30 @@
     box-sizing: border-box;
 }
 
+/* Fullscreen Background */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  text */
+body {
+    font-family: 'Syne', sans-serif;
+    font-weight: 400;
+    color: white;
+    background-color: #000; /* Black background for entire page */
+}
+
 
 /* Main container and text styling */
 main {
@@ -23,6 +47,18 @@ section {
     box-sizing: border-box; /* Ensure padding is included in width/height calculations */
     line-height: 1.8; /* Increase line height for better readability */
 }
+
+header h1 {
+    margin-bottom: 10px;
+    background-color:black;
+}
+
+header h2 {
+    background-color: #000; /* Black background for header text */
+    color: #fff; /* White text color for contrast */
+    padding: 10px; /* Add padding to create spacing */
+}
+
 
 /* text formatting */
 #text {
@@ -52,41 +88,6 @@ section {
 span {
     font-family: 'Syne', sans-serif !important;
     font-weight: 400;
-}
-
-/* Fullscreen Background */
-body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*  text */
-body {
-    font-family: 'Syne', sans-serif;
-    font-weight: 400;
-    color: white;
-    background-color: #000; /* Black background for entire page */
-}
-
-header h1 {
-    margin-bottom: 10px;
-    background-color:black;
-}
-
-header h2 {
-    background-color: #000; /* Black background for header text */
-    color: #fff; /* White text color for contrast */
-    padding: 10px; /* Add padding to create spacing */
 }
 
 /* ----------------------Compass Container ----------------------------------*/
@@ -376,66 +377,6 @@ h2 {
 
 /* Mobile Styles (up to 600px) */
 @media only screen and (max-width: 600px) {
-    /* Compass Container */
-    .compass-container {
-        max-width: 200px;
-        width: 40vw;
-        position: absolute;
-        bottom: 10px; /* Position at the bottom */
-        left: 50%;
-        transform: translateX(-50%); /* Center horizontally */
-    }
-
-    .center-logo img {
-        width: 60px;
-    }
-
-    .option {
-        width: 60px; /* Adjust width for mobile */
-        height: 60px; /* Adjust height for mobile */
-        font-size: 11px; /* Smaller font size */
-        padding: 5px; /* Adjust padding */
-        transition: transform 0.2s ease, opacity 0.2s ease; /* Slightly faster transition */
-    }
-
-    .option span {
-        font-size: 11px;
-        font-family: 'Syne', sans-serif; /* Ensure all text uses Syne */
-    }
-
-    .option-north {
-        top: 10%; /* Adjust position from top */
-        left: 50%;
-        transform: translate(-50%, 0); /* Center horizontally */
-    }
-
-    .option-south {
-        bottom: 10%; /* Adjust position from bottom */
-        left: 50%;
-        transform: translate(-50%, 0); /* Center horizontally */
-    }
-
-    .option-east {
-        top: 50%;
-        right: 10%; /* Adjust position from right */
-        transform: translate(0, -50%); /* Center vertically */
-    }
-
-    .option-west {
-        top: 50%;
-        left: 10%; /* Adjust position from left */
-        transform: translate(0, -50%); /* Center vertically */
-    }
-
-    .option:hover img {
-        transform: none; /* Disable zoom effect on hover */
-    }
-    
-    .option:hover {
-        transform: none;
-        opacity: 1;
-    }
-
     /* resume container */
     .resume-container {
         position: relative;
