@@ -69,7 +69,7 @@ body, html {
 .logo {
     position: fixed; /* Fixed relative to the viewport */
     top: 20px; /* Distance from the top of the viewport */
-    right: 20x; /* Distance from the right of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     z-index: 1000; /* Ensure it stays above other content */
@@ -585,7 +585,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     max-width: 90%;
-    padding-left:45px;
+    padding-left:35px;
     padding-right:0px;
     padding-top: 15px;
     justify-content: center;
