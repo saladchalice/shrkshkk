@@ -8,6 +8,14 @@
     box-sizing: border-box;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
 /* ---------------background container------------------*/
 .background-container {
     background-image: url('../images/background.png');
@@ -16,6 +24,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: none;
 }
 
 /* ----------------------main-page----------------------*/
@@ -40,12 +49,14 @@
 
 
 /* ----------------------------- basics --------------------------------------*/
-body {
-    font-family: 'Syne', sans-serif;
-    font-weight: 400;
-    color: white;
-    background-color: #000; 
-    justify-content: center;
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 main {
@@ -70,11 +81,11 @@ span {
 
 /*----------------------- about-me text formatting ---------------------------*/
 #text {
-    background-color: #141414; 
+    background-color: #000000; 
     color: #fff;
     padding: 20px; 
-    max-width: 50%;
-    margin-bottom: 20px; 
+    max-width: 60%;
+    margin: 0 auto;
     box-sizing: border-box;
     line-height: 2; 
     text-align: center;
@@ -109,7 +120,7 @@ span {
 }
 
 .center-logo {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -122,7 +133,7 @@ span {
 }
 
 .option {
-    position: relative;
+    position: absolute;
     width: 125px;
     height: 125px;
     text-align: center;
@@ -205,6 +216,26 @@ span {
     opacity: 0.5;
 }
 
+@media screen and (max-width: 768px) {
+    .compass-container {
+        max-width: 300px; /* Adjust as needed for mobile screens */
+        width: 80vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
+    }
+
+    .center-logo img {
+        width: 100px; /* Make the logo smaller for mobile */
+    }
+
+    .option {
+        width: 100px; /* Adjust option size for mobile */
+        height: 100px;
+    }
+}
+
 /* ------------------------------ About--------------------------------------*/
 #socials {
     display: flex;
@@ -246,8 +277,8 @@ span {
 /* --------------------------------Resume Container----------------------- */
 .resume-container {
     position: relative;
-    width: 60%;
-    height: 80vh; /* Adjust height to use most of the viewport height */
+    max-width: 100%;
+    max-height: 100%; /* Adjust height to use most of the viewport height */
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -357,11 +388,12 @@ span {
 
 /* Section Title */
 h2 {
-    margin-top: 50px;
+    display: inline-block;
     font-size: 2em;
-    color: #d3d3d3;
+    color: #ffffff;
     padding: 15px;
     background-color: #000;
+    margin-top: 50px;
     margin-bottom: 0px;
     text-align: center; 
 }
