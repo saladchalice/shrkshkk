@@ -61,7 +61,6 @@ body, html {
     float: right;
     vertical-align: middle;
     height: 500px;
-    width: auto;
 }
 
 .cool-row{
@@ -184,7 +183,6 @@ span {
     margin: 0 auto;
     box-sizing: border-box;
     line-height: 2; 
-    max-width: 400px;
     z-index: 2;
 }
 
@@ -210,6 +208,44 @@ span {
     line-height: 1.8;
     color: #fff;
     z-index: inherit;
+}
+
+.intro-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Adds padding around the content */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.intro-text > div {
+    flex: 1 1 calc(33.33% - 20px); /* Allows each section to take up one-third of the container width minus margins */
+    margin: 10px; /* Spacing between columns */
+    box-sizing: border-box;
+}
+
+.intro-text h2 {
+    font-size: 1.5em; /* Adjust font size as needed */
+    color: #000; /* Text color */
+    margin-top: 0; /* Remove default top margin */
+}
+
+.intro-text p {
+    font-size: 1em; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .intro-text {
+        flex-direction: column; /* Stacks the items vertically on mobile */
+    }
+
+    .intro-text > div {
+        flex: 1 1 100%; /* Each section takes up full width */
+        margin: 10px 0; /* Adjust margins for vertical stacking */
+    }
 }
 
 
