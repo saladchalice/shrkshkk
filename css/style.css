@@ -10,59 +10,61 @@
 
 /* ---------------background container------------------*/
 .background-container {
-    position: relative;
     background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/* ----------------------main-page----------------------*/
+.main-page .background-container {
+    position: relative;
     height: 100vh; /* Full viewport height */
 }
 
 /* black space under */
-.black-space {
+.main-page .black-space {
     background-color: #000;
-    height: 4000px; /* Adjust height as needed */
+    height: 3000px; /* Adjust height as needed */
     width: 100%;
 }
 
+/* -------------------------------alt page-----------------------------------*/
+.alt-page .background-container {
+    position: relative;
+    min-height: 100vh; /* Ensures the background covers the viewport height */
+}
 
-/*  text */
+
+/* ----------------------------- basics --------------------------------------*/
 body {
     font-family: 'Syne', sans-serif;
     font-weight: 400;
     color: white;
-    background-color: #000; /* Black background for entire page */
+    background-color: #000; 
 }
 
-
-/* Main container and text styling */
 main {
     color: #fff; /* White text color */
     padding: 20px; /* Padding around the content */
     box-sizing: border-box; /* Include padding in width/height calculations */
+    font-family: 'Syne', sans-serif;
 }
 
 section {
-    color: #fff; /* White text color for contrast */
-    padding: 20px; /* Padding for spacing */
+    color: #fff; 
+    padding: 20px;
     margin-bottom: 10px; 
-    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
-    line-height: 1.8; /* Increase line height for better readability */
+    box-sizing: border-box; 
+    line-height: 1.8; 
 }
 
-header h1 {
-    margin-bottom: 10px;
-    background-color:black;
+span {
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 400;
 }
 
-header h2 {
-    background-color: #000; /* Black background for header text */
-    color: #fff; /* White text color for contrast */
-    padding: 10px; /* Add padding to create spacing */
-}
-
-
-/* text formatting */
+/*----------------------- about-me text formatting ---------------------------*/
 #text {
     background-color: #141414; 
     color: #fff; /* White text color for contrast */
@@ -73,14 +75,12 @@ header h2 {
     line-height: 2; /* Line height for better readability */
 }
 
-/* Heading Styling */
 #text h2 {
     font-size: 1.8em; /* Larger font size for headings */
     margin-bottom: 10px; /* Space below the heading */
     color: #fff; /* White color for headings */
 }
 
-/* Paragraph Styling */
 #text p {
     font-size: 1em; /* Font size for paragraphs */
     margin-bottom: 15px; /* Space below paragraphs */
@@ -88,14 +88,10 @@ header h2 {
     color: #fff; /* White color for paragraphs */
 }
 
-span {
-    font-family: 'Syne', sans-serif !important;
-    font-weight: 400;
-}
 
 /* ----------------------Compass Container ----------------------------------*/
 .compass-container {
-    position: relative;
+    position: fixed;
     max-width: 400px;
     width: 90vw;
     display: flex;
@@ -104,8 +100,6 @@ span {
     aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
 }
 
-
-/* Center Logo */
 .center-logo {
     position: absolute;
     top: 50%;
@@ -119,7 +113,6 @@ span {
     height: auto;
 }
 
-/* Options Positioning */
 .option {
     position: absolute;
     width: 125px;
@@ -156,7 +149,7 @@ span {
     margin-top: 15px;
     font-size: 20px;
     color: white;
-    font-family: 'Syne', sans-serif; /* Ensure span text uses Syne */
+    font-family: 'Syne', sans-serif;
     font-weight: 700;
 }
 
@@ -195,7 +188,7 @@ span {
     opacity: 1;
 }
 
-/* Optional: Make non-hovered options fade slightly */
+/* Make non-hovered options fade slightly */
 .option {
     opacity: 0.9;
 }
@@ -204,7 +197,7 @@ span {
     opacity: 0.5;
 }
 
-/* ---------------------- About------------ -----------------------------*/
+/* ------------------------------ About--------------------------------------*/
 #socials {
     display: flex;
     justify-content: center;
@@ -227,7 +220,6 @@ span {
 #socials a:hover img {
     transform: scale(1.2); /* Slightly enlarge the logo on hover */
 }
-
 
 /* photo */
 #photo {
@@ -261,6 +253,31 @@ span {
     max-height: 100%;
 }
 
+
+/* Mobile Styles (up to 600px) */
+@media only screen and (max-width: 600px) {
+    /* resume container */
+    .resume-container {
+        position: relative;
+        width: 100%; /* Full width of the container */
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflow if needed */
+        padding: 20px; /* Add padding if needed */
+        box-sizing: border-box; /* Include padding in width/height calculations */
+    }
+    
+    .resume-container iframe {
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        border: none; /* Remove border */
+    }
+
+}
+
+
 /*--------------------------------data gallery---------------------------*/
 
 /* Data Gallery */
@@ -271,11 +288,10 @@ span {
     padding: 20px;
     box-sizing: border-box; /* Include padding in total width and height */
     max-width: 100%;
-    margin-top: 25px;
+    margin-top: 10px;
     overflow: auto;
     margin-left: auto; /* Aligns the grid container to the right side */
 }
-
 
 /* Project Item */
 .project-item {
@@ -335,22 +351,25 @@ span {
 h2 {
     margin-top: 50px;
     font-size: 2em;
-    color: #131313;
-    margin-bottom: 10px;
+    color: #d3d3d3;
+    padding: 15px;
+    background-color: #000;
+    margin-bottom: 0px;
     text-align: center; 
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    max-width: 80vw;
-    padding: 0 4px;
+    max-width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* Create four equal columns that sit next to each other */
 .column {
     flex: 25%;
-    max-width: 20%;
+    max-width: 25%;
     padding: 0 4px;
 }
 
@@ -374,28 +393,5 @@ h2 {
         flex: 100%;
         max-width: 100%;
     }
-}
-
-/* Mobile Styles (up to 600px) */
-@media only screen and (max-width: 600px) {
-    /* resume container */
-    .resume-container {
-        position: relative;
-        width: 100%; /* Full width of the container */
-        height: 100vh; /* Full viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden; /* Hide overflow if needed */
-        padding: 20px; /* Add padding if needed */
-        box-sizing: border-box; /* Include padding in width/height calculations */
-    }
-    
-    .resume-container iframe {
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        border: none; /* Remove border */
-    }
-
 }
 
