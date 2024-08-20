@@ -57,13 +57,13 @@ body, html {
 }
 
 .background-image-block {
-    background-image: url('../images/photos/icelake.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-    box-sizing: border-box;
-    
+    background-image: url('../images/photos/bleu.jpg'); 
+    background-size: cover; 
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Ensures the container spans the full width */
+    height: 100%; 
+    position: relative;
 }
 
 .main-page .black-space .background-image{
@@ -78,8 +78,8 @@ body, html {
 .cool-row{
     display:flex;
     flex-wrap: wrap;
-    margin-top:35px;
-    margin-bottom: 35px;
+    margin-top:15px;
+    margin-bottom: 15px;
     z-index: 1;
 }
 
@@ -579,6 +579,7 @@ h2 {
     padding-top: 15px;
     justify-content: center;
     padding-bottom: 15px;
+    margin: 0 auto;
 }
 
 /* Create four equal columns that sit next to each other */
