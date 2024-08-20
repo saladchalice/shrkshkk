@@ -20,7 +20,7 @@ body, html {
 .background-container {
     background-image: url('../images/background.png');
     position: relative;
-    width: 100vw; /* Ensure full viewport width */
+    width: 100%; /* Ensure full viewport width */
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -63,6 +63,8 @@ body, html {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(33.33% - 20px);
+    margin-left: 150px;
+    margin-right: 15px;
 }
 
 .cool-col:nth-child(2){
@@ -96,7 +98,7 @@ body, html {
 .alt-page .background-container {
     background-image: url('../images/background.png');
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: #000;
     background-size: cover;
