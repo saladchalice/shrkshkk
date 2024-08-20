@@ -8,21 +8,23 @@
     box-sizing: border-box;
 }
 
-/* Fullscreen Background */
-body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+/* ---------------background container------------------*/
+.background-container {
+    position: relative;
     background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh; /* Full viewport height */
 }
+
+/* black space under */
+.black-space {
+    background-color: #000;
+    height: 4000px; /* Adjust height as needed */
+    width: 100%;
+}
+
 
 /*  text */
 body {
@@ -62,9 +64,10 @@ header h2 {
 
 /* text formatting */
 #text {
-    background-color: #141414; /* Semi-transparent black background */
+    background-color: #141414; 
     color: #fff; /* White text color for contrast */
     padding: 20px; /* Padding around the content */
+    max-width: 50%;
     margin-bottom: 20px; 
     box-sizing: border-box; /* Include padding in width/height calculations */
     line-height: 2; /* Line height for better readability */
@@ -243,7 +246,7 @@ span {
 /* --------------------------------Resume Container----------------------- */
 .resume-container {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 80vh; /* Adjust height to use most of the viewport height */
     margin-bottom: 20px;
     display: flex;
@@ -253,8 +256,6 @@ span {
 }
 
 .resume-container iframe {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
     border: none;
     max-width: 100%;
     max-height: 100%;
