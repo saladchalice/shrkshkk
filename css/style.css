@@ -462,7 +462,7 @@ span {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically (optional) */
-    margin: 20px 0; /* Optional margin to adjust spacing */
+    margin: 0px; /* Optional margin to adjust spacing */
 }
 
 #photo img {
