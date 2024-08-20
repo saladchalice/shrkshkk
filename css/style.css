@@ -20,12 +20,13 @@ body, html {
 .background-container {
     background-image: url('../images/background.png');
     position: relative;
-    width:100%;
+    width: 100vw; /* Ensure full viewport width */
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: none;
-    text-align: center;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
     background-color:#000;
 }
 
@@ -66,9 +67,15 @@ body, html {
 /* -------------------------------alt page-----------------------------------*/
 .alt-page .background-container {
     background-image: url('../images/background.png');
-    position:relative;
-    width:100%;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
 
 
