@@ -19,7 +19,7 @@ body, html {
 
 /* ---------------background container------------------*/
 .background-container {
-    background-image: url('../images/background.png');
+    background-image: url('../images/background.jpg');
     position: relative;
     width: 100%; /* Ensure full viewport width */
     height: 100vh;
@@ -57,13 +57,22 @@ body, html {
 }
 
 .background-image-block {
-    background-image: url('../images/photos/bleu.jpg'); 
-    background-size: cover; 
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100%; /* Ensures the container spans the full width */
-    height: 100%; 
     position: relative;
+    background-image: url('../images/shrkshkk.png'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+}
+
+.logo {
+    position: fixed; /* Fixed relative to the viewport */
+    top: 10px; /* Distance from the top of the viewport */
+    right: 10px; /* Distance from the right of the viewport */
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .main-page .black-space .background-image{
@@ -146,7 +155,7 @@ body, html {
 
 /* -------------------------------alt page-----------------------------------*/
 .alt-page .background-container {
-    background-image: url('../images/background.png');
+    background-image: url('../images/background.jpg');
     position: relative;
     width: 100%;
     height: 100vh;
