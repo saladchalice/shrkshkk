@@ -20,13 +20,10 @@ body, html {
 .background-container {
     background-image: url('../images/background.png');
     position: relative;
-    width:100vh;
-    height: 100vh;
+    width:100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
     border: none;
     text-align: center;
     background-color:#000;
@@ -35,7 +32,6 @@ body, html {
 /* ----------------------main-page----------------------*/
 .main-page .background-container {
     position: relative;
-    height: 100vh; /* Full viewport height */
 }
 
 /* black space under */
@@ -71,7 +67,6 @@ body, html {
 .alt-page .background-container {
     background-image: url('../images/background.png');
     position:relative;
-    height: 100vh; /* Ensures the background covers the viewport height */
     width:100%;
     background-color: #000;
 }
