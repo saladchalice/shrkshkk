@@ -187,6 +187,12 @@ body, html {
     height:auto;
 }
 
+.alt-page .about .black-space {
+    background-color: #000;
+    width: 100%;
+    height: 0px; /* Automatically adjusts to content */
+}
+
 .alt-page .art .black-space {
     background-color: #000;
     width: 100%;
@@ -195,10 +201,21 @@ body, html {
 }
 
 @media only screen and (max-width: 600px) {
-    .alt-page .black-space {
-        min-height: auto; /* Removes viewport height minimum */
-        height: auto; /* Ensures the black space fits the content */
+
+    .alt-page .data .black-space {
+        height:1000px; /* Adds at least 1000px extra height */
     }
+
+    .alt-page .art .black-space {
+        height: 3000px /* Adds at least 1000px extra height */
+    }
+
+    .alt-page .about .black-space {
+        background-color: #000;
+        width: 100%;
+        height: 800px; /* Automatically adjusts to content */
+    }
+
 }
 
 
