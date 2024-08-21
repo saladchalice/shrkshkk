@@ -510,8 +510,6 @@ span {
 
 #photo img:hover {
     transform: scale(1.05); /* Slightly enlarge */
-    border:#000;
-    border: 2px solid #000; /* 2px wide solid black border *
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
 }
 
