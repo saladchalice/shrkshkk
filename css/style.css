@@ -54,6 +54,8 @@ body, html {
     font-family: 'Syne', sans-serif;
     font-size: 16;
     overflow:hidden;
+    will-change: transform;
+    transition: opacity 1s, filter 1s, transform 1s;
 }
 
 .background-image-block {
