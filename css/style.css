@@ -155,6 +155,11 @@ body, html {
         flex: 100%;
         max-width: 100%;
     }
+    .main-page .black-space {
+        background-color: #000;
+        height: 3500px; /* Adjust height as needed */
+        width: 100%;
+    }
 }
 
 
@@ -196,7 +201,7 @@ body, html {
 .alt-page .art .black-space {
     background-color: #000;
     width: 100%;
-    min-height: 1700px; /* Automatically adjusts to content */
+    min-height: 2500px; /* Automatically adjusts to content */
     height:auto;
 }
 
@@ -535,6 +540,7 @@ span {
     height: 200px; /* Set height */
     object-fit: cover; /* Ensures the image covers the specified area */
     margin-top: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
 }
 
 .intro-text > div {
