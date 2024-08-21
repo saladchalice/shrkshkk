@@ -249,6 +249,7 @@ span {
     z-index: 1000; /* Ensures the footer stays above other content */
 }
 
+
 /*----------------------- about-me text formatting ---------------------------*/
 .text {
     display:grid;
@@ -274,6 +275,7 @@ span {
 
 .text .h3{
     font-size: 2.8em; 
+    font-family: "Syne", sans-serif;
     margin-bottom: 10px; 
     color: #fff;
     font-weight: 700;
