@@ -137,6 +137,14 @@ body, html {
     transform:translateX(0);
 }
 
+.website-block .hidden .row .column img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio:4/3;
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    position: absolute; /* Ensure the image covers the container */
+}
+
 @media screen and (max-width: 800px) {
     .cool-col {
         flex: 50%;
@@ -232,7 +240,7 @@ span {
 }
 
 .footer {
-    position: absolute; /* Positioning it relative to the closest positioned ancestor */
+    position: relative; /* Positioning it relative to the closest positioned ancestor */
     bottom: 0; /* Aligns to the bottom of the page */
     left: 0; /* Aligns to the left of the page */
     width: 100%; /* Takes up the full width of the viewport */
@@ -241,6 +249,7 @@ span {
     text-align: center; /* Centers the text horizontally */
     padding: 10px; /* Adds padding around the text */
     box-sizing: border-box; /* Ensures padding is included in the width */
+    font-family: "Syne", "sans-serif";
     font-size: 0.875em; /* Adjust font size if needed */
     z-index: 1000; /* Ensures the footer stays above other content */
 }
@@ -648,8 +657,6 @@ h2 {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    aspect-ratio: 4 / 3; /* Maintains the aspect ratio of 1170x879 */
-    object-fit: cover;
 }
 
 .column h2 {
