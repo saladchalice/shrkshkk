@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <!--geojson imports-->
+    <!-- Add Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Add Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script type="module" src="map.js"></script>
+
+    <!--animation import-->
     <script defer src="app.js"></script>
     <!--set favicon-->
     <link rel="shortcut icon" type="image/png" href="images/dog.png">
@@ -45,16 +55,20 @@
         </div>
     </div>
     <div class="black-space">
-        <div class="website-block">
-            <section class="text">
-                <h3>welcome to the official edward webpage</h3>
-                <p>this is where i will attempt to keep track of everything that i am up to. there is not much, currently, but construction is ongoing. </p>                
+        <div class = "website-block">
+            <section class ="text">
+                <h2><span class="smalltitle">long night of solace:</span class="subtitle"> indie/alternative from across the world</h2>
+                <p>for several years, i have been compiling an exhaustive curated list of indie/alternative music from every country in the world. so far i'm up to 69!</p>
             </section>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/45lMrjDlH4w4d0cJxGDyW3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="website-block">
+            <img class='countrypng' src="images/Count of country.png">
         </div>
         <div class = "website-block">
-            <section class="text">
+            <!-- <section class="text">
                 <section class="hidden">
-                    <h3>spotify playlists</h3>
+                    <h3>other spotify playlists</h3>
                     <div class="cool-row">
                         <div class = "cool-col">
                             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/45lMrjDlH4w4d0cJxGDyW3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -70,8 +84,9 @@
                         </div>
                     </div>    
                 </section>
-            </section>
+            </section> -->
         </div>
+        
         <div class="website-block">
             <section class="text">
                 <h3>sketches and travels</h3>
@@ -104,6 +119,12 @@
                 <p>i don't know how to do this yet...</p>
             </section>
         </div>
+        <div class ="website-block">
+            <section class="text">
+                <h3>latest shrkshkk activity</h3>
+            </section>
+        </div>
+
     </div>
     <footer class="footer">
         <p>© 2023 Edward Lu. All rights reserved.</p>

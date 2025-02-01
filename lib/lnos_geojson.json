@@ -1,0 +1,1161 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.6167,
+          -38.4161
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "somniferos",
+        "artist": "no te me enojes",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.0382,
+          40.0691
+        ]
+      },
+      "properties": {
+        "genre": "rock",
+        "song name": "the noise is a scream",
+        "artist": "clocker",
+        "rating": 6,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.9667,
+          12.5167
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "stomp",
+        "artist": "the revoir",
+        "rating": 8.5,
+        "personal notes": "white boys from the caribbean"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3333,
+          47.3333
+        ]
+      },
+      "properties": {
+        "genre": "experimental rock",
+        "song name": "acting moderate",
+        "artist": "killed by 9v batteries",
+        "rating": 9,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.3563,
+          23.685
+        ]
+      },
+      "properties": {
+        "genre": "alternative",
+        "song name": "sheishob din raatri",
+        "artist": "karnival",
+        "rating": 8.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.9534,
+          53.7098
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "\u0414\u0430\u0436\u0434\u0436\u0430\u043c\u0456",
+        "artist": "\u0411\u044f\u0437 \u041d\u0430\u0437\u0432\u044b",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.6849,
+          -22.3285
+        ]
+      },
+      "properties": {
+        "genre": "noise rock",
+        "song name": "bathroom wall",
+        "artist": "internet key",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -51.9253,
+          -14.235
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "germaboys | a crise do prensado",
+        "artist": "quem e voce alice",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.3468,
+          56.1304
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "la monogamie",
+        "artist": "malajube",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -23.6042,
+          15.1201
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "sinti alive",
+        "artist": "krad",
+        "rating": 6.9,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.542969,
+          -35.675147
+        ]
+      },
+      "properties": {
+        "genre": "math rock",
+        "song name": "resonancias",
+        "artist": "herbario",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.195397,
+          35.86166
+        ]
+      },
+      "properties": {
+        "genre": "alternative",
+        "song name": "\u5149",
+        "artist": "arches",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.297333,
+          4.570868
+        ]
+      },
+      "properties": {
+        "genre": "emo",
+        "song name": "become",
+        "artist": "the hall effect",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2,
+          45.1
+        ]
+      },
+      "properties": {
+        "genre": "psychedelic rock",
+        "song name": "meke ruke",
+        "artist": "cuvarkuca",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.472962,
+          49.817492
+        ]
+      },
+      "properties": {
+        "genre": "experimental rock",
+        "song name": "sign n spell",
+        "artist": "here",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.781167,
+          21.521757
+        ]
+      },
+      "properties": {
+        "genre": "shoegaze",
+        "song name": "no te veo",
+        "artist": "land whales",
+        "rating": 8.7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.501785,
+          56.26392
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "fencesitters",
+        "artist": "inventory",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.183406,
+          -1.831239
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "sindrome de uppsala",
+        "artist": "biorn borg",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.89653,
+          13.794185
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "color",
+        "artist": "inflorescencia",
+        "rating": 6.7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.748151,
+          61.92411
+        ]
+      },
+      "properties": {
+        "genre": "symphonic metal",
+        "song name": "amaranth",
+        "artist": "nightwish",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.213749,
+          46.603354
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "je te vois encore",
+        "artist": "foggy bottoms",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.451526,
+          51.165691
+        ]
+      },
+      "properties": {
+        "genre": "alternative",
+        "song name": "hands and arrows",
+        "artist": "sometree",
+        "rating": 8.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.023194,
+          7.946527
+        ]
+      },
+      "properties": {
+        "genre": "rock",
+        "song name": "try",
+        "artist": "dark suburb",
+        "rating": 5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.824312,
+          39.074208
+        ]
+      },
+      "properties": {
+        "genre": "pop rock (?)",
+        "song name": "the big deal",
+        "artist": "tripwire",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42.604303,
+          71.706936
+        ]
+      },
+      "properties": {
+        "genre": "folk rock",
+        "song name": "inuinnaagavit",
+        "artist": "nanook",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.503304,
+          47.162494
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "ha az eletben",
+        "artist": "kispal es a borz",
+        "rating": 7.6,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -19.020835,
+          64.963051
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "fardu i roo",
+        "artist": "botnledja",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.96288,
+          20.593684
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "the bridge between us",
+        "artist": "pacifist",
+        "rating": 6.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.921327,
+          -0.789275
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "checks and calls",
+        "artist": "liar's wife",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.24389,
+          53.41291
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "boys in the better land",
+        "artist": "fontaines d.c",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.56738,
+          41.87194
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "come dovrei oppormi",
+        "artist": "bymyside",
+        "rating": 10,
+        "personal notes": "dark, fast"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.297508,
+          18.109581
+        ]
+      },
+      "properties": {
+        "genre": "alternative",
+        "song name": "vex",
+        "artist": "dxrkknght, indie anthony",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.252924,
+          36.204824
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "hyperventilation",
+        "artist": "radwimps",
+        "rating": 8.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.238414,
+          30.585164
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "khatem",
+        "artist": "akher zapheer",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.923684,
+          48.019573
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "kokke",
+        "artist": "far in gate",
+        "rating": 6.7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.906193,
+          -1.292066
+        ]
+      },
+      "properties": {
+        "genre": "rock",
+        "song name": "nitachange",
+        "artist": "rash band, ruff",
+        "rating": 5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.603189,
+          56.879635
+        ]
+      },
+      "properties": {
+        "genre": "dream pop",
+        "song name": "i want you",
+        "artist": "tribes of the city",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.862285,
+          33.854721
+        ]
+      },
+      "properties": {
+        "genre": "dream pop",
+        "song name": "dead end",
+        "artist": "postcards",
+        "rating": 6,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.129583,
+          49.815273
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "6th of august",
+        "artist": "holy national victims",
+        "rating": 6.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.552784,
+          23.634501
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "eres",
+        "artist": "cafe tacvba",
+        "rating": 9,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.846656,
+          46.862496
+        ]
+      },
+      "properties": {
+        "genre": "rock",
+        "song name": "tuurugdul",
+        "artist": "orshihui",
+        "rating": 6.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.09262,
+          31.791702
+        ]
+      },
+      "properties": {
+        "genre": "punk",
+        "song name": "aisha qandisha",
+        "artist": "taqbir",
+        "rating": 7,
+        "personal notes": "hijabi punk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.49041,
+          -22.95764
+        ]
+      },
+      "properties": {
+        "genre": "garage rock",
+        "song name": "over this",
+        "artist": "penilane",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.291266,
+          52.132633
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "geek",
+        "artist": "bettie serveert",
+        "rating": 8.6,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.745275,
+          41.608635
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "peski nakaj doma",
+        "artist": "\u0414\u0438\u0432\u043e\u0433\u0440\u0430\u0434\u0431\u0430 (divogradka)",
+        "rating": 9,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.675277,
+          9.081999
+        ]
+      },
+      "properties": {
+        "genre": "rock",
+        "song name": "oge",
+        "artist": "clayrocksu",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.468946,
+          60.472024
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "pie in the sky",
+        "artist": "drape",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.345116,
+          30.375321
+        ]
+      },
+      "properties": {
+        "genre": "shoegaze",
+        "song name": "children",
+        "artist": "//orangenoise",
+        "rating": 8.8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.015152,
+          -9.189967
+        ]
+      },
+      "properties": {
+        "genre": "math rock",
+        "song name": "dos",
+        "artist": "procrastinacion 1 yo 0",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.774017,
+          12.879721
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "the chase",
+        "artist": "as silent as the forest",
+        "rating": 8.3,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.145136,
+          51.919438
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "to nie byw film",
+        "artist": "myslovitz",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.224454,
+          39.399872
+        ]
+      },
+      "properties": {
+        "genre": "dark wave rock",
+        "song name": "pale",
+        "artist": "aenima",
+        "rating": 8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.318756,
+          61.52401
+        ]
+      },
+      "properties": {
+        "genre": "math rock",
+        "song name": "\u041f\u043e\u0433\u0440\u0435\u0431\u043e\u043a",
+        "artist": "franco",
+        "rating": 8.3,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.079162,
+          23.885942
+        ]
+      },
+      "properties": {
+        "genre": "experimental rock",
+        "song name": "\u064a\u0634 \u0633\u0648\u064a\u062a",
+        "artist": "ana.n7n",
+        "rating": "",
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.005859,
+          44.016521
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "smazka",
+        "artist": "pipesh",
+        "rating": 7.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.70379,
+          40.416775
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "saguzarren kanta",
+        "artist": "belako",
+        "rating": 8.9,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.819836,
+          1.352083
+        ]
+      },
+      "properties": {
+        "genre": "midwest emo",
+        "song name": "cabin fever",
+        "artist": "subsonic eye",
+        "rating": 8.8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.937506,
+          -30.559482
+        ]
+      },
+      "properties": {
+        "genre": "pop rock (?)",
+        "song name": "cokehead",
+        "artist": "internet girl",
+        "rating": 9.5,
+        "personal notes": "awesome"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.766922,
+          35.907757
+        ]
+      },
+      "properties": {
+        "genre": "shoegaze",
+        "song name": "beautiful world",
+        "artist": "parannoul",
+        "rating": 9.8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.643501,
+          60.128161
+        ]
+      },
+      "properties": {
+        "genre": "alternative",
+        "song name": "owc",
+        "artist": "kent",
+        "rating": 9.6,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.227512,
+          46.818188
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "chasing honesty",
+        "artist": "favez",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.960515,
+          23.69781
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "\u721b\u6ce5",
+        "artist": "no party for cao dong",
+        "rating": 8.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.992541,
+          15.870032
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "i'm just like that",
+        "artist": "yonlapa",
+        "rating": 7.8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.537499,
+          33.886917
+        ]
+      },
+      "properties": {
+        "genre": "shoegaze",
+        "song name": "sleep cycle",
+        "artist": "retrieval",
+        "rating": 7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.243322,
+          38.963745
+        ]
+      },
+      "properties": {
+        "genre": "alt rock",
+        "song name": "cambaz",
+        "artist": "mor ve \u00f6tesi",
+        "rating": 8.7,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.16558,
+          48.379433
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "\u041d\u0435 \u0421\u043f\u043b\u044e",
+        "artist": "the unsleeping",
+        "rating": 7.8,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.58973,
+          6.42375
+        ]
+      },
+      "properties": {
+        "genre": "sifri rock",
+        "song name": "retroceder",
+        "artist": "los mesoneros",
+        "rating": 6.5,
+        "personal notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.277199,
+          14.058324
+        ]
+      },
+      "properties": {
+        "genre": "indie rock",
+        "song name": "nho em",
+        "artist": "do it dad",
+        "rating": 9,
+        "personal notes": ""
+      }
+    }
+  ]
+}
