@@ -20,14 +20,55 @@ body, html {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-.country-png {
-    width: 100%;
-    height: auto;
-    max-width: 100vw; /* Ensures the image does not exceed the viewport width */
-    max-height: 100vh; /* Ensures the image does not exceed the viewport height */
-    object-fit: contain; /* Scales the image to fit within the container while maintaining aspect ratio */
-    margin-top: 20px;
-    margin-bottom: 20px;
+.world-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Sets the background color to black */
+}
+
+.countrypng {
+    display: block;          /* Ensures the image is a block element */
+    margin-left: auto;       /* Centers the image horizontally */
+    margin-right: auto;      /* Centers the image horizontally */
+    width: 80%;             /* Sets the width to 100% of its container */
+    height: auto;            /* Maintains the aspect ratio by adjusting height automatically */
+    max-width: 100vw;        /* Ensures the image does not exceed the viewport width */
+}
+
+/* Container for centering the iframe */
+.plotly-container {
+    display: flex;               /* Enables flexbox */
+    justify-content: center;     /* Centers the iframe horizontally */
+    align-items: center;         /* Centers the iframe vertically */
+    height: 550px;               /* Matches the height of the iframe */
+    width: 1300px;               /* Matches the width of the iframe */
+    background-color: black;     /* Optional: sets background color of container */
+    margin-left: 10%;                   /* Ensures no margin around the container */
+    padding: 0;                  /* Removes any padding around the container */
+}
+
+/* Styles for the iframe */
+.plotly {
+    width: 87%;                  /* Makes the iframe stretch across the full width of the container */
+    height: 100%;                 /* Makes the iframe take the full height of the container */
+    border: none;                /* Removes any borders around the iframe */
+    background-color: transparent; /* Ensures iframe background is transparent */
+}
+.description {
+    margin-top: 20px;            /* Adds space above the description */
+    text-align: center;          /* Centers the text */
+    color: white;                /* Makes text color white for better visibility on black background */
+    font-size: 16px;             /* Sets font size */
+}
+
+.description a {
+    color: #32568f;              /* Sets the color for the link */
+    text-decoration: none;       /* Removes underline from the link */
+}
+
+.description a:hover {
+    text-decoration: underline;  /* Adds underline on hover for better interaction */
 }
 
 .smalltitle {
@@ -69,13 +110,9 @@ body, html {
     background-color: #000;
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
     width: 100%;
+    overflow:auto;
 }
-/* black space under */
-/* .main-page .black-space {
-    background-color: #000;
-    height: 2500px;
-    width: 100%;
-} */
+
 
 .website-block {
     display: flex;
@@ -110,16 +147,6 @@ body, html {
     height: auto; /* Maintain aspect ratio */
     z-index: 1000; /* Ensure it stays above other content */
 }
-
-.main-page .black-space .background-image{
-    position:relative;
-    background-image: url('../images/centipede.png');
-    z-index:-1;
-    float: right;
-    vertical-align: middle;
-    min-height: 100vh; /* Ensures it takes at least the full viewport height */
-    width: 100%;}
-
 
 p {
     font-family: 'Inter', sans-serif;
@@ -196,6 +223,7 @@ p {
         background-color: #000;
         min-height: 100vh; /* Ensures it takes at least the full viewport height */
         width: 100%;
+        overflow:auto;
     }
 }
 
@@ -216,12 +244,14 @@ p {
     border:none;
     padding: 0;
     background-color:#000;
+    overflow:auto;
 }
 
 .alt-page .black-space {
     background-color: #000;
     width: 100%;
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
+    overflow:auto;
 }
 
 .alt-page .data .black-space {
@@ -229,19 +259,30 @@ p {
     width: 100%;
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
     height:auto;
+    overflow:auto;
 }
 
 .alt-page .about .black-space {
     background-color: #000;
     width: 100%;
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
+    overflow:auto;
 }
 .alt-page .art .black-space {
     background-color: #000;
-    min-height: 100vh; /* Ensures it takes at least the full viewport height */
+    /* min-height: 100vh; Ensures it takes at least the full viewport height */
     width: 100%;
-    height: 2500px; /* Automatically adjusts to content */
+    /* height: 2500px; Automatically adjusts to content */
+    overflow:auto;
 }
+
+.alt-page .art .black-space table {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+
 
 @media only screen and (max-width: 600px) {
 
@@ -295,18 +336,13 @@ span {
 }
 
 .footer {
-    position: relative; /* Positioning it relative to the closest positioned ancestor */
-    bottom: 0; /* Aligns to the bottom of the page */
-    left: 0; /* Aligns to the left of the page */
-    width: 100%; /* Takes up the full width of the viewport */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    text-align: left; /* Centers the text horizontally */
-    padding: 15px; /* Adds padding around the text */
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    padding: 15px;
+    box-sizing: border-box;
     font-family: "Syne", "sans-serif";
-    font-size: 0.875em; /* Adjust font size if needed */
-    z-index: 1000; /* Ensures the footer stays above other content */
+    font-size: 0.875em;
 }
 
 
@@ -760,9 +796,9 @@ h2 {
 .scroll-widget {
     position: fixed;
     bottom: 20px; /* Adjust to your preferred distance from the bottom */
-    right: 20px;  /* Adjust to your preferred distance from the right */
+    right: 25px;  /* Adjust to your preferred distance from the right */
     width: 60px;  /* Size of the widget */
-    height: 60px;
+    height: 45px;
     transition: transform 0.2s ease-out; /* Smooth rotation */
     z-index: 1000; /* Ensures the widget stays above other content */
 
@@ -800,3 +836,32 @@ h2 {
 #navbar a:hover {
     background-color: #575757;
 }
+
+
+#profile-stats {
+    display: flex;
+    max-width: fit-content;
+  }
+  
+  #profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal-sized columns */
+  }
+  
+  #profile-stats dt {
+    grid-row: 1; /* Place all dt elements in the first row */
+    text-align: center;
+    margin-bottom: 0.5rem; /* Adjust spacing between title and figure */
+    font-size:larger;
+    font-weight: 300;
+    color:cadetblue;
+    padding-right:1em;
+  }
+  
+  #profile-stats dd {
+    grid-row: 2; /* Place all dd elements in the second row */
+    text-align: center;
+    margin: .3rem;
+    font-size:x-large;
+    font-weight:600;
+  }
