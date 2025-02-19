@@ -1,3 +1,17 @@
+// FADE IN
+// Function to fade in elements one by one
+function fadeInElements() {
+  const elements = document.querySelectorAll('.fade');
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add('visible'); // Add 'visible' class to make the element fade in
+    }, index * 500); // Delay each element by 500ms (you can adjust this time)
+  });
+}
+
+// Call the fadeInElements function when the page is loaded
+window.addEventListener('load', fadeInElements);
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -76,60 +90,78 @@ const baseURL = window.location.origin.includes('github.io')
   ? '/shrkshkk'
   : ''; // Adjust if needed for local dev
 
-export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-  // Check if containerElement is null or undefined
-  if (!containerElement) {
-    console.error('Container element is null or undefined.');
-    return;
-  }
-
-  // Validate headingLevel
-  const validHeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-  if (!validHeadingLevels.includes(headingLevel)) {
-    console.error('Invalid heading level:', headingLevel);
-    headingLevel = 'h2'; // Fallback to default heading level
-  }
-
-  // Clear the containerElement to make sure no duplicates
-  containerElement.innerHTML = '';
-
-  // Check if projects array is empty
-  if (projects.length === 0) {
-    const placeholder = document.createElement('p');
-    placeholder.textContent = 'No projects available.';
-    containerElement.appendChild(placeholder);
-    return;
-  }
-
-  // Iterate over each project in the projects array
-  projects.forEach(project => {
-    const article = document.createElement('article');
-    
-    // Use default values if properties are missing
-    const title = project.title || 'Untitled Project';
-    const image = project.image || 'default-image.png';
-    const description = project.description || 'No description available.';
-    const style = project.style || '';
-    const year = project.year || 'Year unknown';
-    const link = project.link || '#'; // Default link if not provided
-    
-    // Create heading element dynamically based on headingLevel
-    const heading = document.createElement(headingLevel);
-    heading.textContent = title;
-    
-
-
-    article.innerHTML = `
-      <img src="${baseURL}${image}" alt="${title}" style="width: 100%; max-width: 100%; height: auto;">
-      <div>
-      <p>${description}</p>
-      <h4>c. ${year}</h4>
+  export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+    // Check if containerElement is null or undefined
+    if (!containerElement) {
+      console.error('Container element is null or undefined.');
+      return;
+    }
+  
+    // Validate headingLevel
+    const validHeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    if (!validHeadingLevels.includes(headingLevel)) {
+      console.error('Invalid heading level:', headingLevel);
+      headingLevel = 'h2'; // Fallback to default heading level
+    }
+  
+    // Clear the containerElement to make sure no duplicates
+    containerElement.innerHTML = '';
+  
+    // Check if projects array is empty
+    if (projects.length === 0) {
+      const placeholder = document.createElement('p');
+      placeholder.textContent = 'No projects available.';
+      containerElement.appendChild(placeholder);
+      return;
+    }
+  
+    // Iterate over each project in the projects array
+    projects.forEach((project, index) => {
+      const article = document.createElement('article');
+      
+      // Use default values if properties are missing
+      const title = project.title || 'Untitled Project';
+      const image = project.image || 'default-image.png';
+      const description = project.description || 'No description available.';
+      const style = project.style || '';
+      const year = project.year || 'Year unknown';
+      const link = project.link || '#'; // Default link if not provided
+      const tags = project.tags || []; // Default to empty array if no tags
+      
+      // Create heading element dynamically based on headingLevel
+      const heading = document.createElement(headingLevel);
+      heading.textContent = title;
+      // Create tags container
+      const tagsContainer = document.createElement('div');
+      tagsContainer.classList.add('tags-container');
+      tags.forEach(tag => {
+        const tagSpan = document.createElement('span');
+        tagSpan.classList.add('tag');
+        tagSpan.textContent = tag;
+        tagsContainer.appendChild(tagSpan);
+      });
+  
+      article.innerHTML = ` 
       <a href="${link}" target="_blank">
-      <img src="${baseURL}/images/link.png" alt="Link" class="link">
-      </a>
-      </div>`;
+        <img src="${image}" alt="${title}" class="article-image">
+        <div class="project-description">
+          <p>${description}</p>
+          <div class="tags-wrapper"></div>
+        </div>
+      </a>`;
+        
+      article.prepend(heading);
+      article.querySelector('.tags-wrapper').appendChild(tagsContainer); 
+  
+      // Add initial class to trigger fade and drop
+      article.classList.add('article-fade');
+      containerElement.appendChild(article);
+  
+      // Use setTimeout to delay the class that triggers the transition
+      setTimeout(() => {
+        article.classList.add('visible');
+      }, index * 200); // Add a small delay between articles for staggered effect
+    });
+  }
     
-    article.prepend(heading);
-    containerElement.appendChild(article);
-  });
-}
+
