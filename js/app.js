@@ -67,8 +67,6 @@ export async function fetchJSON(url) {
   }
 }
 
-console.log(fetchJSON('../lib/projects.json'));
-
 // render projects function
 // we need project and containerElemenet as parameters because we 
 // must locate a specific project, then a container element to put them in

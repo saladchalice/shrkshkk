@@ -1,7 +1,11 @@
 import { fetchJSON, renderProjects } from './app.js';
 
 // only include first 3 projects
-const projects = await fetchJSON('../lib/projects.json');
+const baseURL = window.location.origin.includes('github.io')
+  ? '/shrkshkk'
+  : ''; // Adjust if needed for local dev
+
+const projects = await fetchJSON(`${baseURL}/lib/projects.json`);
 const latestProjects = projects.slice(0, 3);
 
 const projectsContainer = document.querySelector('.projects');

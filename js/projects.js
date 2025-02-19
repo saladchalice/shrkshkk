@@ -1,6 +1,10 @@
 import { fetchJSON, renderProjects } from './app.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
-const projects = await fetchJSON('../lib/projects.json');
+const baseURL = window.location.origin.includes('github.io')
+  ? '/shrkshkk'
+  : ''; // Adjust if needed for local dev
+
+const projects = await fetchJSON(`${baseURL}/lib/projects.json`);
 
 // define the project container, class=projects
 const projectsContainer = document.querySelector('.projects');
