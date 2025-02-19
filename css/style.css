@@ -840,7 +840,8 @@ h2 {
 }
 
 #navbar a:hover {
-    background-color: #575757;
+    transition-duration: 0.3s;
+    transform: translateY(-4px); /* Moves upwards slightly */
 }
 
 
