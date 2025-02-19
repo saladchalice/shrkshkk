@@ -14,7 +14,7 @@ renderProjects(projects, projectsContainer, 'h3');
 // Add a count of projects at the top of the page
 const projectsTitle = document.querySelector('.projects-title');
 if (projectsTitle) {
-    projectsTitle.textContent = `${projects.length} Projects`;
+    projectsTitle.textContent = `my projects`;
 }
 
 // Initialize selectedIndex to -1
