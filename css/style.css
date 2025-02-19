@@ -249,6 +249,18 @@ p {
     overflow:auto;
 }
 
+#projects.background-container{
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), /* Vignette effect */
+        url('../images/projectbg.png');
+}
+
+#about.background-container{
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), /* Vignette effect */
+        url('../images/art/dumpling.jpg');
+}
+
 .alt-page #projects{
     padding-left: 13em;
     padding-right:13em;
@@ -588,49 +600,47 @@ span {
 }
 
 /* ------------------------------ About--------------------------------------*/
-#socials {
+section#socials {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
-#socials a {
+section#socials a {
     color: white;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-#socials img {
-    width: 70px;
-    height: 70px;
+section#socials img {
+    width: 45px;
+    height: 45px;
     transition: transform 0.3s ease;
     margin-left: 1%;
     margin-right:15px;
 }
 
-#socials a:hover img {
+section#socials a:hover img {
     transform: scale(1.2); /* Slightly enlarge the logo on hover */
 }
 
 /* photo */
 #photo {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically (optional) */
+    justify-content: right; /* Center horizontally */
     margin: 0px; /* Optional margin to adjust spacing */
 }
 
 #photo img:hover {
-    transform: scale(1.05); /* Slightly enlarge */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    box-shadow: 0 0 0 2px white; /* Apply an inset shadow to act like a border */
 }
 
 #photo img {
     width: 300px; /* Set width */
     height: 300px; /* Set height */
     object-fit: cover; /* Ensures the image covers the specified area */
-    margin-top: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
 }
 
 .intro-text > div {
@@ -670,7 +680,7 @@ h2 {
     color: #ffffff;
     padding: 10px;
     background-color: #000;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center; 
     border-radius: 10px;
@@ -1061,3 +1071,61 @@ h2 {
     max-width: 600px;
     height: 300px;
   }
+
+  /* about me */
+  .text {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout for the photo section */
+section#photo {
+    display: flex;
+    align-items: center; /* Vertically aligns the <p> and <img> */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 40px; /* Adds space between the <p> and <img> */
+    text-align: center;
+    padding-top:0;
+}
+
+#photo p {
+    flex: 1; /* Ensures <p> takes up available space */
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px; /* Limits the width of the text */
+    align-content: justify;
+}
+
+#photo img {
+    border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #photo {
+        flex-direction: column;
+        align-items: center; /* Stacks the text and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    #photo p {
+        font-size: 16px; /* Reduces font size for mobile devices */
+    }
+
+    #photo img {
+        max-width: 200px; /* Reduces image size for mobile devices */
+    }
+}
+
+#intro{
+    color:#4984e2;
+}
+
+#intro-container{
+    padding-top:8%;
+}

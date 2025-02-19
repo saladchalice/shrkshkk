@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="art-portfolio.html">Art</a>
         <a href="data-portfolio.html">Projects</a>
         <a href="images/2025 Resume.pdf">CV</a>
-        <a href="about.html">About</a>
     `;
   
     
