@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects } from './app.js';
+import { fetchJSON, renderProjects } from '../js/app.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 const baseURL = window.location.origin.includes('github.io')
   ? '/shrkshkk'

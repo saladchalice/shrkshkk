@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects } from './app.js';
+import { fetchJSON, renderProjects } from '../js/app.js';
 
 // only include first 3 projects
 const baseURL = window.location.origin.includes('github.io')
