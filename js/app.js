@@ -113,11 +113,11 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     heading.textContent = title;
     
     article.innerHTML = `
-      <img src="${image}" alt="${title}" style="width: 100%; max-width: 100%; height: auto;">
+      <img src="${baseURL}${image}" alt="${title}" style="width: 100%; max-width: 100%; height: auto;">
       <div>
       <p>${description}</p>
       <h4>c. ${year}</h4>
-      <a href="${link}" target="_blank">
+      <a href="${baseURL}${link}" target="_blank">
       <img src="../images/link.png" alt="Link" class="link">
       </a>
       </div>`
