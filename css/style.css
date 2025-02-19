@@ -44,7 +44,7 @@ body, html {
     height: 550px;               /* Matches the height of the iframe */
     width: 1300px;               /* Matches the width of the iframe */
     background-color: black;     /* Optional: sets background color of container */
-    margin-left: 10%;                   /* Ensures no margin around the container */
+    margin-left: 0;                   /* Ensures no margin around the container */
     padding: 0;                  /* Removes any padding around the container */
 }
 
@@ -75,13 +75,12 @@ body, html {
     color:#32568f;  /* Vibrant blue color */
     font-weight: 700;
     font-size:20;
-    
 }
 
 /*-------------------globe-------------------*/
 #map {
-    width: 960px;  /* Set your map width */
-    height: 500px; /* Set your map height */
+    width: 100%;  /* Set your map width */
+    height: auto; /* Set your map height */
   }
   
 
@@ -110,7 +109,9 @@ body, html {
     background-color: #000;
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
     width: 100%;
-    overflow:auto;
+    overflow:hidden;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 
@@ -342,7 +343,6 @@ span {
 }
 
 .footer {
-    background-color: #000;
     color: #fff;
     text-align: left;
     padding: 15px;
@@ -360,7 +360,7 @@ span {
     font-size: 16px;
     background-color: #000000; 
     color: #fff;
-    padding: 35px; 
+    padding: 30px; 
     margin: 0 auto;
     box-sizing: border-box;
     line-height: 2; 
@@ -1000,3 +1000,64 @@ h2 {
     transform: translateY(0);
     visibility: visible;
 }
+
+  #lnos  {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically (if needed) */
+    text-align: justify; /* Ensures text inside aligns */
+}
+
+#lnos h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 700;
+    z-index: inherit;
+}
+
+
+
+
+@keyframes scrollText {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  #lnos-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+  
+  #lnos-wrapper {
+    display: flex;
+    animation: scrollText 10s linear infinite;
+    min-width: 200%;
+  }
+  
+  #lnos-wrapper h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding-right: 40px; /* Adjust spacing as needed */
+    flex-shrink: 0;
+  }
+  
+  #lnos.text{
+    border-radius: 10px;
+    outline: none; /* Remove outline */
+    margin-right:10px;
+  }
+
+  .spotify {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+  }
