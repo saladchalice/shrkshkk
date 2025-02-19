@@ -67,7 +67,7 @@ export async function fetchJSON(url) {
   }
 }
 
-console.log(fetchJSON('../lib/projects.json'));
+console.log(fetchJSON('/lib/projects.json'));
 
 // render projects function
 // we need project and containerElemenet as parameters because we 
