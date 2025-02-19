@@ -1026,6 +1026,18 @@ h2 {
     z-index: inherit;
 }
 
+@media (max-width: 768px) {
+    #lnos {
+        font-size: .65rem; /* Reduce font size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #lnos {
+        font-size: .25rem; /* Further shrink font for mobile */
+        max-width: 95%; /* Slightly increase width usage */
+    }
+}
 
 
 
@@ -1119,6 +1131,7 @@ section#photo {
 
     #photo img {
         max-width: 200px; /* Reduces image size for mobile devices */
+        height:auto;
     }
 }
 
