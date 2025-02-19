@@ -1,6 +1,3 @@
-const baseURL = window.location.origin.includes('github.io')
-  ? '/shrkshkk'
-  : ''; // Adjust if needed for local dev
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -75,6 +72,10 @@ export async function fetchJSON(url) {
 // we need project and containerElemenet as parameters because we 
 // must locate a specific project, then a container element to put them in
 
+const baseURL = window.location.origin.includes('github.io')
+  ? '/shrkshkk'
+  : ''; // Adjust if needed for local dev
+
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   // Check if containerElement is null or undefined
   if (!containerElement) {
@@ -117,13 +118,14 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     heading.textContent = title;
     
 
+
     article.innerHTML = `
       <img src="${baseURL}${image}" alt="${title}" style="width: 100%; max-width: 100%; height: auto;">
       <div>
       <p>${description}</p>
       <h4>c. ${year}</h4>
-      <a href="${baseURL}${link}" target="_blank">
-      <img src="../images/link.png" alt="Link" class="link">
+      <a href="${link}" target="_blank">
+      <img src="${baseURL}/images/link.png" alt="Link" class="link">
       </a>
       </div>`;
     
