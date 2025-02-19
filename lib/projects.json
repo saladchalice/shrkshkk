@@ -35,36 +35,49 @@
         "image": "/images/data/walk.png",
         "year": "2024",
         "description": "Utilized U.S EPA's Smart Location Dataset to analyze Californian areas' relationships between the EPA-rated Walkability (an aggregate index for traffic, access to public transit, and accessibility of labor), wage, and car ownership, modeling it with regression.",
-        "tags": ["Regression Analysis", "Data Analysis", "Data Visualization"]
+        "tags": ["Regression Analysis", "Python", "Data Analysis", "Data Visualization"]
     },
     {
         "title": "Structural Topic Analysis of Race-Related Discourse in South African SOTN Speeches",
         "image": "/images/data/zaf.png",
         "year": "2023",
-        "description": "Utilized structural topic modeling techniques in RStudio to evaluate trends in topical frequency and significance across all State of the Nation addresses since 1994. Analyzed and tracked topics heavily interlinked with racial discourse and post-apartheid reform to discover their"
+        "description": "Utilized structural topic modeling techniques in RStudio to evaluate trends in topical frequency and significance across all State of the Nation addresses since 1994. Analyzed and tracked topics heavily interlinked with racial discourse and post-apartheid reform to discover their", 
+        "tags": ["Topic Modeling", "RStudio", "Data Analysis"]
     },
     {
         "title": "General Store Co-Op Financial Performance and Forecasting",
         "image": "/images/data/gstore.png",
         "year": "2024",
-        "description": "Compiled sales data of my workplace over the past 16 months in Python pandas, cleaned the data to arrange it into tidy format, and generated summary statistics and visualizations to showcase demand trends and possible expansions. Also trained an ARIMA model for demand forecasting."
+        "description": "Compiled sales data of my workplace over the past 16 months in Python pandas, cleaned the data to arrange it into tidy format, and generated summary statistics and visualizations to showcase demand trends and possible expansions. Also trained an ARIMA model for demand forecasting.",
+        "tags": ["Time Series Analysis", "Python", "Data Analysis", "Data Visualization"]
+    },
+    {
+        "title": "Oaxaca-Blinder Decom: Poverty-Income Ratio Disparities Between Black and White Americas",
+        "image": "/images/data/decomp.png",
+        "year": "2025",
+        "description": "Utilized the Oaxaca-Blinder decomposition technique to evaluate the root causes of disparity in poverty-income ratios between Black and White Americans, utilizing data from the U.S. Census Bureau and the Bureau of Labor Statistics.",
+        "tags": ["Data Analysis", "Econometrics", "RStudio"]
     },
     {
         "title": "RStudio Brexit Analysis: Demographic and Economic Differences in Pro-Brexit Councils",
         "image": "/images/data/uk.png",
         "year": "2022",
-        "description": "Utilized RStudio to intake demographic data on English councils to attempt to evaluate factors that are correlated with voting Leave, including unemployment statistics, import-shock susceptibility, immigrant population, and population share above the age of 60, among others."
+        "description": "Utilized RStudio to intake demographic data on English councils to attempt to evaluate factors that are correlated with voting Leave, including unemployment statistics, import-shock susceptibility, immigrant population, and population share above the age of 60, among others.",
+        "tags": ["Data Analysis", "RStudio", "Data Visualization"]
     },
     {
         "title": "XGBoost Credit Card Fraud Classifier",
         "image": "/images/data/money.png",
         "year": "2024",
-        "description": "Implements and trains an XGBoost machine learning algorithm in Python with the XGBoost package to classify financial transaction data as fraudulent or legitimate based on factors such as transaction time, category, merchant, amount, etc."
+        "description": "Implements and trains an XGBoost machine learning algorithm in Python with the XGBoost package to classify financial transaction data as fraudulent or legitimate based on factors such as transaction time, category, merchant, amount, etc.",
+        "tags": ["Machine Learning", "Python", "Data Analysis"]
     },
     {
         "title": "K-Nearest Neighbors Image Classifier",
         "image": "/images/data/knn.png",
         "year": "2020",
-        "description": "Implemented an RGB image processing class in Python that reads in images and offers customization options as well as a KNN component to analyze image similarity and assign unlabeled images labels according to the labels of its nearest neighbors."
+        "description": "Implemented an RGB image processing class in Python that reads in images and offers customization options as well as a KNN component to analyze image similarity and assign unlabeled images labels according to the labels of its nearest neighbors.",
+        "tags": ["Image Processing", "Python", "Data Analysis"]
     }
+    
 ]
