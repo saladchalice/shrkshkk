@@ -1,3 +1,7 @@
+const baseURL = window.location.origin.includes('github.io')
+  ? '/shrkshkk'
+  : ''; // Adjust if needed for local dev
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         requestAnimationFrame(() => {
@@ -112,6 +116,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const heading = document.createElement(headingLevel);
     heading.textContent = title;
     
+
     article.innerHTML = `
       <img src="${baseURL}${image}" alt="${title}" style="width: 100%; max-width: 100%; height: auto;">
       <div>
@@ -120,8 +125,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       <a href="${baseURL}${link}" target="_blank">
       <img src="../images/link.png" alt="Link" class="link">
       </a>
-      </div>`
-      ;
+      </div>`;
     
     article.prepend(heading);
     containerElement.appendChild(article);
