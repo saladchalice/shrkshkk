@@ -3,10 +3,9 @@
         "title": "Aging Under the Knife: How Surgery Trends Shift Across Generations",
         "image": "/images/data/aging.png",
         "year": "2025",
-        "description": "This project visualizes the trends in surgical procedures across different generations. The data was sourced from VitalDB, and the visualization was created using D3.js and HTML/CSS.",
+        "description": "This project visualizes the trends in surgical procedures across different generations with a focus on user interactability. The data was sourced from VitalDB, and the visualization was created using D3.js and HTML/CSS.",
         "link": "https://ancientabacus.github.io/106-Project-3/",
         "tags": ["Data Visualization", "D3.js", "HTML/CSS"]
-
     },
     {
         "title": "Northrop Grumman AI Governance: Data Pipelines",
@@ -19,7 +18,7 @@
         "title": "Power Outages: Predicting Severity and Evaluating Causes",
         "image": "/images/data/power.png",
         "year": "2024",
-        "description": "This project centers around the dataset “Data on major power outage events in the continental U.S.” compiled by Mukherjee et al., 2018 in order to identify and understand the most impactful characteristics that are associated with power outage severity and use them to predict future severity.",
+        "description": "This project seeks to identify and understand the most impactful characteristics that are associated with power outage severity and use them to predict future severity.",
         "link": "https://saladchalice.github.io/Power-Outages-Predicting-Severity-and-Evaluating-Causes/",
         "tags": ["Predictive Modeling", "Python", "Data Analysis", "Data Visualization"]
     },

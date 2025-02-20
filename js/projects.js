@@ -13,9 +13,9 @@ renderProjects(projects, projectsContainer, 'h3');
 
 // Add a count of projects at the top of the page
 const projectsTitle = document.querySelector('.projects-title');
-if (projectsTitle) {
-    projectsTitle.textContent = `my projects`;
-}
+// if (projectsTitle) {
+//     projectsTitle.textContent = `my projects`;
+// }
 
 // Initialize selectedIndex to -1
 let selectedIndex = -1;
@@ -23,15 +23,15 @@ let selectedIndex = -1;
 // pie chart
 // arcgenerator generates arc paths to display
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-
-function renderPieChart(projectsGiven){
+function renderPieChart(projectsGiven) {
     let newRolledData = d3.rollups(
         projectsGiven,
         (v) => v.length,
-        (d) => d.year,
-      );
-     // re-calculate data
-     let newData = newRolledData.map(([year, count]) => {
+        (d) => d.year
+    );
+
+    // Recalculate data
+    let newData = newRolledData.map(([year, count]) => {
         return { value: count, label: year };
     }).sort((a, b) => a.label - b.label);
 
@@ -40,65 +40,68 @@ function renderPieChart(projectsGiven){
     let newArcs = newArcData.map((d) => arcGenerator(d));
 
     let colors = d3.scaleOrdinal([
-        '#DC143C', // crimson
-        '#8B0000', // dark red
-        '#FF4500', // orange red
-        '#2E8B57', // sea green
-        '#006400', // dark green
-        '#228B22', // forest green
-        '#008080', // teal
-        '#008B8B', // dark cyan
-        '#20B2AA', // light sea green
-        '#556B2F', // dark olive green
-        '#3CB371'  // medium sea green
+        '#DC143C', '#8B0000', '#FF4500', '#2E8B57', '#006400',
+        '#228B22', '#008080', '#008B8B', '#20B2AA', '#556B2F', '#3CB371'
     ]);
+
     let svg = d3.select('svg');
+    svg.classed('article-fade', true); // Ensure fade class is applied before render
     svg.selectAll('path').remove();
+
     newArcs.forEach((arc, i) => {
-        svg
-          .append('path')
-          .attr('d', arc)
-          .attr('fill', colors(i))
-          .on('click', () => {
-            selectedIndex = selectedIndex === i ? -1 : i;
-            console.log(`Selected index: ${selectedIndex}`);
-            svg
-            .selectAll('path')
-            .attr('class', (_, idx) => (
-                selectedIndex === idx ? 'selected' : ''
-            ));
-        legend
-        .selectAll('li')
-        .attr('class', (_, idx) => (
-            selectedIndex === idx ? 'legend-item-selected' : 'legend-item'
-             ));
-        
-        // Updated code to filter by both year and search query
-        let filteredProjects = projects.filter(project => {
-            let matchesYear = selectedIndex === -1 || project.year === newData[selectedIndex].label;
-            let matchesQuery = Object.values(project).join('\n').toLowerCase().includes(query);
-            return matchesYear && matchesQuery;
-        });
-        renderProjects(filteredProjects, projectsContainer, 'h3');
-        });
+        svg.append('path')
+            .attr('d', arc)
+            .attr('fill', colors(i))
+            .on('click', () => {
+                selectedIndex = selectedIndex === i ? -1 : i;
+                console.log(`Selected index: ${selectedIndex}`);
+                
+                svg.selectAll('path').attr('class', (_, idx) => (
+                    selectedIndex === idx ? 'selected' : ''
+                ));
+
+                legend.selectAll('li').attr('class', (_, idx) => (
+                    selectedIndex === idx ? 'legend-item-selected' : 'legend-item'
+                ));
+
+                // Updated filtering based on year and search query
+                let filteredProjects = projects.filter(project => {
+                    let matchesYear = selectedIndex === -1 || project.year === newData[selectedIndex].label;
+                    let matchesQuery = Object.values(project).join('\n').toLowerCase().includes(query);
+                    return matchesYear && matchesQuery;
+                });
+                renderProjects(filteredProjects, projectsContainer, 'h3');
+            });
     });
 
-    // clear existing legend
+    // Clear existing legend and apply initial hidden class
     let legend = d3.select('.legend');
+    legend.classed('article-fade', true);
     legend.selectAll('*').remove();
 
-    // define new legend
+    // Define new legend
     newData.forEach((d, idx) => {
         legend.append('li')
-            .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-            .attr('class','legend-item') // set the class attribute
-            .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
-            
+            .attr('style', `--color:${colors(idx)}`)
+            .attr('class', 'legend-item')
+            .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
     });
 
-    
-      
+    let searchBar = document.querySelector('.searchBar');
+    if (searchBar) {
+        searchBar.classList.add('article-fade');
+    }
+
+    // Ensure elements are initially hidden before fading in
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            svg.classed('visible', true);
+            if (searchBar) searchBar.classList.add('visible');
+            legend.classed('visible', true);
+        }, 200);
+    });
 }
+
 renderPieChart(projects);
 
 // implementing a search
