@@ -1,5 +1,13 @@
 [
     {
+        "title": "PedalPlot: What's Bike Traffic Like in Boston?",
+        "image": "/images/data/biking.png",
+        "year": "2025",
+        "description": "This project uses publicly accessible GeoJsons to interactively map arrivals, departures, and total traffic across all times of day for all bike stations in Boston.",
+        "link": "https://saladchalice.github.io/pedalplot/",
+        "tags": ["Data Visualization", "D3.js", "HTML/CSS"]
+    },
+    {
         "title": "Aging Under the Knife: How Surgery Trends Shift Across Generations",
         "image": "/images/data/aging.png",
         "year": "2025",
