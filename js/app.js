@@ -140,15 +140,18 @@ const baseURL = window.location.origin.includes('github.io')
         tagSpan.textContent = tag;
         tagsContainer.appendChild(tagSpan);
       });
-  
+      
       article.innerHTML = ` 
-      <a href="${link}" target="_blank">
+      <a href="${link}" target="_blank" class="project-link">
         <img src="${image}" alt="${title}" class="article-image">
         <div class="project-description">
           <p>${description}</p>
           <div class="tags-wrapper"></div>
         </div>
-      </a>`;
+        ${link !== '#' ? `<img src="../images/link.png" alt="External Link" class="link-icon">` : ''}
+      </a>
+    `;
+    
         
       article.prepend(heading);
       article.querySelector('.tags-wrapper').appendChild(tagsContainer); 

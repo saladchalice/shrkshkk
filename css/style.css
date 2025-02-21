@@ -1148,3 +1148,17 @@ section#photo {
 #intro-container{
     padding-top:8%;
 }
+
+.link-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.7; /* Slight transparency */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.link-icon:hover {
+    opacity: 1; /* Fully visible on hover */
+}
