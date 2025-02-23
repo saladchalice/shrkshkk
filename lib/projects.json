@@ -77,7 +77,8 @@
         "image": "/images/data/money.png",
         "year": "2024",
         "description": "Implements and trains an XGBoost machine learning algorithm in Python with the XGBoost package to classify financial transaction data as fraudulent or legitimate based on factors such as transaction time, category, merchant, amount, etc.",
-        "tags": ["Machine Learning", "Python", "Data Analysis"]
+        "tags": ["Machine Learning", "Python", "Data Analysis"], 
+        "link": "https://github.com/saladchalice/XGBoost-Credit-Card-Fraud-Classifier"
     },
     {
         "title": "K-Nearest Neighbors Image Classifier",

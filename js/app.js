@@ -1,18 +1,3 @@
-// FADE IN
-// Function to fade in elements one by one
-function fadeInElements() {
-  const elements = document.querySelectorAll('.fade');
-  elements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add('visible'); // Add 'visible' class to make the element fade in
-    }, index * 500); // Delay each element by 500ms (you can adjust this time)
-  });
-}
-
-// Call the fadeInElements function when the page is loaded
-window.addEventListener('load', fadeInElements);
-
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         requestAnimationFrame(() => {
@@ -118,7 +103,9 @@ const baseURL = window.location.origin.includes('github.io')
     // Iterate over each project in the projects array
     projects.forEach((project, index) => {
       const article = document.createElement('article');
-      
+      // Add initial class to trigger fade and dr op
+      article.classList.add('article-fade');
+
       // Use default values if properties are missing
       const title = project.title || 'Untitled Project';
       const image = project.image || 'default-image.png';
@@ -156,8 +143,7 @@ const baseURL = window.location.origin.includes('github.io')
       article.prepend(heading);
       article.querySelector('.tags-wrapper').appendChild(tagsContainer); 
   
-      // Add initial class to trigger fade and drop
-      article.classList.add('article-fade');
+
       containerElement.appendChild(article);
   
       // Use setTimeout to delay the class that triggers the transition

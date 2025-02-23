@@ -88,9 +88,7 @@ function renderPieChart(projectsGiven) {
     });
 
     let searchBar = document.querySelector('.searchBar');
-    if (searchBar) {
-        searchBar.classList.add('article-fade');
-    }
+    searchBar.classList.add('article-fade');
 
     // Ensure elements are initially hidden before fading in
     requestAnimationFrame(() => {

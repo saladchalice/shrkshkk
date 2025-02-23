@@ -733,6 +733,10 @@ h2 {
     transform: translateY(0); /* Reset row position */
 }
 
+img.visible:hover{
+    transform: translateY(-5px) scale(1.05); /* Slightly enlarges the image */
+}
+
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .column {
