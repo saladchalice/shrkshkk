@@ -755,7 +755,13 @@ img.visible:hover{
     display: flex;
     justify-content: flex-end; /* Align links to the right */
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 1s ease; /* Adjust duration as needed */
 }
+
+#navbar.fade-in {
+    opacity: 1;
+  }
 
 #navbar a {
     font-family: 'Syne', sans-serif;
@@ -1148,3 +1154,26 @@ section#photo {
 .link-icon:hover {
     opacity: 1; /* Fully visible on hover */
 }
+
+#link{
+    color:#4984e2;
+    font-weight: 700;
+}
+
+svg.rotate {
+    position: fixed;
+    top: 99%;
+    left: 99%;
+    margin-top: -50px;
+    margin-left: -50px;
+    transform-origin: center;
+  
+  
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    z-index: 500;
+  }

@@ -14,49 +14,48 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-//scroller
-window.onscroll = function () {
-    scrollRotate(); 
-};
+// scroll widget ------------------------------------------------------------------------------------
+window.addEventListener('scroll', () => {
+  const documentHeight = document.documentElement.scrollHeight; // Full document height including dynamically generated content
+  const viewportHeight = window.innerHeight; // The height of the viewport
+  const scrollPosition = window.pageYOffset; // The current scroll position
 
-function scrollRotate() {
-  const image = document.querySelector(".scroll-widget img");
-  
-  if (image) {
-      let rotationValue = window.scrollY / 2; // Adjust the rotation speed here
-      image.style.transform = `rotate(${rotationValue}deg)`;
-  } else {
-      console.log("Scroll widget element not found!");
-  }
-}
+  // Update the --scroll property based on the current scroll position and full document height
+  //pushed
+  document.body.style.setProperty('--scroll', scrollPosition / (documentHeight - viewportHeight));
+}, false);
 
 document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.getElementById('navbar');
-    navbar.innerHTML = `
-        <a href="index.html">Home</a>
-        <a href="art-portfolio.html">Art</a>
-        <a href="data-portfolio.html">Projects</a>
-        <a href="images/2025 Resume.pdf">CV</a>
-    `;
-    const aboutOption = document.querySelector('.scroll-to-intro');
-    const introContainer = document.getElementById('intro-container');
-      // Ensure the element exists before adding an event listener
-      if (aboutOption && introContainer) {
-        aboutOption.addEventListener('click', (event) => {
+  const navbar = document.getElementById('navbar');
+  
+  // Apply the fade-in class immediately
+  navbar.classList.add('fade-in');
+  
+  navbar.innerHTML = `
+      <a href="index.html">Home</a>
+      <a href="art-portfolio.html">Art</a>
+      <a href="data-portfolio.html">Projects</a>
+      <a href="images/2025 Resume.pdf">CV</a>
+  `;
+
+  const aboutOption = document.querySelector('.scroll-to-intro');
+  const introContainer = document.getElementById('intro-container');
+
+  // Ensure the element exists before adding an event listener
+  if (aboutOption && introContainer) {
+      aboutOption.addEventListener('click', (event) => {
           event.preventDefault(); // Prevent default link behavior
-      
+
           // Scroll smoothly to the intro container with a slight offset
           introContainer.scrollIntoView({ 
               behavior: 'smooth', 
               block: 'start' 
           });
-      
+
           // Adjust for any fixed headers (if you have one)
           window.scrollBy(0, -80); // Adjust the number (e.g., 80px) to the height of the fixed header
       });
-      
-    }
-    
+  }
 });
 
 
