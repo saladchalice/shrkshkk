@@ -155,7 +155,7 @@ p {
 #projects.background-container{
     background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/projectbg.png');
+        url('../images/projectbg.jpg');
         background-position: center -50px; 
     /* background-image:none;
     background-color:black; */
@@ -589,7 +589,7 @@ h2 {
 
 
 /* Grid layout for artwork */
-.row {
+#art.row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to next line */
     gap: 15px; /* Space between items */
@@ -599,11 +599,12 @@ h2 {
     transition: opacity 0.78s ease, transform 0.6s ease; /* Fade-in and movement effect */
 }
 
-.row #photos{
+#photos.row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to next line */
     gap: 15px; /* Space between items */
     justify-content: center; /* Center the items */
+    opacity:1;
 }
 
 .column {
@@ -615,12 +616,18 @@ h2 {
 }
 
 /* Make sure images take full width of their container */
-.column img {
+#art.column img {
     width: 100%;
     height: auto;
     transition: opacity 0.5s ease, transform 0.3s ease; /* For fade and enlarge effects */
     opacity: 0; /* Start with invisible */
     transform: translateY(20px); /* Initially slightly below */
+}
+
+#photos.column img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease, transform 0.3s ease; /* For fade and enlarge effects */
 }
 
 /* Hover effect to enlarge image */
@@ -629,12 +636,12 @@ h2 {
 }
 
 /* Fade-in effect */
-.column img.visible {
+#art.column img.visible {
     opacity: 1; /* Make visible after fade-in */
     transform: translateY(0); /* Reset position */
 }
 
-.row.visible {
+#art.row.visible {
     opacity: 1; /* Make the row visible */
     transform: translateY(0); /* Reset row position */
 }
