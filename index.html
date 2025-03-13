@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
-    <!--animation import-->
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <!--js import-->
     <script defer type='module' src="js/app.js"></script>
     <script type='module' src="js/index.js"></script>
-    <script defer type='module' src="js/art.js"></script>
+    <!-- <script defer type='module' src="js/art.js"></script> -->
+    <script defer type='module' src="js/map.js"></script>
 
     <!--set favicon-->
     <link rel="shortcut icon" type="image/png" href="images/dog.png">
@@ -71,26 +77,36 @@
                     <br />
                 in the making of this playlist, i've gotten to know and appreciate indie and alternative artists from music cultures around the world that i would've never been able to encounter otherwise. some highlights for me are singapore, kenya, the faroe islands, and peru!</p>
             </section>
-            <iframe 
+            <!-- <iframe 
             style="border-radius:12px; width:100%; max-width:600px; height:300px; display:block; margin:0 auto;     align-items: center;" 
             src="https://open.spotify.com/embed/playlist/45lMrjDlH4w4d0cJxGDyW3?utm_source=generator" 
             frameBorder="0" 
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy" class="spotify">
-        </iframe>
-        
+            </iframe> -->
         </div>
-        <div class="plotly-container">
+
+        <div id="lnos-chart">
+
+        </div>
+        <!-- <div class="plotly-container">
             <iframe src="plot.html" class="plotly"></iframe>
+        </div> -->
+        <div class="website-block" id="lnos">
+            <section class="text" id="lnos">
+                <p><span id="emphasis">The interactive map above</span> displays every country I've collected so far in my playlist, with depth of shade relating to number of songs!
+                <!-- <br />
+                <br />
+                For more details, check out the original dataset in <a href="https://docs.google.com/spreadsheets/d/1DJq9LYoS_qU9mkHKc6gJMrKqchGn_CXwq-JpD3UfrFk/edit?gid=0#gid=0" target="_blank">Google Sheets</a>.</p> -->
+            </section>
         </div>
-        <div class="description">
-            <p>Hey there! This interactive map displays every country I've collected so far in my playlist, with depth of shade relating to number of songs!</p>
-            <p>For more details, check out the original dataset in <a href="https://docs.google.com/spreadsheets/d/1DJq9LYoS_qU9mkHKc6gJMrKqchGn_CXwq-JpD3UfrFk/edit?gid=0#gid=0" target="_blank">Google Sheets</a>.</p>
-        </div>
-        <div class="website-block">
+        
+
+        
+        <!-- <div class="website-block">
             <section class="text">
                 <h2>sketches and travels</h2>
-                <div class="row">
+                <div class="row" id="photos">
                     <div class = "column">
                         <img src="images/photos/montagne.jpg">
                         <img src="images/photos/bleu.jpg">
@@ -116,13 +132,13 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> -->
         <div class="website-block">
             <section class="text">
                 <h2>about me</h2>
                 <section id="photo">
                     <div id="intro-container">
-                        <p><span id="intro">hi, i'm eddie!</span> i'm a data scientist and artist passionate about leveraging data to tackle real-world problems. 
+                        <p><span id="emphasis">hi, i'm eddie!</span> i'm a data scientist and artist passionate about leveraging data to tackle real-world problems. 
                             <br />
                             <br />
                             i have experience building automated data pipelines and analyzing complex datasets. when i'm not working with data, i enjoy creating digital art and exploring new languages and cultures. feel free to reach out!</p>
