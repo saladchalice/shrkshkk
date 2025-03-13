@@ -56,6 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
           window.scrollBy(0, -80); // Adjust the number (e.g., 80px) to the height of the fixed header
       });
   }
+
+  // Get the scrollArrow and opening2 elements
+  const scrollArrow = document.getElementById("scrollArrow");
+  const opening2 = document.getElementById("black-space");
+
+  // Add event listener to scrollArrow for the click event
+  scrollArrow.addEventListener("click", function() {
+    // Scroll to the opening2 element smoothly
+    opening2.scrollIntoView({
+      behavior: "smooth",  // Smooth scrolling
+      block: "start"       // Align to the top of the viewport
+    });
+  });
 });
 
 

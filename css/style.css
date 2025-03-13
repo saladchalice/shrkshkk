@@ -589,6 +589,7 @@ section#socials img {
 
 section#socials a:hover img {
     transform: scale(1.2); /* Slightly enlarge the logo on hover */
+    border:none;
 }
 
 /* photo */
@@ -598,7 +599,7 @@ section#socials a:hover img {
     margin: 0px; /* Optional margin to adjust spacing */
 }
 
-#photo img:hover {
+img#me:hover {
     box-shadow: 0 0 0 2px white; /* Apply an inset shadow to act like a border */
 }
 
@@ -1180,3 +1181,38 @@ svg.rotate {
     animation-fill-mode: both;
     z-index: 500;
   }
+
+  /* scroll arrow formatting ---------------------------------------------------------------- */
+.scroll-arrow {
+    margin-top: 60px;
+    position:absolute;
+    left: 47.9vw;
+    top:83vh;
+    opacity: 1; /* Start with the arrow invisible */
+    animation: fadeIn 1s forwards, bounce 2s infinite ease-in-out; /* Apply both animations */
+    animation-delay: 1.2s; /* Delay for both animations */
+    z-index: 500;
+  }
+
+  .scroll-arrow:hover {
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Fade in to fully visible */
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0); /* At the start, middle, and end, it stays in its position */
+    }
+    40% {
+      transform: translateY(-10px); /* Moves up slightly */
+    }
+    60% {
+      transform: translateY(-5px); /* Moves up a little less */
+    }
+  }
+  
