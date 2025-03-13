@@ -87,7 +87,7 @@ export async function fetchJSON(url) {
 // we need project and containerElemenet as parameters because we 
 // must locate a specific project, then a container element to put them in
 
-const baseURL = window.location.origin.includes('github.io')
+  const baseURL = window.location.origin.includes('github.io')
   ? '/shrkshkk'
   : ''; // Adjust if needed for local dev
 
@@ -119,8 +119,8 @@ const baseURL = window.location.origin.includes('github.io')
     // Iterate over each project in the projects array
     projects.forEach((project, index) => {
       const article = document.createElement('article');
-      // Add initial class to trigger fade and dr op
-      article.classList.add('article-fade');
+      // Initially set to hidden, then will be revealed after appending
+      article.classList.add('article-fade', 'hidden');
 
       // Use default values if properties are missing
       const title = project.title || 'Untitled Project';
@@ -130,10 +130,11 @@ const baseURL = window.location.origin.includes('github.io')
       const year = project.year || 'Year unknown';
       const link = project.link || '#'; // Default link if not provided
       const tags = project.tags || []; // Default to empty array if no tags
-      
+
       // Create heading element dynamically based on headingLevel
       const heading = document.createElement(headingLevel);
       heading.textContent = title;
+
       // Create tags container
       const tagsContainer = document.createElement('div');
       tagsContainer.classList.add('tags-container');
@@ -143,7 +144,7 @@ const baseURL = window.location.origin.includes('github.io')
         tagSpan.textContent = tag;
         tagsContainer.appendChild(tagSpan);
       });
-      
+
       article.innerHTML = ` 
       <a href="${link}" target="_blank" class="project-link">
         <img src="${image}" alt="${title}" class="article-image">
@@ -155,18 +156,18 @@ const baseURL = window.location.origin.includes('github.io')
       </a>
     `;
     
-        
       article.prepend(heading);
       article.querySelector('.tags-wrapper').appendChild(tagsContainer); 
-  
 
       containerElement.appendChild(article);
-  
-      // Use setTimeout to delay the class that triggers the transition
+
+      // Add delay only after the element is added
       setTimeout(() => {
-        article.classList.add('visible');
+        article.classList.remove('hidden'); // Remove the hidden class to reveal the element
+        article.classList.add('visible'); // Trigger the transition
       }, index * 200); // Add a small delay between articles for staggered effect
     });
-  }
+}
+
     
 

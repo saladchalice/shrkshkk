@@ -45,7 +45,6 @@ function renderPieChart(projectsGiven) {
     ]);
 
     let svg = d3.select('svg');
-    svg.classed('article-fade', true); // Ensure fade class is applied before render
     svg.selectAll('path').remove();
 
     newArcs.forEach((arc, i) => {
@@ -76,7 +75,6 @@ function renderPieChart(projectsGiven) {
 
     // Clear existing legend and apply initial hidden class
     let legend = d3.select('.legend');
-    legend.classed('article-fade', true);
     legend.selectAll('*').remove();
 
     // Define new legend
@@ -88,7 +86,6 @@ function renderPieChart(projectsGiven) {
     });
 
     let searchBar = document.querySelector('.searchBar');
-    searchBar.classList.add('article-fade');
 
     // Ensure elements are initially hidden before fading in
     requestAnimationFrame(() => {
