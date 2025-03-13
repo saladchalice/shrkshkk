@@ -20,56 +20,13 @@ body, html {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-.world-map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black; /* Sets the background color to black */
+
+.background-container, .compass-container, .website-block {
+    width: 100%;
+    overflow: hidden; /* Prevent overflow within these containers */
 }
 
-.countrypng {
-    display: block;          /* Ensures the image is a block element */
-    margin-left: auto;       /* Centers the image horizontally */
-    margin-right: auto;      /* Centers the image horizontally */
-    width: 80%;             /* Sets the width to 100% of its container */
-    height: auto;            /* Maintains the aspect ratio by adjusting height automatically */
-    max-width: 100vw;        /* Ensures the image does not exceed the viewport width */
-}
 
-/* Container for centering the iframe */
-.plotly-container {
-    display: flex;               /* Enables flexbox */
-    justify-content: center;     /* Centers the iframe horizontally */
-    align-items: center;         /* Centers the iframe vertically */
-    height: 550px;               /* Matches the height of the iframe */
-    width: 1300px;               /* Matches the width of the iframe */
-    background-color: black;     /* Optional: sets background color of container */
-    margin-left: 0;                   /* Ensures no margin around the container */
-    padding: 0;                  /* Removes any padding around the container */
-}
-
-/* Styles for the iframe */
-.plotly {
-    width: 87%;                  /* Makes the iframe stretch across the full width of the container */
-    height: 100%;                 /* Makes the iframe take the full height of the container */
-    border: none;                /* Removes any borders around the iframe */
-    background-color: transparent; /* Ensures iframe background is transparent */
-}
-.description {
-    margin-top: 20px;            /* Adds space above the description */
-    text-align: center;          /* Centers the text */
-    color: white;                /* Makes text color white for better visibility on black background */
-    font-size: 16px;             /* Sets font size */
-}
-
-.description a {
-    color: #32568f;              /* Sets the color for the link */
-    text-decoration: none;       /* Removes underline from the link */
-}
-
-.description a:hover {
-    text-decoration: underline;  /* Adds underline on hover for better interaction */
-}
 
 .smalltitle {
     color:#32568f;  /* Vibrant blue color */
@@ -113,7 +70,6 @@ body, html {
     padding-left: 8%;
     padding-right: 8%;
 }
-
 
 .website-block {
     display: flex;
@@ -336,6 +292,11 @@ body, html {
     box-sizing: border-box;
 }
 
+html{
+    overflow: hidden;
+
+}
+
 main {
     color: #fff; /* White text color */
     padding: 20px; /* Padding around the content */
@@ -356,7 +317,7 @@ span #emphasis{
     font-family: 'Inter', sans-serif !important;
     font-weight: 400;
 }
-    
+
 
 .footer {
     color: #fff;
