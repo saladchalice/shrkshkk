@@ -208,7 +208,7 @@ p {
 
 #projects.background-container{
     background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
         url('../images/projectbg.png');
         background-position: center -50px; 
     /* background-image:none;
@@ -428,19 +428,20 @@ span #emphasis{
 
 /* ----------------------Compass Container ----------------------------------*/
 .compass-container {
-    position: relative;
-    max-width: 400px;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateY(-20px); /* Start slightly above */
-    width: 90vw;
+    transform: translate(-50%, -50%) translateY(-20px); /* Centers the element and slightly shifts it up */
+    width: 90vw; /* Adjust width to fit as desired */
+    max-width: 400px; /* Optional max-width */
+    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
-    opacity: 0; /* Fully hidden */
+    opacity: 0; /* Initially hidden */
     transition: opacity 1s ease, transform 1s ease; /* Smooth transition for fade and drop */
 }
+
 
 /* Class to activate fade and drop when the page is loaded */
 .compass-container.visible {
@@ -500,6 +501,11 @@ span #emphasis{
     color: white;
     font-family: 'Syne', sans-serif;
     font-weight: 700;
+}
+
+#intro-header{
+    margin-bottom:0;
+    padding-bottom:0;
 }
 
 /* Position the options around the center logo */
@@ -1186,8 +1192,8 @@ svg.rotate {
 .scroll-arrow {
     margin-top: 60px;
     position:absolute;
-    left: 47.9vw;
-    top:83vh;
+    left: 48.5%;
+    top:80%;
     opacity: 1; /* Start with the arrow invisible */
     animation: fadeIn 1s forwards, bounce 2s infinite ease-in-out; /* Apply both animations */
     animation-delay: 1.2s; /* Delay for both animations */

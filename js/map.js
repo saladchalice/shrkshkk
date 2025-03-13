@@ -124,8 +124,13 @@ async function createChoropleth(data) {
 
     // Create color scale
     const maxCount = d3.max(Array.from(countryStats.values()), d => d.count) || 1;
-    const colorScale = d3.scaleSequential(d3.interpolateRgb("#6c7f9b", "#3d5473"))
-        .domain([0, maxCount]);  // Scale from 0 to maxCount based on data
+    const colorScale = d3.scaleSequential(d3.interpolateHcl("#AFC6E9", "#08142E"))
+    .domain([0, maxCount]);
+
+
+
+
+ // Scale from 0 to maxCount based on data
 
     svg.call(zoom);
 
