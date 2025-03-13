@@ -1,5 +1,13 @@
 [
     {
+        "title": "The Organ Trail: Navigating the Surgical Experience",
+        "image": "/images/data/organ.png",
+        "year": "2025",
+        "description": "This project pulls from the VitalDB surgical dataset to construct three interactive visualizations that display how surgery differs for every patient.",
+        "link": "https://ancientabacus.github.io/Project-4/",
+        "tags": ["Data Visualization", "D3.js", "HTML/CSS", "Front-end Development"]
+    },
+    {
         "title": "PedalPlot: What's Bike Traffic Like in Boston?",
         "image": "/images/data/biking.png",
         "year": "2025",

@@ -14,3 +14,8 @@ window.addEventListener('load', function() {
 });
 
 
+document.querySelectorAll("div").forEach(div => {
+  div.addEventListener("scroll", function () {
+      console.log(`Scrolling detected in: ${this.id || "Unnamed div"}`);
+  });
+});

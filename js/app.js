@@ -25,6 +25,11 @@ window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll', scrollPosition / (documentHeight - viewportHeight));
 }, false);
 
+window.addEventListener("scroll", () => {
+  console.log("Scroll detected!");
+});
+
+// on load -------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   
