@@ -38,7 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="data-portfolio.html">Projects</a>
         <a href="images/2025 Resume.pdf">CV</a>
     `;
-  
+    const aboutOption = document.querySelector('.scroll-to-intro');
+    const introContainer = document.getElementById('intro-container');
+      // Ensure the element exists before adding an event listener
+      if (aboutOption && introContainer) {
+        aboutOption.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent default link behavior
+      
+          // Scroll smoothly to the intro container with a slight offset
+          introContainer.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start' 
+          });
+      
+          // Adjust for any fixed headers (if you have one)
+          window.scrollBy(0, -80); // Adjust the number (e.g., 80px) to the height of the fixed header
+      });
+      
+    }
     
 });
 

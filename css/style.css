@@ -21,7 +21,7 @@ body, html {
     overflow-x: hidden;
 }
 
-.background-container, .compass-container, .website-block {
+.background-container,.website-block {
     width: 100%;
     overflow: hidden; /* Prevent overflow within these containers */
 }
@@ -477,7 +477,7 @@ span #emphasis{
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .option a {
