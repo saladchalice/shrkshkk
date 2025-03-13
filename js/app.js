@@ -15,19 +15,17 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // scroll widget ------------------------------------------------------------------------------------
-window.addEventListener('scroll', () => {
-  const documentHeight = document.documentElement.scrollHeight; // Full document height including dynamically generated content
-  const viewportHeight = window.innerHeight; // The height of the viewport
-  const scrollPosition = window.pageYOffset; // The current scroll position
+// const mainPage = document.querySelector('body.main-page'); // Select the body element with the class 'main-page'
 
-  // Update the --scroll property based on the current scroll position and full document height
-  //pushed
-  document.body.style.setProperty('--scroll', scrollPosition / (documentHeight - viewportHeight));
-}, false);
+// mainPage.addEventListener('scroll', () => {
+//   const documentHeight = mainPage.scrollHeight; // Full document height including dynamically generated content
+//   const viewportHeight = mainPage.clientHeight; // The height of the viewport (main page container)
+//   const scrollPosition = mainPage.scrollTop; // The current scroll position
 
-window.addEventListener("scroll", () => {
-  console.log("Scroll detected!");
-});
+//   // Update the --scroll property based on the current scroll position and full document height
+//   document.body.style.setProperty('--scroll', scrollPosition / (documentHeight - viewportHeight));
+// });
+
 
 // on load -------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
