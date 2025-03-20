@@ -63,6 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+const scrollarrow = document.querySelector('.scroll-arrow')
+if(scrollarrow){
+  scrollarrow.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Scroll smoothly to the intro container
+    document.querySelector('.black-space').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+}
+   
+
 // dsc 106 code
 function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));

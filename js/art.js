@@ -29,4 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
             introContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     }
+
+    
 });
