@@ -149,6 +149,8 @@ export async function fetchJSON(url) {
       // Create heading element dynamically based on headingLevel
       const heading = document.createElement(headingLevel);
       heading.textContent = title;
+      heading.style.fontFamily = 'Inter, sans-serif'; // Apply the Syne font
+
 
       // Create tags container
       const tagsContainer = document.createElement('div');

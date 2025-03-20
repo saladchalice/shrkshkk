@@ -787,7 +787,7 @@ img.visible:hover{
       display: inline-block;
       width: 1em !important; /* Explicitly set width with !important */
       height: 1em !important; /* Explicitly set height with !important */
-      background-color: oklch(60% 45% 0);
+      background-color: oklch(15.76% 0.039 0);
       border-radius: 50%;
       margin-right: 0.5em;
       vertical-align: middle; /* Ensure consistent vertical alignment */
@@ -833,7 +833,7 @@ img.visible:hover{
   } 
 
   .selected {
-    --color: oklch(60% 45% 0) !important;
+    --color: oklch(.21 .02 303. 1) !important;
   
     &:is(path) {
       fill: var(--color);

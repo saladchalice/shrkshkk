@@ -39,10 +39,24 @@ function renderPieChart(projectsGiven) {
     let newArcData = newSliceGenerator(newData);
     let newArcs = newArcData.map((d) => arcGenerator(d));
 
-    let colors = d3.scaleOrdinal([
-        '#DC143C', '#8B0000', '#FF4500', '#2E8B57', '#006400',
-        '#228B22', '#008080', '#008B8B', '#20B2AA', '#556B2F', '#3CB371'
-    ]);
+    const ordinalColors = [
+        '#0A2F51', // Deep Blue
+        '#004488', // Royal Blue
+        '#1D9A6C', // Teal Green
+        '#FF8800', // Vibrant Orange
+        '#E63946', // Strong Red
+        '#FFC300', // Bright Yellow
+        '#39A96B', // Fresh Green
+        '#556B2F', // Olive Green
+        '#8E44AD', // Rich Purple
+        '#3CB371'  // Medium Sea Green
+      ];
+      
+    let colors = d3.scaleOrdinal(
+       ordinalColors
+    );
+
+
 
     let svg = d3.select('svg');
     svg.selectAll('path').remove();
@@ -80,11 +94,11 @@ function renderPieChart(projectsGiven) {
     // Define new legend
     newData.forEach((d, idx) => {
         legend.append('li')
-            .attr('style', `--color:${colors(idx)}`)
             .attr('class', 'legend-item')
+            .attr('style', `--color:${colors(idx)}; font-family: Inter;`)
             .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
     });
-
+    
     let searchBar = document.querySelector('.searchBar');
 
     // Ensure elements are initially hidden before fading in
