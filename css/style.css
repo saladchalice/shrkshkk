@@ -855,6 +855,11 @@ img.visible:hover{
     gap:1em;
   }
 
+span.tag{
+    font-family:Inter, sans serif;
+    border-radius:5px;
+}
+
 .projects article {
     display: grid;
     grid-template-rows: subgrid;
