@@ -678,13 +678,13 @@ img.visible:hover{
     display: flex;
     justify-content: flex-end; /* Align links to the right */
     box-sizing: border-box;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease; /* Adjust duration as needed */
 }
 
-#navbar.fade-in {
+/* #navbar.fade-in {
     opacity: 1;
-  }
+  } */
 
 #navbar a {
     font-family: 'Syne', sans-serif;
@@ -1085,12 +1085,14 @@ section#photo {
 }
 
 /* scroll progress ----------------------------------------------------*/
-/* svg.scroll-widget {
+img.scroll-widget {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     width: 60px;
     height: 60px;
+    width:50px;
+    height:auto;
   
     transform-origin: center;
   
@@ -1108,7 +1110,7 @@ section#photo {
       transform: rotate(360deg);
     }
   }
-   */
+  
 
 
   /* scroll arrow formatting ---------------------------------------------------------------- */

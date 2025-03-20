@@ -15,16 +15,17 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // scroll widget ------------------------------------------------------------------------------------
-// const mainPage = document.querySelector('body.main-page'); // Select the body element with the class 'main-page'
+document.querySelectorAll('body.main-page, body.alt-page, div.background-container').forEach(page => {
+  page.addEventListener('scroll', () => {
+    const documentHeight = page.scrollHeight; // Full document height
+    const viewportHeight = page.clientHeight; // Viewport height
+    const scrollPosition = page.scrollTop; // Current scroll position
 
-// mainPage.addEventListener('scroll', () => {
-//   const documentHeight = mainPage.scrollHeight; // Full document height including dynamically generated content
-//   const viewportHeight = mainPage.clientHeight; // The height of the viewport (main page container)
-//   const scrollPosition = mainPage.scrollTop; // The current scroll position
+    // Update the --scroll property based on the current scroll position
+    document.body.style.setProperty('--scroll', scrollPosition / (documentHeight - viewportHeight));
+  });
+});
 
-//   // Update the --scroll property based on the current scroll position and full document height
-//   document.body.style.setProperty('--scroll', scrollPosition / (documentHeight - viewportHeight));
-// });
 
 
 // on load -------------------------------------------------------------------------------------------
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   
   // Apply the fade-in class immediately
-  navbar.classList.add('fade-in');
+  // navbar.classList.add('fade-in');
   
   navbar.innerHTML = `
       <a href="index.html">Home</a>
@@ -60,20 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // Get the scrollArrow and opening2 elements
-  const scrollArrow = document.getElementById("scrollArrow");
-  const opening2 = document.getElementById("black-space");
-
-  // Add event listener to scrollArrow for the click event
-  scrollArrow.addEventListener("click", function() {
-    // Scroll to the opening2 element smoothly
-    opening2.scrollIntoView({
-      behavior: "smooth",  // Smooth scrolling
-      block: "start"       // Align to the top of the viewport
-    });
-  });
 });
-
 
 // dsc 106 code
 function $$(selector, context = document) {
