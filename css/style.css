@@ -955,14 +955,24 @@ span.tag{
 
 @media (max-width: 768px) {
     #lnos {
-        font-size: .65rem; /* Reduce font size on tablets */
+        font-size: .85rem; /* Reduce font size on tablets */
+    }
+
+    #lnos.text {
+        width:100%;
+    }
+    .logo{
+        visibility: hidden;
     }
 }
 
 @media (max-width: 480px) {
     #lnos {
-        font-size: .25rem; /* Further shrink font for mobile */
+        font-size: 1rem; /* Further shrink font for mobile */
         max-width: 95%; /* Slightly increase width usage */
+    }
+    .logo{
+        visibility: hidden;
     }
 }
 
