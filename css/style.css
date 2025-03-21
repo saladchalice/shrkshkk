@@ -932,7 +932,7 @@ span.tag{
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically (if needed) */
-    text-align: justify; /* Ensures text inside aligns */
+    text-align: left; /* Ensures text inside aligns */
     max-width:100ch;
 }
 
@@ -960,9 +960,17 @@ span.tag{
 
     #lnos.text {
         width:100%;
+        font-size: 1rem; /* Further shrink font for mobile */
+
     }
     .logo{
         visibility: hidden;
+    }
+    #lnos-chart{
+        overflow-x: auto;
+    }
+    #scroll-arrow{
+        left:50%;
     }
 }
 
@@ -973,6 +981,14 @@ span.tag{
     }
     .logo{
         visibility: hidden;
+    }
+
+    #lnos-chart{
+        overflow-x: auto;
+    }
+
+    #scroll-arrow{
+        left:50%;
     }
 }
 
