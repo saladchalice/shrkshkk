@@ -664,7 +664,7 @@ img.visible:hover{
 }
 
 
-/* navbar whatever ------------------------------------------------------- */
+/* nav whatever -------------------------------------------------- */
 #navbar {
     position: fixed;
     top: 0;
@@ -681,35 +681,25 @@ img.visible:hover{
     transition: opacity 1s ease; /* Adjust duration as needed */
 }
 
-
 #navbar a {
-    position: relative;
+    font-family: 'Syne', sans-serif;
+    color: white;
     text-decoration: none;
-    color: white; /* Adjust to fit your theme */
     padding: 10px;
-    font-size: 18px;
+    margin-right: 2rem;
+    display: inline-block;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width/height */
+    position: relative; /* Required for hover effects */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transition for smooth hover effect */
+    border-radius: 10px; /* Keep consistent border-radius */
 }
 
-#navbar a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: white; /* Adjust color */
-    transition: width 0.3s ease, left 0.3s ease;
-    border-bottom: 2px dotted white; /* Dotted effect */
+#navbar a:hover {
+    box-shadow: inset 0 0 0 2px white;
+    outline: none; 
 }
 
-#navbar a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-
-/* navbar whatever ------------------------------------------------------- */
-
+/* nav whatever -------------------------------------------------- */
 #emphasis{
     color:#4984e2;
 }
