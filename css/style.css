@@ -666,19 +666,26 @@ img.visible:hover{
 
 /* nav whatever -------------------------------------------------- */
 #navbar {
-    position: fixed;
+    /* positioning */
+    position: absolute;
     top: 0;
     right: 0;
-    left: 0; /* Ensure it spans the full width */
-    background-color: transparent; /* Adjusted from 'none' to 'transparent' for visibility */
     padding: 10px;
     z-index: 1000;
-    font-family: 'Syne', sans-serif;
-    display: flex;
-    justify-content: flex-end; /* Align links to the right */
     box-sizing: border-box;
+
+    /* styles*/
+    background-color: transparent; 
+    font-family: 'Syne', sans-serif;
     opacity: 1;
-    transition: opacity 1s ease; /* Adjust duration as needed */
+
+    /* centering content*/
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    /* transition */
+    transition: opacity 1s ease; 
 }
 
 #navbar a {
@@ -689,16 +696,35 @@ img.visible:hover{
     margin-right: 2rem;
     display: inline-block;
     box-sizing: border-box; /* Ensures padding and border are included in the total width/height */
-    position: relative; /* Required for hover effects */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transition for smooth hover effect */
-    border-radius: 10px; /* Keep consistent border-radius */
+    position: relative;
+    border-radius: 10px; 
+
+     /* flexbox styles for equal width and spacing */
+     flex-grow: 1; /* Makes each link take up equal space */
+     text-align: center; /* Centers the text inside each link */
+
+    /*transition*/
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-#navbar a:hover {
-    box-shadow: inset 0 0 0 2px white;
-    outline: none; 
+#navbar a:hover + .dot {
+    opacity: 1;
+    transform: translateX(0); /* Reset transform if needed */
 }
 
+#navbar .dot {
+    width: 6px; 
+    height: 6px;
+    background-color: white; /* Color of the dot */
+    border-radius: 50%; /* Makes the dot round */
+    position: absolute; /* Position the dot relative to the navbar */
+    top: 70%; 
+    opacity:0;
+    transform: translateY(-50%); /* Adjusts the dot's vertical alignment */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    pointer-events: none; /* Ensures the dot doesn't block interactions with navbar links */
+}
 /* nav whatever -------------------------------------------------- */
 #emphasis{
     color:#4984e2;

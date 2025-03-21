@@ -42,6 +42,44 @@ document.addEventListener('DOMContentLoaded', () => {
       <a href="images/2025 Resume.pdf">CV</a>
       <div class="dot"></div>
   `;
+
+  // dot animation -----------------------------------------------------------------------
+
+  let dot = document.querySelector(".dot");
+  let links = document.querySelectorAll("#navbar a");
+  
+  // Function to update the dot position
+  function updateDotPosition() {
+      let navbarRect = navbar.getBoundingClientRect(); // Get the navbar's position
+      let firstLinkRect = links[0].getBoundingClientRect(); // Get the first link's position
+      dot.style.left = `${firstLinkRect.left - navbarRect.left}px`; // Set initial position of the dot
+  }
+  
+  // Initialize the dot position when the page loads
+  updateDotPosition();
+  
+  // Recalculate dot position on window resize
+  window.addEventListener('resize', updateDotPosition);
+  
+  // Add mouseenter event listeners to each link
+  links.forEach((link) => {
+      link.addEventListener("mouseenter", function () {
+          let linkRect = link.getBoundingClientRect();
+          let navbarRect = navbar.getBoundingClientRect(); // Get navbar position
+          let newX = linkRect.left - navbarRect.left; // Calculate X position relative to navbar
+          dot.style.transform = `translateX(${newX}px)`; // Move the dot to the new position
+          dot.style.opacity = '1'; // Set opacity to 1 to make the dot visible
+        });
+  });
+  
+  // Reset the dot when mouse leaves the navbar
+  navbar.addEventListener("mouseleave", function () {
+      updateDotPosition(); // Reset to the first link when mouse leaves
+      dot.style.opacity = '0'; // Fade out the dot
+    });
+
+  // rest ---------------------------------------------------------------------------------------
+
   const aboutOption = document.querySelector('.scroll-to-intro');
   const introContainer = document.getElementById('intro-container');
 
