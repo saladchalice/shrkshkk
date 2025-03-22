@@ -596,7 +596,7 @@ h2 {
     justify-content: center; /* Center the items */
     opacity: 0; /* Start with rows invisible */
     transform: translateY(20px); /* Initially slightly below */
-    transition: opacity 0.78s ease, transform 0.6s ease; /* Fade-in and movement effect */
+    transition: opacity 0.25s ease, transform 0.6s ease; /* Fade-in and movement effect */
 }
 
 #photos.row {
@@ -1200,3 +1200,39 @@ img.scroll-widget {
     }
   }
   
+
+  /* transition ------------------------- */
+/* transition ------------------------- */
+.transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.transition-row {
+    flex: 1;
+    display: flex;
+}
+
+.transition-row.row-1 .block {
+    transform-origin: top; /* Only one transform-origin */
+}
+
+.transition-row.row-2 .block {
+    transform-origin: bottom; /* Only one transform-origin */
+}
+
+.block {
+    flex: 1;
+    background-color: black;
+    transform: scaleY(1);
+    will-change: transform;
+    min-height: 1px; /* Ensure elements have height */
+    visibility: visible; /* Ensure visibility before animation */
+}
