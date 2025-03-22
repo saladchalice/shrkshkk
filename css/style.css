@@ -1211,7 +1211,7 @@ img.scroll-widget {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    z-index: 3000;
     pointer-events: none;
 }
 
