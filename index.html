@@ -15,12 +15,29 @@
     <script type='module' src="js/index.js"></script>
     <!-- <script defer type='module' src="js/art.js"></script> -->
     <script defer type='module' src="js/map.js"></script>
+    <script defer type='module' src="js/transition.js"></script>
+
 
     <!--set favicon-->
     <link rel="shortcut icon" type="image/png" href="images/dog.png">
     
 </head>
 <body class="main-page">
+    <!--Transition Blocks-->
+    <div class="transition">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <!-- main page-->
+    <div class="app">
+
+    </div>
+
+    
     <div id="navbar"></div>
     <!-- scroll widget-->
     <img src="images/star.svg" class="scroll-widget">
@@ -82,21 +99,11 @@
                     <br />
                 in the making of this playlist, i've gotten to know and appreciate indie and alternative artists from music cultures around the world that i would've never been able to encounter otherwise. some highlights for me are singapore, kenya, the faroe islands, and peru!</p>
             </section>
-            <!-- <iframe 
-            style="border-radius:12px; width:100%; max-width:600px; height:300px; display:block; margin:0 auto;     align-items: center;" 
-            src="https://open.spotify.com/embed/playlist/45lMrjDlH4w4d0cJxGDyW3?utm_source=generator" 
-            frameBorder="0" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy" class="spotify">
-            </iframe> -->
         </div>
 
         <div id="lnos-chart">
 
         </div>
-        <!-- <div class="plotly-container">
-            <iframe src="plot.html" class="plotly"></iframe>
-        </div> -->
         <div class="website-block" id="lnos">
             <section class="text" id="lnos">
                 <p>
@@ -106,42 +113,10 @@
                        target="_blank" 
                        id="link">here!</a>
                   </p>
-                                  <!-- <br />
-                <br />
-                For more details, check out the original dataset in <a href="https://docs.google.com/spreadsheets/d/1DJq9LYoS_qU9mkHKc6gJMrKqchGn_CXwq-JpD3UfrFk/edit?gid=0#gid=0" target="_blank">Google Sheets</a>.</p> -->
             </section>
         </div>
         
-        <!-- <div class="website-block">
-            <section class="text">
-                <h2>sketches and travels</h2>
-                <div class="row" id="photos">
-                    <div class = "column"id='photos'>
-                        <img src="images/photos/montagne.jpg">
-                        <img src="images/photos/bleu.jpg">
-                        <img src="images/photos/longroad.jpg">
-                        <img src="images/photos/joshuatree2.jpg">
-                    </div>
-                    <div class = "column"id='photos'>
-                        <img src="images/photos/kid.jpg">
-                        <img src="images/photos/louise.jpg">
-                        <img src="images/photos/bemine.jpg">
-                        <img src="images/photos/heart1.jpg">
-
-                    </div>
-                    <div class = "column"id='photos'>
-                        <img src="images/photos/icelake.jpg">
-                        <img src="images/photos/olympic.jpg">
-                        <img src="images/photos/schweiz.jpg">
-                    </div>
-                    <div class = "column"id='photos'>
-                        <img src="images/photos/float.jpg">
-                        <img src="images/photos/windmill.jpg">
-                        <img src="images/photos/joshuatree.jpg">
-                    </div>
-                </div>
-            </section>
-        </div> -->
+       
         <div class="website-block">
             <section class="text">
                 <h2 id = 'intro-header'>about me</h2>
@@ -169,7 +144,6 @@
                 </section>
             </section>
         </div>
-        <!-- <div class="projects"></div> -->
         <footer class="footer">
             <p>© 2023 Edward Lu. All rights reserved.</p>
         </footer>
