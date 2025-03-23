@@ -53,7 +53,7 @@ body, html {
 
 /* ----------------------main-page----------------------*/
 .main-page .black-space {
-    background-color: #000;
+    background: linear-gradient(180deg, #000000 60%, #08142E 100%);
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
     width: 100%;
     overflow:hidden;
@@ -69,7 +69,7 @@ body, html {
     margin: 0 auto; /* Ensures the section is centered within its parent */
     text-align: center; /* Centers the text inside the section */
     font-family: 'Syne', sans-serif; /* Use the 'Syne' font for the text */
-    font-size: 12;
+    background-color: transparent;
     overflow:hidden;
     will-change: transform;
     transition: opacity 1s, filter 1s, transform 1s;
@@ -277,9 +277,8 @@ span #emphasis{
 .text {
     display:grid;
     place-items:center;
-    align-content:center;
+    align-content:left;
     font-size: 16px;
-    background-color: #000000; 
     color: #fff;
     padding: 30px; 
     margin: 0 auto;
@@ -1053,7 +1052,6 @@ section#photo {
     font-size: 18px;
     line-height: 1.6;
     max-width: 600px; /* Limits the width of the text */
-    align-content: justify;
 }
 
 #photo img {
