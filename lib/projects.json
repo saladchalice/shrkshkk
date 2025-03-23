@@ -16,14 +16,6 @@
         "tags": ["Data Visualization", "D3.js", "HTML/CSS"]
     },
     {
-        "title": "Aging Under the Knife: How Surgery Trends Shift Across Generations",
-        "image": "/images/data/aging.png",
-        "year": "2025",
-        "description": "This project visualizes the trends in surgical procedures across different generations with a focus on user interactability. The data was sourced from VitalDB, and the visualization was created using D3.js and HTML/CSS.",
-        "link": "https://ancientabacus.github.io/106-Project-3/",
-        "tags": ["Data Visualization", "D3.js", "HTML/CSS"]
-    },
-    {
         "title": "Northrop Grumman AI Governance: Data Pipelines",
         "image": "/images/data/ng.png",
         "year": "2024",
@@ -67,7 +59,7 @@
         "tags": ["Time Series Analysis", "Python", "Data Analysis", "Data Visualization"]
     },
     {
-        "title": "Oaxaca-Blinder Decom: Poverty-Income Ratio Disparities Between Black and White Americas",
+        "title": "Oaxaca-Blinder Decom: Poverty-Income Ratio Disparities Between Black and White Americans",
         "image": "/images/data/decomp.png",
         "year": "2025",
         "description": "Utilized the Oaxaca-Blinder decomposition technique to evaluate the root causes of disparity in poverty-income ratios between Black and White Americans, utilizing data from the U.S. Census Bureau and the Bureau of Labor Statistics.",
@@ -87,13 +79,5 @@
         "description": "Implements and trains an XGBoost machine learning algorithm in Python with the XGBoost package to classify financial transaction data as fraudulent or legitimate based on factors such as transaction time, category, merchant, amount, etc.",
         "tags": ["Machine Learning", "Python", "Data Analysis"], 
         "link": "https://github.com/saladchalice/XGBoost-Credit-Card-Fraud-Classifier"
-    },
-    {
-        "title": "K-Nearest Neighbors Image Classifier",
-        "image": "/images/data/knn.png",
-        "year": "2020",
-        "description": "Implemented an RGB image processing class in Python that reads in images and offers customization options as well as a KNN component to analyze image similarity and assign unlabeled images labels according to the labels of its nearest neighbors.",
-        "tags": ["Image Processing", "Python", "Data Analysis"]
     }
-    
 ]
