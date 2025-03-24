@@ -933,6 +933,10 @@ p.animate-about, p.animate-about-2 {
         max-width: 200px; /* Reduces image size for mobile devices */
         height:auto;
     }
+
+    .animate-about, .animate-about-2, .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3{
+        color:white;
+    }
 }
 
 #intro{
