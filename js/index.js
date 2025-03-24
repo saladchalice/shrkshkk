@@ -14,7 +14,7 @@ document.querySelectorAll("div").forEach(div => {
 });
 
 
-// compass scroll rotate animation 
+// compass scroll rotate animation -----------------------------------------------------------------
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -25,6 +25,16 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
+});
+
+// // Refresh ScrollTrigger when the user scrolls using any method
+let lastUpdate = 0;
+gsap.ticker.add(() => {
+    let now = Date.now();
+    if (now - lastUpdate > 100) { // Adjust 50ms for smoother performance
+        ScrollTrigger.update();
+        lastUpdate = now;
+    }
 });
 
 gsap.fromTo(
@@ -79,7 +89,7 @@ gsap.fromTo(
     }
 );
 
-//gsap animate lnos lines
+//gsap animate lnos lines ------------------------------------------------------------------------
 
 gsap.to('.animate-about', {
   backgroundPositionX: 0,
@@ -103,7 +113,7 @@ gsap.to('.animate-about-2', {
   }
 });
 
-// animate lnos text
+// animate lnos text ---------------------------------------------------------------
 gsap.to('.animate-lnos-text', {
   backgroundPositionX: 0,
   ease: "none", 
@@ -155,12 +165,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
-// lnos wrapper move
+// lnos wrapper move ----------------------------------------------------------------------------
 
 let loop = horizontalLoop(".scroll-header", {
-  speed: 1, // Adjust speed
+  speed: 1, 
   repeat: -1, 
-  paddingRight: window.innerWidth, // Prevents cutoff
+  paddingRight: window.innerWidth, 
 });
 
 ScrollTrigger.create({
@@ -173,7 +183,7 @@ ScrollTrigger.create({
   }
 });
 
-// gsap scrolltext helper function
+// gsap scrolltext helper function ---------------------------------------------------
 function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};

@@ -1076,3 +1076,7 @@ img.scroll-widget {
     flex-shrink: 0;
     padding-right: 2rem; /* Prevents cut-off */
   }
+
+  .option-north, .option-south, .option-east, .option-west {
+    will-change: transform, opacity;
+}
