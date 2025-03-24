@@ -108,12 +108,16 @@ async function createChoropleth(data) {
         .translateExtent([[0, 0], [width, height]])
         .on('zoom', zoomed);
 
+    
+
+
     // SVG Setup
     const svg = d3.select('#lnos-chart')
         .append('svg')
         .attr('width', width)
         .attr('height', height)
         .attr('class', 'lnos-chart');
+
 
     // Define Projection
     const projection = d3.geoNaturalEarth1()
@@ -161,4 +165,5 @@ async function createChoropleth(data) {
     function zoomed(event) {
         g.attr('transform', event.transform);  // Apply zoom to the group
     }
+    
 }

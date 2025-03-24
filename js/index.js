@@ -1,12 +1,3 @@
-import { fetchJSON, renderProjects } from '../js/app.js';
-
-// only include first 3 projects
-const baseURL = window.location.origin.includes('github.io')
-  ? '/shrkshkk'
-  : ''; // Adjust if needed for local dev
-
-
-
 window.addEventListener('load', function() {
   
   // Add the 'visible' class to the compass container to trigger the animation
@@ -141,17 +132,20 @@ gsap.to('.animate-lnos-text-3', {
   }
 });
 
+document.addEventListener('DOMContentLoaded', async () => {
+  setTimeout(() => {
+    gsap.from('.lnos-chart', {
+      opacity: 0,
+      y: -200,
+      scrollTrigger: {
+        trigger: '#lnos-chart',
+        scrub: 1,
+        start: 'top 80%',
+        end: 'bottom bottom',
+      }
+    });
+  }, 500); // Adjust delay based on your SVG injection timing
+});
 // GSAP animation for the choropleth chart with class .lnos-chart
 // Wait for the SVG to be injected, then run the animation
-setTimeout(() => {
-  gsap.from('.lnos-chart', {
-    opacity: 0,
-    y: -200,
-    scrollTrigger: {
-      trigger: '#lnos-chart',
-      scrub: 1,
-      start: 'top 80%',
-      end: 'bottom bottom',
-    }
-  });
-}, 500); // Adjust delay based on your SVG injection timing
+
