@@ -100,4 +100,36 @@ gsap.to('.animate-about-2', {
   }
 });
 
+// animate lnos text
+gsap.to('.animate-lnos-text', {
+  backgroundPositionX: 0,
+  ease: "none", 
+  scrollTrigger: { 
+    trigger: '.animate-lnos-text',
+    scrub: 1,
+    start: "top 80%",
+    end: "bottom bottom"
+  }
+});
 
+gsap.to('.animate-lnos-text-2', {
+  backgroundPositionX: 0,
+  ease: "none", 
+  scrollTrigger: { 
+    trigger: '.animate-lnos-text-2',
+    scrub: 1,
+    start: "top 80%",
+    end: "bottom bottom"
+  }
+});
+
+gsap.to('.animate-lnos-text-3', {
+  backgroundPositionX: 0,
+  ease: "none", 
+  scrollTrigger: { 
+    trigger: '.animate-lnos-text-3',
+    scrub: 1,
+    start: "top 80%",
+    end: "bottom bottom"
+  }
+});

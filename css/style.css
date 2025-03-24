@@ -356,6 +356,8 @@ section#socials {
     display: flex;
     justify-content: center;
     margin-bottom: 0;
+    padding-top:0;
+    padding-bottom:0;
 }
 
 section#socials a {
@@ -397,7 +399,7 @@ img#me:hover {
 }
 
 #intro-container{
-    padding-top:5%;
+    padding-top:1%;
 }
 /* -------------------------------art gallery ---------------------------------------------------------------------*/
 
@@ -813,17 +815,33 @@ span.tag{
     display: flex;
     align-items: center;
     font-size: 24px;
-    padding-right: 40px; /* Adjust spacing as needed */
+    padding-right: 40px; 
     flex-shrink: 0;
   }
   
-  #lnos.text{
-    border-radius: 10px;
-    outline: none; /* Remove outline */
-    margin-right:10px;
-  }
+  p.animate-lnos-text,   p.animate-lnos-text-2, p.animate-lnos-text-3{
+    font-weight:100;
+    line-height: 1.6;
+    font-size:1.1em;
+    font-family:"Inter", sans serif;
+    }
 
-/* Flexbox Layout for the photo section */
+    .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3 {
+        background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
+        background-size: 200% 100%;
+        background-position-x: 100%;  /* Start the background at the right */
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        line-height: 1.6;
+        max-width: 80ch;
+        font-family: 'Inter', sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+/*  photo section ------------------------------------------------*/
 section#photo {
     display: flex;
     align-items: center; /* Vertically aligns the <p> and <img> */
