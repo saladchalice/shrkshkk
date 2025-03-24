@@ -170,34 +170,6 @@ p {
     overflow:auto;
 }
 
-.alt-page .data .black-space {
-    background-color: #000;
-    width: 100%;
-    min-height: 100vh; /* Ensures it takes at least the full viewport height */
-    height:auto;
-    overflow:auto;
-}
-
-.alt-page .about .black-space {
-    background-color: #000;
-    width: 100%;
-    min-height: 100vh; /* Ensures it takes at least the full viewport height */
-    overflow:auto;
-}
-.alt-page .art .black-space {
-    background-color: #000;
-    /* min-height: 100vh; Ensures it takes at least the full viewport height */
-    width: 100%;
-    /* height: 2500px; Automatically adjusts to content */
-    overflow:auto;
-}
-
-.alt-page .art .black-space table {
-    width: 100%;
-    max-width: 100%;
-    overflow: auto;
-}
-
 
 
 @media only screen and (max-width: 600px) {
@@ -735,19 +707,19 @@ span.tag{
 
 
 .article-image {
-    height: auto; /* Set a constant height */
-    max-width: 100%; /* Maintain aspect ratio */
-    display: block; /* Ensure the image is a block element */
+    height: auto; 
+    max-width: 100%;
+    display: block;
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
-    object-fit: cover; /* Ensure the image covers the specified area */
+    object-fit: cover; 
 }
 
 /* fade in effect */
 .article-fade {
     opacity: 0;
     transform: translateY(20px);
-    visibility: hidden; /* Ensure it's hidden until the transition starts */
+    visibility: hidden; 
 }
 
 /* Fade-in effect */
@@ -825,15 +797,6 @@ span.tag{
     }
 }
 
-/* @keyframes scrollText {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  } */
-  
   #lnos-container {
     overflow: hidden;
     white-space: nowrap;
@@ -842,11 +805,6 @@ span.tag{
     display: flex;
   }
   
-  /* #lnos-wrapper {
-    display: flex;
-    animation: scrollText 10s linear infinite;
-    min-width: 200%;
-  } */
   
   #lnos-wrapper h2 {
     display: flex;
@@ -881,9 +839,9 @@ span.tag{
 /*  photo section ------------------------------------------------*/
 section#photo {
     display: flex;
-    align-items: center; /* Vertically aligns the <p> and <img> */
-    justify-content: center; /* Centers the content horizontally */
-    gap: 40px; /* Adds space between the <p> and <img> */
+    align-items: center; 
+    justify-content: center; 
+    gap: 40px; 
     text-align: center;
     padding-top:0;
 }

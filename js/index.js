@@ -89,7 +89,7 @@ gsap.fromTo(
     }
 );
 
-//gsap animate lnos lines ------------------------------------------------------------------------
+//gsap animate about lines ------------------------------------------------------------------------
 
 gsap.to('.animate-about', {
   backgroundPositionX: 0,
@@ -97,7 +97,7 @@ gsap.to('.animate-about', {
   scrollTrigger: { 
     trigger: '.animate-about',
     scrub: 1,
-    start: "top 80%",
+    start: "top 90%",
     end: "bottom bottom"
   }   
 });
@@ -108,7 +108,7 @@ gsap.to('.animate-about-2', {
   scrollTrigger: { 
     trigger: '.animate-about-2',
     scrub: 1,
-    start: "top 80%",
+    start: "top 90%",
     end: "bottom bottom"
   }
 });
