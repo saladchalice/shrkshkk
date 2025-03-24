@@ -23,6 +23,13 @@ document.querySelectorAll("div").forEach(div => {
 
 // compass scroll rotate animation 
 gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+window.addEventListener("resize", () => {
+  ScrollTrigger.refresh();
+});
 
 gsap.fromTo(
     ".option-north",
