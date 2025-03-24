@@ -26,7 +26,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(
     ".option-north",
-    { opacity: 1, scale: 1, y: 0, x: "0%" }, 
+    { opacity: .9, scale: 1, y: 0, x: "0%" }, 
     { opacity: 1, scale: 1.3, y: -150, x: "-50%", rotation: 50,
       scrollTrigger: {
           trigger: ".compass-container",
@@ -129,7 +129,7 @@ gsap.to('.animate-lnos-text-3', {
   scrollTrigger: { 
     trigger: '.animate-lnos-text-3',
     scrub: 1,
-    start: "top 60%",
+    start: "top 70%",
     end: "bottom bottom"
   }
 });
@@ -139,13 +139,12 @@ gsap.to('.animate-lnos-text-3', {
 setTimeout(() => {
   gsap.from('.lnos-chart', {
     opacity: 0,
-    y: -150,
+    y: -200,
     scrollTrigger: {
       trigger: '#lnos-chart',
       scrub: 1,
       start: 'top 80%',
       end: 'bottom bottom',
-      markers: true
     }
   });
 }, 500); // Adjust delay based on your SVG injection timing
