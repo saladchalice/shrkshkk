@@ -825,14 +825,14 @@ span.tag{
     }
 }
 
-@keyframes scrollText {
+/* @keyframes scrollText {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(-50%);
     }
-  }
+  } */
   
   #lnos-container {
     overflow: hidden;
@@ -842,11 +842,11 @@ span.tag{
     display: flex;
   }
   
-  #lnos-wrapper {
+  /* #lnos-wrapper {
     display: flex;
     animation: scrollText 10s linear infinite;
     min-width: 200%;
-  }
+  } */
   
   #lnos-wrapper h2 {
     display: flex;
@@ -1063,3 +1063,16 @@ img.scroll-widget {
     visibility: visible; /* Ensure visibility before animation */
 }
 
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+  }
+  
+  .scroll-header {
+    font-size: 24px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-right: 2rem; /* Prevents cut-off */
+  }
