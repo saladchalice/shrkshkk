@@ -1,11 +1,6 @@
-/* Import Syne font */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
-
-/* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +30,7 @@ body, html {
 }
 
 
-/* --------------- main page background container------------------*/
+/* --------------- main page background container---------------------------------------------------*/
 #main.background-container {
     background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), /* Vignette effect */
@@ -51,7 +46,7 @@ body, html {
     background-color:#000;
 }
 
-/* ----------------------main-page----------------------*/
+/* ----------------------main-page----------------------------------------------------------------------*/
 .main-page .black-space {
     background: linear-gradient(180deg, #000000 60%, #08142E 100%);
     min-height: 100vh; /* Ensures it takes at least the full viewport height */
@@ -66,7 +61,7 @@ body, html {
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically if needed */
     padding: 15px; /* Adds padding around the content */
-    margin: 0 auto; /* Ensures the section is centered within its parent */
+    margin: 0 auto; 
     text-align: center; /* Centers the text inside the section */
     font-family: 'Syne', sans-serif; /* Use the 'Syne' font for the text */
     background-color: transparent;
@@ -111,7 +106,6 @@ p {
     }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .cool-col {
         margin-left:0;
@@ -226,16 +220,6 @@ p {
 
 
 /* ----------------------------- basics --------------------------------------*/
-
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-
 html{
     overflow: hidden;
 
@@ -251,7 +235,6 @@ main {
 section {
     color: #fff; 
     padding: 20px;
-    margin-bottom: 10px; 
     box-sizing: border-box; 
     line-height: 1.8; 
     background-color: transparent;
@@ -273,135 +256,38 @@ span #emphasis{
 }
 
 
-/*----------------------- about-me text formatting ---------------------------*/
-.text {
-    display:grid;
-    place-items:center;
-    align-content:left;
+/*----------------------- text formatting --------------------------------------------------*/
+.text > p > div {
+    line-height: 1.2;
     font-size: 16px;
-    color: #fff;
-    padding: 30px; 
     margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
     line-height: 2; 
     z-index: 2;
 }
 
-.text .h2 {
-    font-size: 1.2em; 
-    margin-bottom: 10px; 
-    color: #fff;
-    font-weight: 700;
-    z-index: inherit;
-}
 
-.text .h3{
-    font-size: 2.8em; 
-    font-family: "Syne", sans-serif;
-    margin-bottom: 10px; 
-    color: #fff;
-    font-weight: 700;
-    z-index: inherit;
-}
-
-.text .p {
-    font-size: 1em;
-    margin-bottom: 15px; 
-    line-height: 1.8;
-    color: #fff;
-    z-index: inherit;
-    
-}
-
-.intro-text {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto; /* Centers the container */
-    padding: 20px; /* Adds padding around the content */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    font-family:'Syne',  sans-serif; 
-}
-
-.intro-text > div {
-    flex: 1 1 calc(33.33% - 20px); /* Allows each section to take up one-third of the container width minus margins */
-    margin: 10px; /* Spacing between columns */
-    box-sizing: border-box;
-    background-color: #000; /* Black background color */
-    color: #ffffff; /* White text color */
-    padding: 20px; /* Padding inside each column */
-    border-radius: 8px; /* Optional: adds rounded corners */
-}
-
-.intro-text > div {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
-}
-
-.intro-text h2 {
-    font-size: 1.5em; /* Adjust font size as needed */
-    color: #ffffff; /* Text color */
-    margin-top: 0;
-    background-color: #000;
-    padding: 10px;
-    font-family:'Syne',  sans-serif; 
-    font-weight: 700;
-}
-
-.intro-text p {
-    font-size: 1em; /* Adjust font size as needed */
-    color: #ffffff; /* Text color */
-    margin-bottom: 20px; /* Space below paragraphs */
-    font-family:'Syne',  sans-serif; 
-    font-weight: 400;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .intro-text {
-        flex-direction: column; /* Stacks the items vertically on mobile */
-    }
-
-    .intro-text > div {
-        flex: 1 1 100%; /* Each section takes up full width */
-        margin: 10px 0; /* Adjust margins for vertical stacking */
-    }
-}
-
-
-/* ----------------------Compass Container ----------------------------------*/
+/* ----------------------Compass Container ---------------------------------------------------------------*/
 .compass-container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateY(-20px); /* Centers the element and slightly shifts it up */
-    width: 90vw; /* Adjust width to fit as desired */
-    max-width: 400px; /* Optional max-width */
-    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 400px;
+    aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for fade and drop */
-}
-
-
-/* Class to activate fade and drop when the page is loaded */
-.compass-container.visible {
-    opacity: 1; /* Fully visible */
-    transform: translate(-50%, -50%) translateY(0); /* Move to original position */
-}
-
-
-.center-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    opacity: 1; /* Initially hidden */
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .center-logo img {
     width: 125px;
     height: auto;
+    z-index: 10;
 }
 
 .option {
@@ -409,12 +295,12 @@ span #emphasis{
     width: 125px;
     height: 125px;
     text-align: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Syne', sans-serif; 
+    font-family: 'Syne', sans-serif;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .option img {
@@ -444,76 +330,28 @@ span #emphasis{
     font-weight: 700;
 }
 
-#intro-header{
-    margin-bottom:0;
-    padding-bottom:0;
-}
-
 /* Position the options around the center logo */
-.option-north {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.option-south {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.option-east {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-
-.option-west {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-/* Hover Effect: Pop Out */
-.option:hover img {
-    transform: scale(1.1);
-}
-
-.option:hover {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-/* Make non-hovered options fade slightly */
-.option {
-    opacity: 0.9;
-}
-
-.option:hover ~ .option {
-    opacity: 0.5;
-}
+.option-north { top: 0; left: 50%; transform: translateX(-50%); }
+.option-south { bottom: 0; left: 50%; transform: translateX(-50%); }
+.option-east { top: 50%; right: 0; transform: translateY(-50%); }
+.option-west { top: 50%; left: 0; transform: translateY(-50%); }
 
 @media screen and (max-width: 768px) {
     .compass-container {
-        max-width: 300px; /* Adjust as needed for mobile screens */
+        max-width: 300px;
         width: 80vw;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
     }
-
     .center-logo img {
-        width: 100px; /* Make the logo smaller for mobile */
+        width: 100px;
     }
-
     .option {
-        width: 100px; /* Adjust option size for mobile */
+        width: 100px;
         height: 100px;
     }
 }
 
-/* ------------------------------ About--------------------------------------*/
+
+/* ------------------------------ About---------------------------------------------------------------------*/
 section#socials {
     display: flex;
     justify-content: center;
@@ -551,39 +389,30 @@ img#me:hover {
 }
 
 #photo img {
-    width: 300px; /* Set width */
-    height: 300px; /* Set height */
+    width: 350px; /* Set width */
+    height: 350px; /* Set height */
     object-fit: cover; /* Ensures the image covers the specified area */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 50%;
 }
 
-.intro-text > div {
-    transition: transform 0.3s ease; /* Smooth transition for the enlargement effect */
+#intro-container{
+    padding-top:5%;
 }
+/* -------------------------------art gallery ---------------------------------------------------------------------*/
 
-.intro-text > div:hover {
-    transform: scale(1.05); /* Slightly enlarge the element on hover */
-}
-
-/* -------------------------------art gallery ---------------------------*/
-
-/* Section Title */
 h2 {
     font-family: 'Syne', sans-serif;
     display: inline-block;
     font-size: 2em;
     color: #ffffff;
     padding: 10px;
-    /* background-color: #000; */
     margin-top: 20px;
     margin-bottom: 0px;
     text-align: center; 
     border-radius: 10px;
 }
 
-
-/* Grid layout for artwork */
 #art.row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to next line */
@@ -640,7 +469,7 @@ h2 {
 }
 
 
-/* nav whatever -------------------------------------------------- */
+/* nav whatever ------------------------------------------------------------------------------- */
 #navbar {
     /* positioning */
     position: absolute;
@@ -701,41 +530,13 @@ h2 {
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
     pointer-events: none; /* Ensures the dot doesn't block interactions with navbar links */
 }
-/* nav whatever -------------------------------------------------- */
+
 #emphasis{
     color:#4984e2;
 }
 
 
-#profile-stats {
-    display: flex;
-    max-width: fit-content;
-  }
-  
-  #profile-stats dl {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal-sized columns */
-  }
-  
-  #profile-stats dt {
-    grid-row: 1; /* Place all dt elements in the first row */
-    text-align: center;
-    margin-bottom: 0.5rem; /* Adjust spacing between title and figure */
-    font-size:larger;
-    font-weight: 300;
-    color:cadetblue;
-    padding-right:1em;
-  }
-  
-  #profile-stats dd {
-    grid-row: 2; /* Place all dd elements in the second row */
-    text-align: center;
-    margin: .3rem;
-    font-size:x-large;
-    font-weight:600;
-  }
-
-  /* pie chart -------- */
+/* pie chart -------------------------------------------------------------------------------------------------------- */
   
   #projects-pie-plot {
     max-width: 13em;
@@ -904,9 +705,6 @@ span.tag{
 }
 
 /* fade in effect */
-/* Add this CSS to make elements invisible initially */
-/* Initial hidden state */
-/* Initial state (hidden) */
 .article-fade {
     opacity: 0;
     transform: translateY(20px);
@@ -921,6 +719,8 @@ span.tag{
     transition: opacity 0.6s ease, transform 0.5s ease; /* Transition opacity and transform */
 }
 
+
+/* lnos ------------------------------------------------------------------------------------------*/
 
 #lnos  {
     display: flex;
@@ -986,8 +786,6 @@ span.tag{
     }
 }
 
-
-
 @keyframes scrollText {
     from {
       transform: translateX(0);
@@ -1025,18 +823,6 @@ span.tag{
     margin-right:10px;
   }
 
-  .spotify {
-    width: 100%;
-    max-width: 600px;
-    height: 300px;
-  }
-
-  /* about me */
-  .text {
-    padding: 20px;
-}
-
-
 /* Flexbox Layout for the photo section */
 section#photo {
     display: flex;
@@ -1047,12 +833,30 @@ section#photo {
     padding-top:0;
 }
 
-#photo p {
-    flex: 1; /* Ensures <p> takes up available space */
+p.animate-about, p.animate-about-2 {
+    flex: 1; 
     font-size: 18px;
     line-height: 1.6;
-    max-width: 600px; /* Limits the width of the text */
+    max-width: 550px;
+    font-family: 'Inter', sans-serif;
 }
+
+.animate-about, .animate-about-2 {
+    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;  /* Start the background at the right */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 550px;
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
 
 #photo img {
     border-radius: 50%; /* Optional: Makes the image circular */
@@ -1080,9 +884,7 @@ section#photo {
     color:#4984e2;
 }
 
-#intro-container{
-    padding-top:8%;
-}
+
 
 .link-icon {
     width: 25px;
@@ -1167,8 +969,7 @@ img.scroll-widget {
   }
   
 
-  /* transition ------------------------- */
-/* transition ------------------------- */
+/* transition -------------------------------------------------------- */
 .transition {
     position: fixed;
     top: 0;
@@ -1202,3 +1003,4 @@ img.scroll-widget {
     min-height: 1px; /* Ensure elements have height */
     visibility: visible; /* Ensure visibility before animation */
 }
+

@@ -16,6 +16,7 @@
 
 
 
+
     <!--js import-->
     <script defer type='module' src="js/app.js"></script>
     <script type='module' src="js/index.js"></script>
@@ -129,14 +130,19 @@
             
         
             <div class="website-block">
-                <section class="text">
+                <section>
                     <h2 id = 'intro-header'>about me</h2>
                     <section id="photo">
                         <div id="intro-container">
-                            <p><span id="emphasis">hi, i'm eddie!</span> i'm a data scientist and artist based out of san diego, california.  
-                                <br />
-                                <br />
-                                i have experience building automated data pipelines and analyzing complex datasets. when i'm not working with data, i enjoy painting portraits, urban sketching, and exploring new languages and cultures. feel free to reach out at any of my socials linked below!</p>
+                            <section class="text">
+                                <p class="animate-about"><span id="emphasis">hi, i'm eddie!</span> i'm a data scientist and artist based out of san diego, california.</p>
+                                <p>
+                                </p>
+                                <p class="animate-about-2">
+                                    i have experience building automated data pipelines and analyzing complex datasets. when i'm not working with data, i enjoy painting portraits, urban sketching, and exploring new languages and cultures. feel free to reach out at any of my socials linked below!
+                                </p>
+                            </section>
+                            
                             <section id="socials">
                                 <a href="https://www.linkedin.com/in/edward-lu-4833781b4/" id="icon" target="_blank">
                                     <img src="images/linkedin-logo.png" alt="LinkedIn">
@@ -160,10 +166,5 @@
         </div>  
 
     </div>
-
-    
-    <script>
-        gsap.to("body", { backgroundColor: "black", duration: 5 });
-    </script>
 </body>
 </html>

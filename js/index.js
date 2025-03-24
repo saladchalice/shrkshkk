@@ -75,3 +75,29 @@ gsap.fromTo(
       }
     }
 );
+
+//gsap animate lnos lines
+
+gsap.to('.animate-about', {
+  backgroundPositionX: 0,
+  ease: "none", 
+  scrollTrigger: { 
+    trigger: '.animate-about',
+    scrub: 1,
+    start: "top 80%",
+    end: "bottom bottom"
+  }   
+});
+
+gsap.to('.animate-about-2', {
+  backgroundPositionX: 0,
+  ease: "none", 
+  scrollTrigger: { 
+    trigger: '.animate-about-2',
+    scrub: 1,
+    start: "top 80%",
+    end: "bottom bottom"
+  }
+});
+
+
