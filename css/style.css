@@ -128,6 +128,7 @@ p {
     background-image:   
         linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), 
         url('../images/background.jpg');
+
     background-color:black;
     position: relative;
     width: 100%;
@@ -418,6 +419,7 @@ h2 {
     font-size: 2em;
     color: #ffffff;
     padding: 10px;
+    padding-left:0px;
     margin-top: 20px;
     margin-bottom: 0px;
     text-align: center; 
@@ -465,7 +467,7 @@ h2 {
 /* ---- art gallery ---------------------------------------------------------------------------------*/
 .art-gallery {
   column-count: 4;
-  column-gap: 15px;
+  column-gap: 10px;
   width: 100%;
 }
 
@@ -491,7 +493,7 @@ h2 {
 .art-card {
   display: inline-block;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   box-sizing: border-box;
 }
 
@@ -769,14 +771,14 @@ span.tag{
   }
   
   .tag {
-    background-color: #c2c2c2; /* Example background for tags */
+    background-color: #eeeeee; /* Example background for tags */
     padding: 5px 10px; /* Padding inside tags */
     border-radius: 3px;
     font-size: 14px;
   }
 
     .art-tag {
-    background-color: #f0f0f0; /* Example background for tags */
+    background-color: #e2e2e2; /* Example background for tags */
     color:black;
     padding: 5px 10px; /* Padding inside tags */
     border-radius: 3px;
@@ -1118,4 +1120,45 @@ img.scroll-widget {
 }
 
 
-/* ------------------------------ tilted card effect ------------------------------------------------- */
+/* ------------------------------ tpage heading------------------------------------------------- */
+.page-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:5em;
+    margin-top: 7%;
+    margin-bottom:20px;
+}
+
+
+/* tag search ------------------------------------------------- */
+.tag-buttons {
+  display: flex;
+  justify-content: center; /* centers the buttons horizontally */
+  gap: 10px;
+  margin: 20px 0;
+  font-family:"Inter", sans-serif; /* Use the 'Syne' font for the buttons */
+  margin-bottom:30px;
+}
+
+.tag-buttons button {
+  background-color: #ffffff; /* light gray */
+  color: #000; /* black text */
+  border: 2px solid transparent;  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tag-buttons button:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.tag-buttons button.active {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #e6e6e6; /* slightly different background to indicate selection */
+}

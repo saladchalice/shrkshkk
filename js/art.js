@@ -15,3 +15,38 @@ const projectsContainer = document.querySelector('.art-gallery');
 
 // render
 renderArt(projects, projectsContainer, 'h3');
+
+// pick from traditional or digital
+const tagButtons = document.querySelectorAll('.tag-buttons button');
+const container = document.querySelector('.art-gallery'); // or whatever your container is
+let selectedTag = null;
+
+tagButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const tag = button.dataset.tag.toLowerCase();
+
+    if (selectedTag === tag) {
+      button.classList.remove('active');
+      selectedTag = null;
+      renderArt(projects, container); // Show all or default view
+      return;
+    }
+    // Clear other active states
+    tagButtons.forEach(btn => btn.classList.remove('active'));
+    // Activate current button
+    button.classList.add('active');
+    selectedTag = tag;
+
+    let filtered = [];
+
+    if (tag === 'all') {
+      filtered = projects;
+    } else {
+      filtered = projects.filter(project =>
+        (project.tags || []).map(t => t.toLowerCase()).includes(tag)
+      );
+    }
+
+    renderArt(filtered, container, 'h2'); // or 'h3', based on your setup
+  });
+});
