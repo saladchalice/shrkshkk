@@ -14,6 +14,7 @@ body, html {
     height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+    background-color: black; 
 }
 
 .background-container,.website-block {
@@ -125,11 +126,11 @@ p {
 
 /* -------------------------------alt page-----------------------------------*/
 .alt-page .background-container {
-    background-image:   
+    /* background-image:   
         linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), 
-        url('../images/background.jpg');
+        url('../images/background.jpg'); */
 
-    background-color:black;
+    background: linear-gradient(180deg, #000000 60%, #020711 100%);
     position: relative;
     width: 100%;
     height: 100vh;
@@ -144,12 +145,13 @@ p {
 }
 
 #projects.background-container{
-    background-image: 
+    /* background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/projectbg.jpg');
+        url('../images/projectbg.jpg'); */
         background-position: center -50px; 
     /* background-image:none;
     background-color:black; */
+    background: black;
 
 }
 
@@ -160,8 +162,8 @@ p {
 }
 
 .alt-page #projects{
-    padding-left: 13em;
-    padding-right:13em;
+    /* padding-left: 10em;
+    padding-right:10em; */
 }
 
 .alt-page .black-space {
@@ -495,6 +497,8 @@ h2 {
   width: 100%;
   margin-bottom: 10px;
   box-sizing: border-box;
+    border-radius:3px;
+
 }
 
 .art-card {
@@ -505,6 +509,7 @@ h2 {
 
 .art-card:hover {
   transform: translateY(-10px) scale(1.05);
+  box-shadow:0 0 0 2px white;
 }
 
 
@@ -692,8 +697,7 @@ h2 {
   height: 3em;
   margin: 0 auto 1em auto; /* centers horizontally */
   margin-top:25px;
-  border-radius: 20px;
-  padding-left: 10px;
+  padding-left: 15px;
   background-color: #FAF9F6;
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
@@ -748,18 +752,19 @@ span.tag{
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
-    background-color: #FAF9F6; /* off white color */
-    border-radius: 10px;
+    background-color: #e7e7e7; /* off white color */
+    border-radius: 0px;
     padding: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
-    transition: transform 0.3s ease; /* Smooth transition for the enlargement effect */
+    transition: background-color 0.4s ease, outline 0.3s ease, transform 0.3s ease;
 }
 
 .projects article:hover {
-    outline: 2px solid black; /* Adds a black outline */
-    outline-offset: -2px; /* Ensures the outline is inside the element */
+    outline: 4px solid rgb(192, 49, 6);
+    outline-offset: -2px;
     cursor: pointer;
 }
+
 
 .projects article h4 {
     margin: 0.0001em 0;
@@ -1148,20 +1153,21 @@ img.scroll-widget {
   .option-north, .option-south, .option-east, .option-west {
     will-change: transform, opacity;
 }
-.wave {
+
+
+
+/* .wave {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background-color: black;
+  clip-path: circle(150% at 100% 100%);
+  z-index: 9999;
   pointer-events: none;
-  z-index: 10000;
+} */
 
-  /* Start clipped to a small circle at bottom right */
-  clip-path: circle(0% at 100% 100%);
-}
-
+/* .content {
+  opacity: 0;
+} */
 
 
 /* ------------------------------ tpage heading------------------------------------------------- */
@@ -1206,4 +1212,24 @@ img.scroll-widget {
 .tag-buttons button.active {
   border: 2px solid rgb(0, 0, 0);
   background-color: #e6e6e6; /* slightly different background to indicate selection */
+}
+
+
+/* ------------------------------ heading bgs ------------------------------------------------- */
+#art-gallery-container{
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), /* Vignette effect */
+        url('../images/art/piano.jpg');
+    background-position: center;
+    background-size: cover;             /* ensure full coverage */
+    background-repeat: no-repeat;
+}
+
+#projects-container{
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), /* Vignette effect */
+        url('../images/art/store.jpg');
+    background-position: center;
+    background-size: cover;             /* ensure full coverage */
+    background-repeat: no-repeat;
 }
