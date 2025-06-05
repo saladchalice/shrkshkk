@@ -687,18 +687,24 @@ h2 {
   }
   
 .searchBar {
-    display: flex;
-    width: 100%;
-    gap: 1em;
-    margin-bottom: 1em;
-    height: 3em; /* Adjust the height as needed */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    border-radius: 10px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
-    padding-left: 10px; /* Offset the cursor to the right by 10px */
-    background-color: #FAF9F6;
-
+  display: block; /* important for margin auto to work */
+  width: 100%;
+  height: 3em;
+  margin: 0 auto 1em auto; /* centers horizontally */
+  margin-top:25px;
+  border-radius: 20px;
+  padding-left: 10px;
+  background-color: #FAF9F6;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
+
+.searchBar:focus {
+  outline: none; /* removes the default blue/white outline */
+  box-shadow: 0 0 0 0px #ccc; /* optional: soft custom border on focus */
+  border: none; /* optional: ensure no default border appears */
+}
+
   &:has(path:hover) {
     path:not(:hover) {
       opacity: 0.5;
@@ -1077,28 +1083,52 @@ img.scroll-widget {
     flex-direction: column;
     z-index: 3000;
     pointer-events: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .transition-row {
-    flex: 1;
-    display: flex;
+  height: 50vh; /* force exact half screen height */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0; /* no gap between blocks */
+  flex-shrink: 0; /* prevent shrinking */
 }
 
 .transition-row.row-1 .block {
-    transform-origin: top; /* Only one transform-origin */
+  transform-origin: top;
 }
 
 .transition-row.row-2 .block {
-    transform-origin: bottom; /* Only one transform-origin */
+  transform-origin: bottom;
 }
 
 .block {
-    flex: 1;
-    background-color: black;
-    transform: scaleY(1);
-    will-change: transform;
-    min-height: 1px; /* Ensure elements have height */
-    visibility: visible; /* Ensure visibility before animation */
+  flex: none;       /* disable flex-grow and shrink */
+  width: 20%;       /* exactly 1/5 width */
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  min-height: 1px;
+  will-change: transform;
+  visibility: visible;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+}
+
+.block {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(0);
 }
 
 .scroll-container {
@@ -1118,6 +1148,20 @@ img.scroll-widget {
   .option-north, .option-south, .option-east, .option-west {
     will-change: transform, opacity;
 }
+.wave {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  pointer-events: none;
+  z-index: 10000;
+
+  /* Start clipped to a small circle at bottom right */
+  clip-path: circle(0% at 100% 100%);
+}
+
 
 
 /* ------------------------------ tpage heading------------------------------------------------- */
@@ -1130,6 +1174,7 @@ img.scroll-widget {
     margin-top: 7%;
     margin-bottom:20px;
 }
+
 
 
 /* tag search ------------------------------------------------- */

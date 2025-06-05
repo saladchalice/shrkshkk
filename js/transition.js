@@ -1,63 +1,34 @@
 // document.addEventListener("DOMContentLoaded", () => {
-//     const ease = "power4.inOut";
+//   const ease = "power4.inOut";
+//   const wave = document.querySelector(".wave");
 
-//     // Ensure .block elements are visible
-//     gsap.set(".block", { visibility: "visible", minHeight: "50px" });
+//   // Start with wave fully expanded (cover screen)
+//   gsap.set(wave, { clipPath: 'circle(150% at 100% 100%)' });
 
-//     document.querySelectorAll("a").forEach((link) => {
-//         link.addEventListener("click", (event) => {
-//             const href = link.getAttribute("href");
+//   // On page load: animate wave shrinking to reveal content
+//   gsap.to(wave, {
+//     clipPath: 'circle(0% at 100% 100%)',
+//     duration: 1,
+//     ease: ease,
+//   });
 
-//             if (href && !href.startsWith("#") && href !== window.location.pathname) {
-//                 // Trigger the transition and then navigate
-//                 animateTransition().then(() => {
-//                     // Delay navigation to ensure the transition completes
-//                     setTimeout(() => {
-//                         window.location.href = href;
-//                     }, 100); // Adjust the delay as needed
-//                 });
-//             }
+//   document.querySelectorAll("a").forEach((link) => {
+//     link.addEventListener("click", (event) => {
+//       const href = link.getAttribute("href");
+
+//       if (href && !href.startsWith("#") && href !== window.location.pathname) {
+//         event.preventDefault();
+
+//         // Animate wave expanding to cover the screen before navigation
+//         gsap.to(wave, {
+//           clipPath: 'circle(150% at 100% 100%)',
+//           duration: 1,
+//           ease: ease,
+//           onComplete: () => {
+//             window.location.href = href;
+//           },
 //         });
+//       }
 //     });
-
-//     // Initial reveal transition
-//     revealTransition().then(() => {
-//         gsap.set(".block", { visibility: "hidden" });
-//     });
-
-//     function revealTransition() {
-//         return new Promise((resolve) => {
-//             gsap.set(".block", { scaleY: 1 });
-//             gsap.to(".block", {
-//                 scaleY: 0,
-//                 duration: 1,
-//                 stagger: {
-//                     each: 0.1,
-//                     from: "start",
-//                     grid: "auto",
-//                     axis: "x",
-//                 },
-//                 ease: ease,
-//                 onComplete: resolve,
-//             });
-//         });
-//     }
-
-//     function animateTransition() {
-//         return new Promise((resolve) => {
-//             gsap.set(".block", { visibility: "visible", scaleY: 0 });
-//             gsap.to(".block", {
-//                 scaleY: 1,
-//                 duration: 1,
-//                 stagger: {
-//                     each: 0.1,
-//                     from: "start",
-//                     grid: { rows: 2, columns: 5 },
-//                     axis: "x",
-//                 },
-//                 ease: ease,
-//                 onComplete: resolve,
-//             });
-//         });
-//     }
+//   });
 // });
