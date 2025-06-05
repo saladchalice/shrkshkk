@@ -1,19 +1,20 @@
 [
+  { "src": "images/art/textless.jpg", "name": "shark of wisdom", "description": "a little shark who has wisdom to offer... ask him at your peril", "tags":["krita", "digital", "landscape", "2023"] },
   { "src": "images/art/flats.png", "name": "flats", "description": "a painting i made in 2022 of a photo of salt flats", "tags": ["krita", "digital", "landscape", "2022"] },
+      { "src": "images/art/heights.jpg", "name": "heights", "description":"my favorite piece i've ever made. a study of a landscape in england, plus an awesome krab because why not..", "tags":["csp", "digital","landscape", "2024"] },
   { "src": "images/art/arthur3.jpg", "name": "arthur", "description": "just a painting of arthur morgan", "tags":["krita", "digital","portrait", "fanart", "2022"] },
   { "src": "images/art/portrait2.jpg", "name": "portrait2", "description":"don't have a name for this one, kind of a study of a woman i saw on a fashion instagram that i added some graphics to", "tags":["krita", "digital","portrait", "2023"] },
   { "src": "images/art/roy.jpg", "name": "roy", "description":"was really feeling fullmetal alchemist nostalgia so i drew roy. very proud of this one", "tags":["csp", "digital", "fanart", "portrait", "anime", "2024"] },
   { "src": "images/art/rose.jpg", "name": "rose", "description":"a painting of rose from FMA2003", "tags":["csp","digital", "portrait","fanart","2024"] },
   { "src": "images/art/tony.jpg", "name": "tony", "description":"had just watched chungking express", "tags":["krita","digital","portrait","2022"] },
   { "src": "images/art/paramour.jpg", "name": "paramour", "description": "pencil sketch from imagination while i was bored at the general store one day", "tags":["traditional", "pencil", "2024"] },
-  { "src": "images/art/textless.jpg", "name": "shark of wisdom", "description": "a little shark who has wisdom to offer... ask him at your peril", "tags":["krita", "digital", "landscape", "2023"] },
   { "src": "images/art/makima.jpg", "name": "makima", "description":"a fanart of makima... wanted to add OFF sprites to match the themes of... control..", "tags":["csp", "digital", "fanart", "portrait", "2023"] },
   { "src": "images/art/faces poses.png", "name": "dev and jack", "description":"wanted to practice portraits and also some graphic design", "tags":["csp", "digital", "portrait", "fanart", "2023"] },
   { "src": "images/art/portraits.jpg", "name": "portraits", "description":"just some portraits for practice", "tags":["csp", "digital", "portrait","2024"] },
-  { "src": "images/art/greed.jpg", "name": "greed", "description":"concept for an album cover for a friend", "tags":["csp", "digital", "2024"] },
+    { "src": "images/art/tangyuan.jpg", "name": "tangyuan", "description":"evil tangyuan on vacation..", "tags":["csp", "digital", "portrait", "2025"] },
+    { "src": "images/art/lobsteropolis.jpg", "name": "lobsteropolis", "description":"commission for a friend's short film project about california spiny lobsters!", "tags":["canva", "digital", "graphic design", "2025"] },
   { "src": "images/art/wizard.jpg", "name": "wizard", "description":"sketch for imagination while bored at general store meeting", "tags":["traditional", "sketch", "2024"] },
   { "src": "images/art/poses.jpg", "name": "poses", "description":"studies of poses on pinterest for practice", "tags":["traditional", "sketch", "2024"] },
-  { "src": "images/art/heights.jpg", "name": "heights", "description":"my favorite piece i've ever made. a study of a landscape in england, plus an awesome krab because why not..", "tags":["csp", "digital","landscape", "2024"] },
   { "src": "images/art/lake.jpg", "name": "lake", "description": "another one of my favorite pieces i've made, i made this one into a print", "tags":["krita", "landscape", "2022"] },
   { "src": "images/art/icelake.jpg", "name": "ice lake", "description":"irl sketch of a mountain bordering lake louise in banff, canada", "tags":["traditional", "sketch", "2023"] },
   { "src": "images/art/dumpling.jpg", "name": "dumpling", "description":"stupid dumpling on a landscape study", "tags":["csp", "landscape", "2024"] },
@@ -29,5 +30,10 @@
   { "src": "images/art/fella.png", "name": "night vision", "description":"a study of a guy on pinterest which i tried to apply a night vision filter to and added some graphics and russian text from crime and punishment", "tags":["krita", "digital", "2022"] },
   { "src": "images/art/miroir.jpg", "name": "miroir", "description":"drawing of my girlfriend as a knight... wanted to try drawing a cool pose i saw on pinterest", "tags":["csp", "digital", "2024"]  },
   { "src": "images/art/leviathan.jpg", "name": "leviathan", "description":"just a study of a woman while i was trying out this graphic design style, one of my first digital paintings", "tags":["krita", "digital", "2022"] },
-  { "src": "images/art/soldier.jpg", "name": "soldier", "description":"a study of a vietnam war soldier on a nature background", "tags":["traditional", "pencil", "2024"] }
+  { "src": "images/art/soldier.jpg", "name": "soldier", "description":"a study of a vietnam war soldier on a nature background", "tags":["traditional", "pencil", "2024"] },
+  { "src": "images/art/commodus.jpg", "name": "commodus", "description":"just wanted to draw something after watching gladiator", "tags":["csp", "digital", "portrait", "2024"] },
+  { "src": "images/art/kassandra.jpg", "name": "kassandra", "description":"put 80 hours into ac odyssey and absolutely loved it, had to draw kassandra", "tags":["csp", "digital", "portrait", "2024"] },
+  { "src": "images/art/jess.jpg", "name": "jess", "description":"for valentine's day!", "tags":["csp", "digital", "portrait", "2024"] },
+  { "src": "images/art/miku.jpg", "name": "miku", "description":"commission for a miku-loving friend", "tags":["csp", "digital", "portrait", "2024"] }
+
 ]
