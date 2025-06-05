@@ -410,7 +410,7 @@ img#me:hover {
 #intro-container{
     padding-top:1%;
 }
-/* -------------------------------art gallery ---------------------------------------------------------------------*/
+/* -------------------------------photo gallery ---------------------------------------------------------------------*/
 
 h2 {
     font-family: 'Syne', sans-serif;
@@ -424,15 +424,6 @@ h2 {
     border-radius: 10px;
 }
 
-#art.row {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to next line */
-    gap: 10px; /* Space between items */
-    justify-content: center; /* Center the items */
-    opacity: 1; /* Start with rows invisible */
-    transform: translateY(20px); /* Initially slightly below */
-    transition: opacity 0.25s ease, transform 0.6s ease; /* Fade-in and movement effect */
-}
 
 #photos.row {
     display: flex;
@@ -450,14 +441,6 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-/* Make sure images take full width of their container */
-#art.column img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease, transform 0.3s ease; /* For fade and enlarge effects */
-    opacity: 1; /* Start with invisible */
-    transform: translateY(20px); /* Initially slightly below */
-}
 
 #photos.column img {
     width: 100%;
@@ -478,6 +461,93 @@ h2 {
         width: 100%; /* One column on small screens */
     }
 }
+
+/* ---- art gallery ---------------------------------------------------------------------------------*/
+.art-gallery {
+  column-count: 4;
+  column-gap: 15px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .art-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .art-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .art-gallery {
+    column-count: 1;
+  }
+}
+
+/* Art Card Styles */
+.art-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.art-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* initial style */
+  will-change: transform;
+}
+
+.art-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+
+/* Art Image Styles */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  /* Remove fixed height for variable height */
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  /* Remove fixed height, allow to grow with content */
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: relative; /* changed from absolute to relative for natural height */
+  width: 100%;
+  /* Remove height so it can be auto */
+  backface-visibility: hidden;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  transform: rotateY(180deg);
+  /* Make sure it's positioned correctly when flipped */
+  position: absolute; /* This one stays absolute */
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
 
 
 /* nav whatever ------------------------------------------------------------------------------- */
@@ -699,11 +769,20 @@ span.tag{
   }
   
   .tag {
-    background-color: #f0f0f0; /* Example background for tags */
+    background-color: #c2c2c2; /* Example background for tags */
     padding: 5px 10px; /* Padding inside tags */
     border-radius: 3px;
     font-size: 14px;
   }
+
+    .art-tag {
+    background-color: #f0f0f0; /* Example background for tags */
+    color:black;
+    padding: 5px 10px; /* Padding inside tags */
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
 
 
 .article-image {
@@ -719,17 +798,16 @@ span.tag{
 .article-fade {
     opacity: 0;
     transform: translateY(20px);
-    visibility: hidden; 
+    pointer-events: none; /* Prevent hover while invisible */
 }
 
 /* Fade-in effect */
 .article-fade.visible {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible; /* Make it visible after the animation starts */
-    transition: opacity 0.6s ease, transform 0.5s ease; /* Transition opacity and transform */
+    pointer-events: auto; /* Re-enable interactivity */
+    transition: opacity 0.6s ease, transform 0.5s ease;
 }
-
 
 /* lnos ------------------------------------------------------------------------------------------*/
 
@@ -1038,3 +1116,6 @@ img.scroll-widget {
   .option-north, .option-south, .option-east, .option-west {
     will-change: transform, opacity;
 }
+
+
+/* ------------------------------ tilted card effect ------------------------------------------------- */

@@ -224,5 +224,88 @@ export async function fetchJSON(url) {
     });
 }
 
-    
 
+export function renderArt(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) {
+    console.error('Container element is null or undefined.');
+    return;
+  }
+
+  containerElement.innerHTML = '';
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    const placeholder = document.createElement('p');
+    placeholder.textContent = 'No projects available.';
+    containerElement.appendChild(placeholder);
+    return;
+  }
+
+  projects.forEach((project, index) => {
+    const title = project.name || 'Untitled Project';
+    const description = project.description || 'No description available.';
+    const src = project.src || '#';
+    const tags = project.tags || [];
+
+    const article = document.createElement('article');
+    article.classList.add('art-card', 'article-fade');
+
+    const card = document.createElement('div');
+    card.classList.add('flip-card');
+
+    const inner = document.createElement('div');
+    inner.classList.add('flip-card-inner');
+
+    // FRONT
+    const front = document.createElement('div');
+    front.classList.add('flip-card-front');
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = title;
+    front.appendChild(img);
+
+    // BACK
+    const back = document.createElement('div');
+    back.classList.add('flip-card-back');
+
+    const heading = document.createElement(headingLevel);
+    heading.textContent = title;
+    heading.style.fontFamily = 'Inter, sans-serif';
+
+    const desc = document.createElement('p');
+    desc.textContent = description;
+
+    const tagsContainer = document.createElement('div');
+    tagsContainer.classList.add('tags-container');
+    tags.forEach(tag => {
+      const tagSpan = document.createElement('span');
+      tagSpan.classList.add('art-tag');
+      tagSpan.textContent = tag;
+      tagsContainer.appendChild(tagSpan);
+    });
+
+    back.appendChild(heading);
+    back.appendChild(desc);
+    back.appendChild(tagsContainer);
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+    article.appendChild(card);
+
+    // Append directly to container (no columns)
+    containerElement.appendChild(article);
+
+    // Reveal after delay for stagger effect
+    setTimeout(() => {
+      article.classList.add('visible');
+    }, index * 150);
+  });
+  
+
+  // Flip functionality on click
+  containerElement.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
+}

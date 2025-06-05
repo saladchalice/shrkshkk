@@ -1,5 +1,13 @@
 [
     {
+        "title": "Alt Around the World",
+        "image": "/images/data/world.png",
+        "year": "2025",
+        "description": "This website displays my personal collection of rock music from every country in the world and allows for audio previews (work in progress, but I'm at 100 right now!)",
+        "link": "https://saladchalice.github.io/Alt-Around-the-World/",
+        "tags": ["Data Visualization", "API Management", "Python Pandas", "D3.js", "HTML/CSS", "Front-end Development"]
+    },
+    {
         "title": "The Organ Trail: Navigating the Surgical Experience",
         "image": "/images/data/organ.png",
         "year": "2025",
