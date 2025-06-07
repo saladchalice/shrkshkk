@@ -1452,22 +1452,6 @@ img.scroll-widget {
   }
 }
 
-@media  (max-width: 1000px) {
-
-    #tangyuan, #bgspinner{
-        height:30%;
-    }
-  
-}
-
-@media  (max-width: 700px) {
-
-    #tangyuan, #bgspinner, #welcome{
-        height:0%;
-    }
-  
-}
-
 .halftone-gradient {
     position: absolute;
     top: -140px;
@@ -1480,6 +1464,34 @@ img.scroll-widget {
     pointer-events: none; /* So it doesn't block clicks */
     opacity: 0.3;      /* Optional: adjust transparency */
     user-select: none;
+}
+
+
+
+@media  (max-width: 1000px) {
+
+    #tangyuan, #bgspinner{
+        height:30%;
+    }
+    .halftone-gradient{
+      width:30%;
+    }
+  
+}
+
+@media  (max-width: 700px) {
+
+    #tangyuan, #bgspinner, #welcome{
+        height:0%;
+    }
+    .halftone-gradient{
+      width:0%;
+    }
+
+    #main-page-spin-grid: {
+        display: none; /* Hide the grid on smaller screens */
+    }
+  
 }
 
 
