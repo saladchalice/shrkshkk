@@ -56,7 +56,9 @@ body, html {
     overflow:hidden;
     padding-left: 5%;
     padding-right: 5%;
-}   
+    position: relative; /* Ensure children can be absolutely positioned */
+}
+
 
 .website-block {
     display: flex;
@@ -230,12 +232,6 @@ span #emphasis{
     font-weight: 400;
 }
 
-
-#emphasis2{
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 400;
-    color:#cea535;
-}
 
 
 .footer {
@@ -1326,6 +1322,7 @@ img.scroll-widget {
   padding-top:0;
   padding-left:10%;
   padding-right:10%;
+  box-sizing: border-box;
 }
 
 #what-handwritten {
@@ -1348,6 +1345,7 @@ img.scroll-widget {
   background-repeat: no-repeat;
   width:100%;
   height:90px;
+  box-sizing: border-box;
 }
 
 #what-handwritten, #about-handwritten {
@@ -1469,3 +1467,19 @@ img.scroll-widget {
     }
   
 }
+
+.halftone-gradient {
+    position: absolute;
+    top: -140px;
+    right: -140px;
+    rotate:220deg;
+    width: 1000px;      /* Adjust as needed */
+    height: auto;
+    
+    z-index: 0;       /* Above most content in black-space */
+    pointer-events: none; /* So it doesn't block clicks */
+    opacity: 0.3;      /* Optional: adjust transparency */
+    user-select: none;
+}
+
+
