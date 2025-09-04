@@ -1228,15 +1228,20 @@ img.scroll-widget {
     }
 
     #main-page-spin-grid {
-        display: block;       /* not none */
-        width: 100%;
-        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* remove fixed 50vh */
+        gap: 1rem;
+        padding: 1rem 0;
     }
 
-    #tangyuan, #bgspinner, #welcome {
-        visibility: hidden;
+    #welcome,
+    #bgspinner,
+    #tangyuan {
+        display: none; /* prevents extra vertical space */
     }
-
+    
     #lnos {
         max-width: 95%;       /* same as .animate-about */
         text-align: left;
