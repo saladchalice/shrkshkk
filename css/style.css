@@ -937,11 +937,10 @@ img.scroll-widget {
 #what-page-container {
     display: grid;
     position: relative;
-    bottom: 10vh;
     align-items: center;
     justify-items: center;
     height: 10vh;
-    margin-top: 0;
+    margin-top: 20px;
     padding-top: 0;
     padding-left: 10%;
     padding-right: 10%;
@@ -1206,7 +1205,6 @@ img.scroll-widget {
     }
 
     #lnos {
-        padding-top: 70px;
         font-size: 14px;
 
     }
@@ -1241,7 +1239,7 @@ img.scroll-widget {
     #tangyuan {
         display: none; /* prevents extra vertical space */
     }
-    
+
     #lnos {
         max-width: 95%;       /* same as .animate-about */
         text-align: left;
@@ -1277,9 +1275,11 @@ img.scroll-widget {
         margin-top: 25%;
     }
 
-    #what-handwritten, #about-handwritten {
-        height: 15%;
-        width: auto;
+
+    #about-handwritten,
+    #what-handwritten {
+        max-width: 70%;  /* tighter fit on phones */
+        height: auto;
     }
 }
 
@@ -1353,6 +1353,7 @@ img.scroll-widget {
     #what-handwritten, #about-handwritten {
         height: 25%;
         width: auto;
+        
     }
 
     #tangyuan, #bgspinner {
@@ -1375,6 +1376,10 @@ img.scroll-widget {
     .animate-about, .animate-about-2, .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3 {
         color: white;
     }
+    #what-page-container {
+    transform: translateY(-10vh);
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1459,6 +1464,11 @@ img.scroll-widget {
         font-size: 14px;
         max-width: 90ch;
     }
+
+    #what-page-container {
+    transform: translateY(-10vh);
+    }
+
 }
 
 /* Large devices (desktops, 1024px and up) */
@@ -1542,6 +1552,11 @@ img.scroll-widget {
     #what-heading-background {
         width: 80%;
     }
+
+    #what-page-container {
+    transform: translateY(-10vh);
+    }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1609,5 +1624,9 @@ img.scroll-widget {
 
     #what-heading-background {
         width: 100%;
+    }
+
+    #what-page-container {
+    transform: translateY(-10vh);
     }
 }
