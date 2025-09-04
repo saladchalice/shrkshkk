@@ -47,6 +47,6 @@ tagButtons.forEach(button => {
       );
     }
 
-    renderArt(filtered, container, 'h2'); // or 'h3', based on your setup
+    renderArt(filtered, container, 'h3'); // or 'h3', based on your setup
   });
 });

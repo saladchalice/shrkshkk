@@ -13,16 +13,26 @@
   { "src": "images/photos/olympic.jpg", "name": "olympic national park", "tags":["washington", "usa", "iphone","2023"] },
   { "src": "images/photos/cathedral.jpg", "name": "notre dame de montreal",  "tags":["canada", "sony cybershot DSC-HX100V","2024"]  },
   { "src": "images/photos/napoleon.jpg", "name": "a very eventful birthday",  "tags":["usa", "sony cybershot DSC-HX100V","2024"]  },
+  { "src": "images/photos/olympic3.jpg", "name": "olympic national park", "tags":["washington", "usa", "iphone","2023"] },
 
-  { "src": "images/photos/giraffe.jpg", "name": "giraffe in palm springs", "tags":["california", "usa", "sony cybershot DSC-HX100V", "2025"] },
-  { "src": "images/photos/horizon.jpg", "name": "sunset from an airplane window", "tags":["california", "usa", "sony cybershot DSC-HX100V", "2022"] },
+
+
+
   { "src": "images/photos/schweiz.jpg", "name": "switzerland", "tags":["switzerland", "sony cybershot DSC-HX100V", "2019"] },
+  { "src": "images/photos/nazare.jpg", "name": "nazare", "tags":["portugal", "iphone", "2023"] },
   { "src": "images/photos/longroad.jpg", "name": "road to palm springs", "tags":["california", "usa", "sony cybershot DSC-HX100V", "2024"] },
 
+
+  { "src": "images/photos/olympic2.jpg", "name": "olympic national park", "tags":["washington", "usa", "iphone","2023"] },
   { "src": "images/photos/duotree.jpg", "name": "bitty and fatty", "tags":["california", "usa", "sony cybershot DSC-HX100V", "2024"] },
+  { "src": "images/photos/montreal.jpg", "name": "montreal", "tags":["canada", "iphone","2024"] },
+  { "src": "images/photos/ireland.jpg", "name": "ireland", "tags":["ireland", "iphone", "2023"] },
+  { "src": "images/photos/giraffe.jpg", "name": "giraffe in palm springs", "tags":["california", "usa", "sony cybershot DSC-HX100V", "2025"] },
+  { "src": "images/photos/schweiz2.jpg", "name": "switzerland", "tags":["switzerland", "sony cybershot DSC-HX100V", "2019"] },
+  { "src": "images/photos/horizon.jpg", "name": "sunset from an airplane window", "tags":["california", "usa", "sony cybershot DSC-HX100V", "2022"] },
+
   { "src": "images/photos/dragon.jpg", "name": "dragonfly in palm springs",  "tags":["california", "usa", "sony cybershot DSC-HX100V", "2025"] },
-  { "src": "images/photos/heart1.jpg", "name": "joshua tree distant mountain",  "tags":["california", "usa", "sony cybershot DSC-HX100V", "2025"] },
-  { "src": "images/photos/nazare.jpg", "name": "nazare", "tags":["portugal", "iphone", "2023"] }
+  { "src": "images/photos/heart1.jpg", "name": "joshua tree distant mountain",  "tags":["california", "usa", "sony cybershot DSC-HX100V", "2025"] }
 
 
 

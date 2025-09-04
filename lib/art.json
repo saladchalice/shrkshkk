@@ -15,6 +15,7 @@
     { "src": "images/art/lobsteropolis.jpg", "name": "lobsteropolis", "description":"commission for a friend's short film project about california spiny lobsters!", "tags":["canva", "digital", "graphic design", "2025"] },
   { "src": "images/art/wizard.jpg", "name": "wizard", "description":"sketch for imagination while bored at general store meeting", "tags":["traditional", "sketch", "2024"] },
   { "src": "images/art/poses.jpg", "name": "poses", "description":"studies of poses on pinterest for practice", "tags":["traditional", "sketch", "2024"] },
+  { "src": "images/art/sadie.jpg", "name": "sadie" , "description":"rdr2", "tags":["csp", "digital", "portrait", "fanart", "2025"] },
   { "src": "images/art/lake.jpg", "name": "lake", "description": "another one of my favorite pieces i've made, i made this one into a print", "tags":["krita", "landscape", "2022"] },
   { "src": "images/art/icelake.jpg", "name": "ice lake", "description":"irl sketch of a mountain bordering lake louise in banff, canada", "tags":["traditional", "sketch", "2023"] },
   { "src": "images/art/dumpling.jpg", "name": "dumpling", "description":"stupid dumpling on a landscape study", "tags":["csp", "landscape", "2024"] },
@@ -34,6 +35,8 @@
   { "src": "images/art/commodus.jpg", "name": "commodus", "description":"just wanted to draw something after watching gladiator", "tags":["csp", "digital", "portrait", "2024"] },
   { "src": "images/art/kassandra.jpg", "name": "kassandra", "description":"put 80 hours into ac odyssey and absolutely loved it, had to draw kassandra", "tags":["csp", "digital", "portrait", "2024"] },
   { "src": "images/art/jess.jpg", "name": "jess", "description":"for valentine's day!", "tags":["csp", "digital", "portrait", "2024"] },
-  { "src": "images/art/miku.jpg", "name": "miku", "description":"commission for a miku-loving friend", "tags":["csp", "digital", "portrait", "2024"] }
+  { "src": "images/art/miku.jpg", "name": "miku", "description":"commission for a miku-loving friend", "tags":["csp", "digital", "portrait", "2024"] },
+  { "src": "images/art/snake.jpg", "name": "venom" , "description":"boss...", "tags":["csp", "digital", "portrait", "fanart", "2025"] }
+
 
 ]
