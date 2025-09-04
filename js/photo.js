@@ -6,7 +6,7 @@ const baseURL = window.location.origin.includes('github.io')
   ? '/shrkshkk'
   : ''; // Adjust if needed for local dev
 
-const projects = await fetchJSON(`${baseURL}/lib/art.json`);
+const projects = await fetchJSON(`${baseURL}/lib/photos.json`);
 
 // define the project container, class=projects
 const projectsContainer = document.querySelector('.art-gallery');

@@ -1058,6 +1058,16 @@ img.scroll-widget {
     background-repeat: no-repeat;
 }
 
+#photo-gallery-container {
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        url('../images/photos/icelake.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 #projects-container {
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),

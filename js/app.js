@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navbar.innerHTML = `
       <a href="index.html">Home</a>
       <a href="art-portfolio.html">Art</a>
+      <a href="photo-portfolio.html">Photos</a>
       <a href="data-portfolio.html">Projects</a>
       <a href="images/2025 Resume.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       <div class="dot"></div>
