@@ -28,7 +28,7 @@ tagButtons.forEach(button => {
     if (selectedTag === tag) {
       button.classList.remove('active');
       selectedTag = null;
-      renderArt(projects, container); 
+      renderArt(projects, container, 'h3'); 
       return;
     }
     // Clear other active states

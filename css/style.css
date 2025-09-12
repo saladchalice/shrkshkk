@@ -1465,6 +1465,11 @@ img.scroll-widget {
         max-width: 90ch;
     }
 
+    p.animate-lnos-text, p.animate-lnos-text-2{
+        text-align:center;
+        align-items: center;
+    }
+
     #what-page-container {
     transform: translateY(-10vh);
     }
