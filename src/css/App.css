@@ -28,6 +28,7 @@ html {
     overflow: hidden;
 }
 
+
 /* ==================== TYPOGRAPHY ==================== */
 p {
     font-family: 'Inter', sans-serif;
@@ -75,15 +76,29 @@ span #emphasis {
 .website-block {
     width: 100%;
     overflow: hidden;
+    user-select: none;
+
 }
+
+.main-page {
+    width: 100%;          /* full width */
+    height: 100vh;     /* at least full viewport */
+    overflow-x: hidden;    /* prevent horizontal scroll */
+    overflow-y: auto;      /* enable vertical scroll */
+    position: relative;
+    user-select: none;
+
+}
+
+
 
 /* Main page background container */
 #main.background-container {
     background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
-        url('../images/background.jpg');
+        url('/images/background.jpg');
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -96,7 +111,7 @@ span #emphasis {
 .main-page .black-space {
     background: linear-gradient(180deg, #000000 60%, #020711 100%);
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     padding-left: 5%;
     padding-right: 5%;
@@ -122,7 +137,7 @@ span #emphasis {
 .alt-page .background-container {
     background: linear-gradient(180deg, #000000 60%, #020711 100%);
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -147,7 +162,7 @@ span #emphasis {
 
 .alt-page .black-space {
     background-color: #000;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     overflow: auto;
 }
@@ -333,7 +348,8 @@ span #emphasis {
 .animate-lnos-text, 
 .animate-lnos-text-2, 
 .animate-lnos-text-3 {
-    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
+    /* background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%); */
+    background:white;
     background-size: 200% 100%;
     background-position-x: 100%;
     color: transparent;
@@ -351,7 +367,8 @@ span #emphasis {
 
 .animate-about, 
 .animate-about-2 {
-    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
+    /* background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%); */
+    background: white;
     background-size: 200% 100%;
     background-position-x: 100%;
     color: transparent;
@@ -368,13 +385,28 @@ span #emphasis {
 }
 
 
-
 /* Article fade effects */
 .article-fade {
     opacity: 0;
+    max-height: 350px;
     transform: translateY(20px);
     pointer-events: none;
+    color: black;
 }
+
+.article-fade h2 {
+  color: black;
+  font-size: 1.2em;
+  font-family: 'Inter', 'sans-serif';
+}
+
+
+.article-fade p {
+  color: black;
+  font-size: 1em;
+  font-family: 'Inter', 'sans-serif';
+}
+
 
 .article-fade.visible {
     opacity: 1;
@@ -558,12 +590,22 @@ p.animate-lnos-text-3 {
 .art-card {
     display: inline-block;
     width: 100%;
+    height:auto;
     margin-bottom: 10px;
     box-sizing: border-box;
     border-radius: 3px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
 }
+
+.art-card img {
+  width: 100%;          /* Fill card width */
+  height: auto;         /* Maintain aspect ratio */
+  object-fit: contain;  /* Show whole image (no cropping) */
+  display: block;       /* Remove inline spacing gaps */
+  border-radius: 3px;   /* Match card radius if desired */
+}
+
 
 .art-card:hover {
     transform: translateY(-10px) scale(1.05);
@@ -770,6 +812,7 @@ path {
     flex-wrap: wrap;
     gap: 5px;
     margin-top: 10px;
+    color: rgb(22, 22, 22);
 }
 
 .tag {
@@ -879,11 +922,11 @@ img.scroll-widget {
     width: 50px;
     height: auto;
     transform-origin: center;
-    animation: rotate 1s linear infinite;
+    /* animation: rotate 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
     animation-iteration-count: 1;
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
     z-index: 500;
 }
 
@@ -1120,7 +1163,6 @@ img.scroll-widget {
     visibility: visible;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    -webkit-transform: translateZ(0);
 }
 
 /* ==================== KEYFRAME ANIMATIONS ==================== */
@@ -1162,6 +1204,22 @@ img.scroll-widget {
         transform: translateY(-5px);
     }
 }
+
+/* ==================== REACT STYLING ==================== */
+button,
+.art-card {
+  outline: none;         /* removes the white outline */
+}
+
+button:focus,
+.art-card:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid #aaa; /* optional: keep keyboard-accessible focus */
+}
+
 
 
 /* ==================== MEDIA QUERIES ==================== */
@@ -1635,3 +1693,4 @@ img.scroll-widget {
     transform: translateY(-10vh);
     }
 }
+
