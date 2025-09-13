@@ -20,7 +20,7 @@ function Home() {
         scrollTrigger: {
           trigger: "#main",
           start: "top top",
-          scroller: window, // explicitly use window
+          scroller: window,
         },
       }
     );
@@ -28,54 +28,46 @@ function Home() {
 
   // =========================== About Scroller ================================= //
   useEffect(() => {
-  const aboutOption = document.querySelector('.scroll-to-intro');
-  const introContainer = document.getElementById('intro-container');
-  if (aboutOption && introContainer) {
-    aboutOption.addEventListener('click', (event) => {
-      event.preventDefault();
-      introContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.scrollBy(0, -80); // Adjust for fixed header if needed
-    });
-  }
-  return () => {
-    if (aboutOption) aboutOption.removeEventListener('click', () => {});
-  };
-}, []);
+    const aboutOption = document.querySelector(".scroll-to-intro");
+    const introContainer = document.getElementById("intro-container");
+    if (aboutOption && introContainer) {
+      aboutOption.addEventListener("click", (event) => {
+        event.preventDefault();
+        introContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.scrollBy(0, -80); // Adjust for fixed header if needed
+      });
+    }
+    return () => {
+      if (aboutOption) aboutOption.removeEventListener("click", () => {});
+    };
+  }, []);
 
   // ========================== Animation for Text =================================
   useEffect(() => {
-    // Select all elements you want to animate
     const hiddenElements = document.querySelectorAll(
       ".animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3, .animate-about, .animate-about-2"
     );
-
-    // Add 'hidden' class initially
     hiddenElements.forEach((el) => el.classList.add("hidden"));
 
-    // Create IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         requestAnimationFrame(() => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
           } else {
-            entry.target.classList.remove("show"); // optional if you want reset on scroll up
+            entry.target.classList.remove("show");
           }
         });
       });
     });
 
-    // Observe each element
     hiddenElements.forEach((el) => observer.observe(el));
 
-    // Cleanup on unmount
     return () => {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
-
-// ==================================== Return ========================================= //
   return (
     <div className="main-page">
       {/* Background container */}
@@ -83,33 +75,48 @@ function Home() {
         {/* Compass Navigation */}
         <div className="compass-container">
           <div className="center-logo">
-            <img src="/images/spin.gif" alt="My Logo" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/spin.gif`}
+              alt="My Logo"
+            />
           </div>
           <div className="option option-north">
             <Link to="/art">
-              <img src="/images/art/lake.jpg" alt="ART" />
+              <img
+                src={`${import.meta.env.BASE_URL}images/art/lake.jpg`}
+                alt="ART"
+              />
               <span>art</span>
             </Link>
           </div>
           <div className="option option-south">
             <Link to="/projects">
-              <img src="/images/shark.png" alt="PROJECTS" />
+              <img
+                src={`${import.meta.env.BASE_URL}images/shark.png`}
+                alt="PROJECTS"
+              />
               <span>projects</span>
             </Link>
           </div>
           <div className="option option-east">
             <a
-              href="/images/2025 Resume.pdf"
+              href={`${import.meta.env.BASE_URL}images/2025 Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/images/dumpling.png" alt="CV" />
+              <img
+                src={`${import.meta.env.BASE_URL}images/dumpling.png`}
+                alt="CV"
+              />
               <span>cv</span>
             </a>
           </div>
           <div className="option option-west">
             <a href="#about" className="scroll-to-intro">
-              <img src="/images/krab.png" alt="ABOUT" />
+              <img
+                src={`${import.meta.env.BASE_URL}images/krab.png`}
+                alt="ABOUT"
+              />
               <span>about</span>
             </a>
           </div>
@@ -131,13 +138,12 @@ function Home() {
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </div>
-
       </div>
 
       {/* Black space section */}
       <div className="black-space" id="black-space">
         <img
-          src="/images/halftone gradient.png"
+          src={`${import.meta.env.BASE_URL}images/halftone gradient.png`}
           alt="halftone gradient"
           className="halftone-gradient"
         />
@@ -146,7 +152,7 @@ function Home() {
         <div id="what-page-container">
           <div id="what-heading-background"></div>
           <img
-            src="/images/whatisthisplace.png"
+            src={`${import.meta.env.BASE_URL}images/whatisthisplace.png`}
             id="what-handwritten"
             alt="what is this place"
           />
@@ -178,11 +184,23 @@ function Home() {
             </section>
           </div>
 
-          <img src="/images/welcome.png" alt="welcome" id="welcome" />
-          <img src="/images/spiral.svg" alt="bgspinner" id="bgspinner" />
+          <img
+            src={`${import.meta.env.BASE_URL}images/welcome.png`}
+            alt="welcome"
+            id="welcome"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}images/spiral.svg`}
+            alt="bgspinner"
+            id="bgspinner"
+          />
 
           <div id="tangyuan-wrapper">
-            <img src="/images/tangyuan.png" alt="tangyuan" id="tangyuan" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/tangyuan.png`}
+              alt="tangyuan"
+              id="tangyuan"
+            />
           </div>
         </div>
 
@@ -190,7 +208,7 @@ function Home() {
         <div id="main-page-container">
           <div id="about-heading-background"></div>
           <img
-            src="/images/aboutme.png"
+            src={`${import.meta.env.BASE_URL}images/aboutme.png`}
             id="about-handwritten"
             alt="about me"
           />
@@ -221,26 +239,39 @@ function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/images/linkedin-logo.png" alt="LinkedIn" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/linkedin-logo.png`}
+                    alt="LinkedIn"
+                  />
                 </a>
                 <a
                   href="https://github.com/saladchalice"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/images/git.png" alt="github" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/git.png`}
+                    alt="github"
+                  />
                 </a>
                 <a
                   href="https://open.spotify.com/user/21f25hzcqr3p4lolhuwmpa6jy?si=50be7e3536f14f17"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/images/spotify.png" alt="spotify" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/spotify.png`}
+                    alt="spotify"
+                  />
                 </a>
               </section>
             </div>
 
-            <img src="/images/photo.png" alt="me" id="me" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/photo.png`}
+              alt="me"
+              id="me"
+            />
           </section>
         </section>
 

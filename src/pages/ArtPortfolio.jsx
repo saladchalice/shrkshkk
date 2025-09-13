@@ -20,7 +20,7 @@ function ArtPortfolio() {
 
   // Fetch JSON data on mount
   useEffect(() => {
-    fetch("/lib/art.json")
+    fetch(`${import.meta.env.BASE_URL}lib/art.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch art projects");
         return res.json();

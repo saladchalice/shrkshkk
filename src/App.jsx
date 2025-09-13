@@ -65,8 +65,8 @@ function App() {
       <div className="content">
         <div className="app">
           <Navigation />
-          <img src="/images/star.svg" className="scroll-widget" alt="scroll" />
-          <img src="/images/shrkshkk.png" alt="Logo" className="logo" />
+          <img src={`${import.meta.env.BASE_URL}images/star.svg`} className="scroll-widget" alt="scroll" />
+          <img src={`${import.meta.env.BASE_URL}images/shrkshkk.png`} alt="Logo" className="logo" />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/art" element={<ArtPortfolio />} />

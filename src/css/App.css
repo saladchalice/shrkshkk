@@ -157,7 +157,7 @@ span #emphasis {
 #about.background-container {
     background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
-        url('../images/art/dumpling.jpg');
+        url('/images/art/dumpling.jpg');
 }
 
 .alt-page .black-space {
@@ -969,7 +969,7 @@ img.scroll-widget {
 #about-heading-background {
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/art/bridge.jpg');
+        url('/images/art/bridge.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1004,7 +1004,7 @@ img.scroll-widget {
 #what-heading-background {
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/art/lake.jpg');
+        url('/images/art/lake.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1094,7 +1094,7 @@ img.scroll-widget {
 #art-gallery-container {
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/art/piano.jpg');
+        url('/images/art/piano.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1103,7 +1103,7 @@ img.scroll-widget {
 #photo-gallery-container {
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/photos/icelake.jpg');
+        url('/images/photos/icelake.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1113,7 +1113,7 @@ img.scroll-widget {
 #projects-container {
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-        url('../images/art/store.jpg');
+        url('/images/art/store.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

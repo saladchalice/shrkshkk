@@ -20,7 +20,7 @@ function PhotoPortfolio() {
 
   // Fetch JSON data on mount
   useEffect(() => {
-    fetch("/lib/photos.json")
+    fetch(`${import.meta.env.BASE_URL}lib/photos.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch photo projects");
         return res.json();
