@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script defer type='module' src="js/app.js"></script>
+    <script defer src="js/transition.js"></script>
+    <script defer type='module' src="js/blog.js"></script>
+
+    <!--set favicon-->
+    <link rel="shortcut icon" type="image/png" href="images/dog.png">
+</head>
+<body class="alt-page">
+    <div class="wave"></div>
+
+    <div class="content">
+        <div class="background-container" id="blog">
+            <div id="navbar"></div>
+            <img src="images/star.svg" class="scroll-widget">
+
+            <div id="blog-header-container">
+                <h2 class="page-heading">blog</h2>
+            </div>
+
+            <div class="page-description">
+                <p>thoughts, updates, and musings from my journey through code, art, and everything in between</p>
+            </div>
+
+            <img src="images/shrkshkk.png" alt="Logo" class="logo">
+
+            <div class="tag-buttons">
+                <button data-tag="tech">tech</button>
+                <button data-tag="personal">personal</button>
+                <button data-tag="art">art</button>
+                <button data-tag="updates">updates</button>
+                <button data-tag="all">all</button>
+            </div>
+
+            <div class="searchBar">
+                <input type="text" id="blog-search" placeholder="Search blog posts...">
+            </div>
+
+            <div class="blog-posts">
+                <article class="blog-post" data-tags="tech updates">
+                    <div class="blog-post-header">
+                        <h3>Building My Portfolio Website</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 15, 2024</span>
+                            <div class="blog-tags">
+                                <span class="tag">tech</span>
+                                <span class="tag">updates</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-excerpt">
+                        <p>The journey of creating this website has been both challenging and rewarding. From designing the compass navigation to implementing smooth animations with GSAP...</p>
+                    </div>
+                    <a href="blog/building-portfolio.html" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post" data-tags="art personal">
+                    <div class="blog-post-header">
+                        <h3>Finding My Artistic Voice</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 8, 2024</span>
+                            <div class="blog-tags">
+                                <span class="tag">art</span>
+                                <span class="tag">personal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-excerpt">
+                        <p>Art has always been a way for me to express what words cannot. In this post, I explore how my style has evolved and what influences shape my creative process...</p>
+                    </div>
+                    <a href="blog/artistic-voice.html" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post" data-tags="tech">
+                    <div class="blog-post-header">
+                        <h3>CSS Grid vs Flexbox: When to Use What</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 28, 2024</span>
+                            <div class="blog-tags">
+                                <span class="tag">tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-excerpt">
+                        <p>After working on multiple projects, I've learned when each layout method shines. Here's my take on choosing between CSS Grid and Flexbox...</p>
+                    </div>
+                    <a href="blog/css-grid-flexbox.html" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post" data-tags="personal updates">
+                    <div class="blog-post-header">
+                        <h3>2024 Goals and Reflections</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">January 1, 2024</span>
+                            <div class="blog-tags">
+                                <span class="tag">personal</span>
+                                <span class="tag">updates</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-excerpt">
+                        <p>A new year brings new opportunities. Here are my goals for 2024 and some reflections on the year that was...</p>
+                    </div>
+                    <a href="blog/2024-goals.html" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post" data-tags="art tech">
+                    <div class="blog-post-header">
+                        <h3>Generative Art with p5.js</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 15, 2023</span>
+                            <div class="blog-tags">
+                                <span class="tag">art</span>
+                                <span class="tag">tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-excerpt">
+                        <p>Exploring the intersection of code and creativity through generative art. My experiments with p5.js and what I've learned about algorithmic creativity...</p>
+                    </div>
+                    <a href="blog/generative-art.html" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post" data-tags="personal">
+                    <div class="blog-post-header">
+                        <h3>Why I Started This Blog</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">December 1, 2023</span>
+                            <div class="blog-tags">
+                                <span class="tag">personal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-excerpt">
+                        <p>The story behind why I decided to start documenting my journey. Sometimes the best way to understand your own thoughts is to write them down...</p>
+                    </div>
+                    <a href="blog/why-i-blog.html" class="read-more">Read More</a>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
