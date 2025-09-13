@@ -42,6 +42,25 @@ function Home() {
     };
   }, []);
 
+  useEffect(() => {
+  const scrollArrow = document.getElementById("scrollArrow");
+  const targetElement = document.getElementById("what-page-container");
+
+  if (scrollArrow && targetElement) {
+    const handleScroll = (event) => {
+      event.preventDefault();
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollBy(0, -80); // Adjust if you have a fixed header
+    };
+
+    scrollArrow.addEventListener("click", handleScroll);
+
+    return () => {
+      scrollArrow.removeEventListener("click", handleScroll);
+    };
+  }
+}, []);
+
   // ========================== Animation for Text =================================
   useEffect(() => {
     const hiddenElements = document.querySelectorAll(
