@@ -27,7 +27,6 @@ function App() {
     const scrollContainers = document.querySelectorAll(
       "div.background-container, .main-page, body, body.alt-page"
     );
-    console.log("Scroll containers found:", scrollContainers);
 
     const handleScroll = (e) => {
       const page = e.target;
