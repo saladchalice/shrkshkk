@@ -22,7 +22,6 @@
 .photo-viewer-image {
   max-width: 80vw;
   max-height: 80vh;
-  border-radius: 10px;
   object-fit: contain;
 }
 
@@ -158,3 +157,45 @@
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
 }
+
+.photo-viewer-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.photo-viewer-image {
+  max-width: 65%; /* leave room for description */
+  max-height: 80vh;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.photo-viewer-description {
+  flex: 1;
+  max-width: 30%;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Syne', sans-serif;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.photo-viewer-description h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.photo-viewer-description p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+
+}
+

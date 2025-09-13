@@ -29,20 +29,22 @@ export default function PhotoViewer({ photos, initialIndex, onClose }) {
           alt={currentPhoto.name} 
           className="photo-viewer-image" 
         />
+
+        {/* New description box */}
+        <div className="photo-viewer-description">
+          <h3>{currentPhoto.name}</h3>
+          <p>{currentPhoto.description || "No description available."}</p>
+          <div className="photo-viewer-tags">
+            {(currentPhoto.tags || []).map((tag, i) => (
+              <span key={i} className="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="photo-viewer-nav">
         <button className="prev-btn" onClick={prevPhoto}>‹</button>
         <button className="next-btn" onClick={nextPhoto}>›</button>
-      </div>
-
-        <div className="photo-viewer-caption">
-          <h2>{photos[currentIndex].name}</h2>
-          <div className="photo-viewer-tags">
-            {(photos[currentIndex].tags || []).map((tag, i) => (
-              <span key={i} className="tag">{tag}</span>
-            ))}
-          </div>
       </div>
     </div>
   );
