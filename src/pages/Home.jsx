@@ -152,7 +152,7 @@ function Home() {
             strokeWidth="1.5"
             strokeLinecap="butt"
             strokeLinejoin="miter"
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="https://www.w3.org/2000/svg"
           >
             <polyline points="6 9 12 15 18 9" />
           </svg>
