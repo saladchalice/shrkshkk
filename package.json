@@ -7,7 +7,7 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build": "vite build && copyfiles -f dist/index.html dist/404.html",
+    "build": "vite build && copyfiles -f dist/index.html dist",
     "deploy": "npm run build && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
