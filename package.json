@@ -7,8 +7,8 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build": "vite build && cp dist/index.html dist/404.html",
-    "deploy": "vite build && cp dist/index.html dist/404.html && gh-pages -d dist -b gh-pages"
+    "build": "vite build && copyfiles dist/index.html dist/404.html",
+    "deploy": "vite build && copyfiles dist/index.html dist/404.html && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
