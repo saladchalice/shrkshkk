@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist -b gh-pages"
+    "build": "vite build && cp dist/index.html dist/404.html",
+    "deploy": "vite build && cp dist/index.html dist/404.html && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
