@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint .",    "preview": "vite preview",
+    "lint": "eslint .",
+    "preview": "vite preview",
     "build": "vite build && powershell Copy-Item dist/index.html dist/404.html",
     "deploy": "npm run build && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-intersection-observer": "^9.16.0",

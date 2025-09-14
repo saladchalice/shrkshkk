@@ -173,13 +173,19 @@ span #emphasis {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;              /* black bar spans full screen */
+    width: 100%;
     height: 60px;
-    background-color: #111;   /* dark background */
+
+    /* Frosted glass effect */
+    background: rgba(17, 17, 17, 1); /* semi-transparent black */
+    backdrop-filter: blur(10px);       /* frosted blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+
     display: flex;
-    justify-content: center;  /* center inner container */
+    justify-content: center;
     align-items: center;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 #topbar .container {
@@ -213,6 +219,53 @@ span #emphasis {
 
 #navbar a:hover {
     background-color: rgba(255, 255, 255, 0.459);
+}
+
+#navbar a, #navbar .link {
+  display: flex;
+  align-items: center;
+  gap: 6px;  /* space between icon and text */
+}
+
+
+/* --- Mobile Styles --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* On small screens */
+@media (max-width: 768px) {
+    #navbar {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+        padding: 1rem;
+        gap: 1rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #navbar.open {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* ==================== COMPASS NAVIGATION ==================== */
@@ -410,7 +463,17 @@ span #emphasis {
     align-items: center;
     text-align: center;
     font-size: 5em;
-    margin-top: 7%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.page-heading2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 5em;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -420,7 +483,7 @@ span #emphasis {
     align-items: center;
     text-align: center;
     font-size: 3.5em;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-bottom: 20px;
 }
 
@@ -1660,12 +1723,12 @@ button:focus-visible {
 
     .page-heading {
         font-size: 5em;
-        margin-top: 7%;
+        margin-top: 5%;
     }
 
     #about-me-header {
         font-size: 3.5em;
-        margin-top: 7%;
+        margin-top: 5%;
     }
 
     #what-handwritten, #about-handwritten {

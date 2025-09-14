@@ -37,7 +37,7 @@ export default function DataPortfolio() {
           {/* <img src={`${import.meta.env.BASE_URL}images/star.svg`} className="scroll-widget" /> */}
 
           <div id="projects-container">
-            <h2 className="page-heading">my projects</h2>
+            <h2 className="page-heading2">my projects</h2>
           </div>
 
           <input
