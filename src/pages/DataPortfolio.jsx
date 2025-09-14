@@ -18,10 +18,23 @@ export default function DataPortfolio() {
       .catch((err) => console.error("Error loading projects:", err));
   }, []);
 
-  // Filter projects based on search query
-  const filteredProjects = projects.filter((project) =>
-    Object.values(project).join(" ").toLowerCase().includes(query.toLowerCase())
-  );
+  // Filter projects by query (tags + text fields)
+  const filteredProjects = projects.filter((project) => {
+    const queryLower = query.toLowerCase();
+
+    // Handle tags array
+    const tagsText = Array.isArray(project.tags)
+      ? project.tags.join(" ").toLowerCase()
+      : "";
+
+    // Handle other fields (title, description, etc.)
+    const contentText = Object.values(project)
+      .filter((val) => typeof val === "string" || typeof val === "number")
+      .join(" ")
+      .toLowerCase();
+
+    return contentText.includes(queryLower) || tagsText.includes(queryLower);
+  });
 
   return (
     <div className="alt-page">
@@ -34,7 +47,6 @@ export default function DataPortfolio() {
             alt="Logo"
             className="logo"
           />
-          {/* <img src={`${import.meta.env.BASE_URL}images/star.svg`} className="scroll-widget" /> */}
 
           <div id="projects-container">
             <h2 className="page-heading2">my projects</h2>
