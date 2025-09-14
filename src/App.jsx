@@ -9,16 +9,23 @@ import './css/App.css';
 
 function Navigation() {
   return (
-    <nav id="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/art">Art</Link>
-      <Link to="/photos">Photos</Link>
-      <Link to="/projects">Projects</Link>
-      <a href="/images/2025 Resume.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-      <div className="dot"></div>
-    </nav>  
-  )
+    <div id="topbar">
+      <img 
+        src={`${import.meta.env.BASE_URL}images/shrkshkk.png`} 
+        alt="Logo" 
+        className="logo" 
+      />
+      <nav id="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/art">Art</Link>
+        <Link to="/photos">Photos</Link>
+        <Link to="/projects">Projects</Link>
+        <a href="/images/2025 Resume.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
+    </div>
+  );
 }
+
 
 function App() {
   const location = useLocation();
@@ -65,7 +72,6 @@ function App() {
         <div className="app">
           <Navigation />
           <img src={`${import.meta.env.BASE_URL}images/star.svg`} className="scroll-widget" alt="scroll" />
-          <img src={`${import.meta.env.BASE_URL}images/shrkshkk.png`} alt="Logo" className="logo" />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/art" element={<ArtPortfolio />} />

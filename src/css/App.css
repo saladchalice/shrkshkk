@@ -168,63 +168,51 @@ span #emphasis {
 }
 
 /* ==================== NAVIGATION ==================== */
-.logo {
+
+#topbar {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 200px;
-    height: auto;
+    top: 0;
+    left: 0;
+    width: 100%;              /* black bar spans full screen */
+    height: 60px;
+    background-color: #111;   /* dark background */
+    display: flex;
+    justify-content: center;  /* center inner container */
+    align-items: center;
     z-index: 1000;
 }
 
-#navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    z-index: 1000;
-    box-sizing: border-box;
-    background-color: transparent; 
-    font-family: 'Syne', sans-serif;
-    opacity: 1;
+#topbar .container {
+    width: 80%;               /* inner width constraint */
+    max-width: 1400px;
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    transition: opacity 1s ease; 
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'Syne', sans-serif;
 }
 
 #navbar a {
     font-family: 'Syne', sans-serif;
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin-right: 2rem;
-    display: inline-block;
-    box-sizing: border-box;
-    position: relative;
-    border-radius: 10px; 
-    flex-grow: 1;
-    text-align: center;
-    -webkit-transition: all 0.2s ease-in-out;
+    padding: 8px 12px;
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
 }
 
-#navbar a:hover + .dot {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-#navbar .dot {
-    width: 6px; 
-    height: 6px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 70%; 
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
+#navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.459);
 }
 
 /* ==================== COMPASS NAVIGATION ==================== */
