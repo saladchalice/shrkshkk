@@ -197,6 +197,7 @@ span #emphasis {
 
 .logo {
     width: 150px;
+    margin-right: 10px;
     height: auto;
 }
 
@@ -218,14 +219,27 @@ span #emphasis {
     user-select: none;
 }
 
+
 #navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.459);
+    color: #222; /* darker text */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3),
+                inset -2px -2px 5px rgba(255,255,255,0.5);
+    transform: translateY(1px);
 }
+
+/* Highlight active link (NavLink) */
+#navbar a.active {
+    color: #222; 
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: inset 0 0 8px rgb(109, 109, 109); 
+}
+
 
 #navbar a, #navbar .link {
   display: flex;
   align-items: center;
-  gap: 6px;  /* space between icon and text */
+  gap: 5px;  /* space between icon and text */
 }
 
 

@@ -1,4 +1,4 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 
 // icons
@@ -19,31 +19,31 @@ function Navigation() {
         alt="Logo" 
         className="logo" 
       />
-        <nav id="navbar">
-          <Link to="/">
-            <HomeIcon size={16} style={{ marginRight: "6px" }} />
-            Home
-          </Link>
-          <Link to="/art">
-            <Palette size={16} style={{ marginRight: "6px" }} />
-            Art
-          </Link>
-          <Link to="/photos">
-            <Camera size={16} style={{ marginRight: "6px" }} />
-            Photos
-          </Link>
-          <Link to="/projects">
-            <FolderGit2 size={16} style={{ marginRight: "6px" }} />
-            Projects
-          </Link>
-          <a 
-            href="/images/2025 Resume.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <FileText size={16} style={{ marginRight: "6px" }} />
-            CV
-          </a>
+      <nav id="navbar">
+        <NavLink to="/" end>
+          <HomeIcon size={16} style={{ marginRight: "6px" }} />
+          Home
+        </NavLink>
+        <NavLink to="/art">
+          <Palette size={16} style={{ marginRight: "6px" }} />
+          Art
+        </NavLink>
+        <NavLink to="/photos">
+          <Camera size={16} style={{ marginRight: "6px" }} />
+          Photos
+        </NavLink>
+        <NavLink to="/projects">
+          <FolderGit2 size={16} style={{ marginRight: "6px" }} />
+          Projects
+        </NavLink>
+        <a 
+          href="/images/2025 Resume.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <FileText size={16} style={{ marginRight: "6px" }} />
+          CV
+        </a>
       </nav>
     </div>
   );
