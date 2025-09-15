@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // icons
 import { Home as HomeIcon, Palette, Camera, FolderGit2, FileText } from "lucide-react";
@@ -10,6 +10,7 @@ import PhotoPortfolio from "./pages/PhotoPortfolio";
 import ArtPortfolio from "./pages/ArtPortfolio";
 import Home from "./pages/Home";
 import './css/App.css';
+
 
 function Navigation() {
   return (
