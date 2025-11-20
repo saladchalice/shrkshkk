@@ -36,7 +36,8 @@
   { "src": "images/art/kassandra.jpg", "name": "kassandra", "description":"put 80 hours into ac odyssey and absolutely loved it, had to draw kassandra", "tags":["csp", "digital", "portrait", "2024"] },
   { "src": "images/art/jess.jpg", "name": "jess", "description":"for valentine's day!", "tags":["csp", "digital", "portrait", "2024"] },
   { "src": "images/art/miku.jpg", "name": "miku", "description":"commission for a miku-loving friend", "tags":["csp", "digital", "portrait", "2024"] },
-  { "src": "images/art/snake.jpg", "name": "venom" , "description":"boss...", "tags":["csp", "digital", "portrait", "fanart", "2025"] }
-
-
+  { "src": "images/art/snake.jpg", "name": "venom" , "description":"boss...", "tags":["csp", "digital", "portrait", "fanart", "2025"] },
+  { "src": "images/art/sundown.jpg", "name": "sundown" , "description":"i love tlou2...", "tags":["krita", "digital", "portrait", "fanart", "2023"] },
+  { "src": "images/art/jess.png", "name": "pierrot" , "description":"i love my girlfriend...", "tags":["csp", "digital", "portrait", "2025"] },
+  { "src": "images/art/viperbots.png", "name": "viperbots logo" , "description":"designed my junior year of high school for my robotics team", "tags":["krita", "digital",  "2020"] }
 ]
