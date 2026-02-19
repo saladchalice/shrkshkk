@@ -27,7 +27,7 @@
     "title": "Northrop Grumman AI Governance: Data Pipelines",
     "image": "images/data/ng.png",
     "year": "2024",
-    "description": "Developed a data pipeline to automate the ingestion, cleaning, and transformation of data from various AI services (chatbots and a governance tool) to a centralized data warehouse. The pipeline was built using Python and SQL and was deployed on AWS EC2 instances.",
+    "description": "Developed a data pipeline to automate the ingestion, cleaning, and transformation of data from various AI services (chatbots and a governance tool).",
     "tags": ["Data Pipeline", "Python", "SQL", "AWS"]
   },
   {
