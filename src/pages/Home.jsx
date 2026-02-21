@@ -177,9 +177,11 @@ function Home() {
           />
         </div>
 
+
+
         {/* Main page spin grid */}
         <div id="main-page-spin-grid">
-          <div className="website-block" id="lnos">
+          <div className="intro-container" id="lnos">
             <section className="text">
               <p className="animate-lnos-text">
                 <span id="emphasis">hey there, visitor! </span>
@@ -204,11 +206,6 @@ function Home() {
           </div>
 
           <img
-            src={`${import.meta.env.BASE_URL}images/welcome.png`}
-            alt="welcome"
-            id="welcome"
-          />
-          <img
             src={`${import.meta.env.BASE_URL}images/spiral.svg`}
             alt="bgspinner"
             id="bgspinner"
@@ -221,6 +218,12 @@ function Home() {
               id="tangyuan"
             />
           </div>
+
+          <img
+            src={`${import.meta.env.BASE_URL}images/what are you looking at.png`}
+            alt="whatareyoulookingat"
+            id="whatareyoulookingat"
+          />
         </div>
 
         {/* About Section */}

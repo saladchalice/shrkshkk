@@ -1057,6 +1057,8 @@ img.scroll-widget {
     height: 55vh;
     margin: 0 auto;
     place-items: center center;
+    /* needed for speech */
+    overflow:visible;
 }
 
 .website-block#lnos, 
@@ -1072,6 +1074,21 @@ img.scroll-widget {
     right: 30%;
     margin: 0 auto;
     transition: transform 0.3s ease;
+}
+
+#whatareyoulookingat {
+    grid-row:1;
+    grid-column:2;
+    z-index: 100;
+    justify-self:end;
+    align-self:start;
+    
+    /* move right */
+
+    /* animate */
+    opacity:0;
+    transform: translateX(20%) scale(0.6);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #tangyuan-wrapper,  
@@ -1102,6 +1119,11 @@ img.scroll-widget {
 #tangyuan:hover, 
 #welcome:hover {
     transform: scale(1.1) translateY(-10px);
+}
+
+#tangyuan-wrapper:hover ~ #whatareyoulookingat {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .halftone-gradient {
