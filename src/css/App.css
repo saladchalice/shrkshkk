@@ -896,7 +896,8 @@ span.tag {
 
 .tag-buttons button.active {
     border: 2px solid rgb(0, 0, 0);
-    background-color: #e6e6e6;
+    background-color: #343434;
+    color: white;
 }
 
 /* ==================== LNOS SECTION ==================== */
@@ -916,8 +917,6 @@ span.tag {
     font-weight: 700;
     z-index: inherit;
 }
-
-
 
 .scroll-container {
     width: 100%;

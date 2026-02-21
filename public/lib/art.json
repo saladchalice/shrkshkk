@@ -36,7 +36,10 @@
   { "src": "images/art/kassandra.jpg", "name": "kassandra", "description":"put 80 hours into ac odyssey and absolutely loved it, had to draw kassandra", "tags":["csp", "digital", "portrait", "2024"] },
   { "src": "images/art/jess.jpg", "name": "jess", "description":"for valentine's day!", "tags":["csp", "digital", "portrait", "2024"] },
   { "src": "images/art/miku.jpg", "name": "miku", "description":"commission for a miku-loving friend", "tags":["csp", "digital", "portrait", "2024"] },
-  { "src": "images/art/snake.jpg", "name": "venom" , "description":"boss...", "tags":["csp", "digital", "portrait", "fanart", "2025"] }
+  { "src": "images/art/snake.jpg", "name": "venom" , "description":"boss...", "tags":["csp", "digital", "portrait", "fanart", "2025"] },
+  { "src": "images/art/viperbots.png", "name": "viperbots" , "description":"logo for my high school robtics team", "tags":["krita", "digital", "portrait", "logo", "2020"] },
+  { "src": "images/art/clown.png", "name": "pierrot" , "description":"birthday gift for my girlfriend :)", "tags":["csp", "digital", "portrait", "2025"] },
+  { "src": "images/art/v2.png", "name": "v" , "description":"second try drawing my cyberpunk character", "tags":["csp", "digital", "portrait", "2025"] }
 
 
 ]
