@@ -31,17 +31,17 @@ html {
 
 /* ==================== TYPOGRAPHY ==================== */
 p {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 h2 {
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
     display: inline-block;
     font-size: 2em;
-    color: #ffffff;
+    color: #fff;
     padding: 10px;
-    padding-left: 0px;
-    margin-bottom: 0px;
+    padding-left: 0;
+    margin-bottom: 0;
     text-align: center; 
     border-radius: 10px;
 }
@@ -66,7 +66,7 @@ h2 {
 }
 
 span #emphasis {
-    font-family: 'Inter', sans-serif !important;
+    font-family: Inter, sans-serif !important;
     font-weight: 400;
 }
 
@@ -82,8 +82,7 @@ span #emphasis {
 .main-page {
     width: 100%;          /* full width */
     height: 100vh;     /* at least full viewport */
-    overflow-x: hidden;    /* prevent horizontal scroll */
-    overflow-y: auto;      /* enable vertical scroll */
+    overflow: hidden auto;    /* prevent horizontal scroll */      /* enable vertical scroll */
     position: relative;
     user-select: none;
 
@@ -94,7 +93,7 @@ span #emphasis {
 /* Main page background container */
 #main.background-container {
     background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgb(0 0 0 / 30%), rgb(0 0 0 / 0%)),
         url('/images/background.jpg');
     position: relative;
     width: 100vw;
@@ -108,7 +107,7 @@ span #emphasis {
 }
 
 .main-page .black-space {
-    background: linear-gradient(180deg, #000000 60%, #020711 100%);
+    background: linear-gradient(180deg, #000 60%, #020711 100%);
     min-height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -124,7 +123,7 @@ span #emphasis {
     padding: 15px;
     margin: 0 auto; 
     text-align: center;
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
     background-color: transparent;
     overflow: hidden;
     will-change: transform;
@@ -134,14 +133,14 @@ span #emphasis {
 
 /* Alt page containers */
 .alt-page .background-container {
-    background: linear-gradient(180deg, #000000 60%, #020711 100%);
+    background: linear-gradient(180deg, #000 60%, #020711 100%);
     position: relative;
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border: none;
     padding-left: 5em;
     padding-right: 5em;
@@ -155,7 +154,7 @@ span #emphasis {
 
 #about.background-container {
     background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgb(0 0 0 / 30%), rgb(0 0 0 / 0%)),
         url('/images/art/dumpling.jpg');
 }
 
@@ -176,15 +175,14 @@ span #emphasis {
     height: 60px;
 
     /* Frosted glass effect */
-    background: rgba(17, 17, 17, 1); /* semi-transparent black */
+    background: rgb(17 17 17 / 100%); /* semi-transparent black */
     backdrop-filter: blur(10px);       /* frosted blur */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-
+    backdrop-filter: blur(10px); /* Safari support */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    border-bottom: 1px solid rgb(255 255 255 / 20%); 
 }
 
 #topbar .container {
@@ -205,11 +203,11 @@ span #emphasis {
     display: flex;
     align-items: center;
     gap: 2rem;
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
 }
 
 #navbar a {
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
     color: white;
     text-decoration: none;
     padding: 8px 12px;
@@ -222,17 +220,17 @@ span #emphasis {
 
 #navbar a:hover {
     color: #222; /* darker text */
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3),
-                inset -2px -2px 5px rgba(255,255,255,0.5);
+    background-color: rgb(255 255 255 / 70%);
+    box-shadow: inset 2px 2px 5px rgb(0 0 0 / 30%),
+                inset -2px -2px 5px rgb(255 255 255 / 50%);
     transform: translateY(1px);
 }
 
 /* Highlight active link (NavLink) */
 #navbar a.active {
     color: #222; 
-    background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: inset 0 0 8px rgb(109, 109, 109); 
+    background-color: rgb(255 255 255 / 85%);
+    box-shadow: inset 0 0 8px rgb(109 109 109); 
 }
 
 
@@ -275,7 +273,7 @@ span #emphasis {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
     transition: transform 0.3s ease, opacity 0.3s ease;
     will-change: transform, opacity;
 }
@@ -303,7 +301,7 @@ span #emphasis {
     margin-top: 15px;
     font-size: 20px;
     color: white;
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
     font-weight: 700;
 }
 
@@ -371,10 +369,10 @@ span #emphasis {
     background-position-x: 100%;
     color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
+    background-clip: text;
     line-height: 1.6;
     max-width: 80ch;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -390,11 +388,11 @@ span #emphasis {
     background-position-x: 100%;
     color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
+    background-clip: text;
     line-height: 1.6;
     font-size: 18px;
     max-width: 550px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -414,14 +412,14 @@ span #emphasis {
 .article-fade h2 {
   color: black;
   font-size: 1.2em;
-  font-family: 'Inter', 'sans-serif';
+  font-family: Inter, sans-serif;
 }
 
 
 .article-fade p {
   color: black;
   font-size: 1em;
-  font-family: 'Inter', 'sans-serif';
+  font-family: Inter, sans-serif;
 }
 
 
@@ -476,7 +474,7 @@ main {
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
-    font-family: 'Syne', sans-serif;
+    font-family: Syne, sans-serif;
 }
 
 section {
@@ -488,7 +486,6 @@ section {
 }
 
 .text > p > div {
-    line-height: 1.2;
     font-size: 16px;
     margin: 0 auto;
     padding: 20px;
@@ -502,7 +499,7 @@ section {
     text-align: left;
     padding: 15px;
     box-sizing: border-box;
-    font-family: "Syne", "sans-serif";
+    font-family: Syne, sans-serif;
     font-size: 0.875em;
 }
 
@@ -566,7 +563,7 @@ p.animate-about-2 {
     font-size: 18px;
     line-height: 1.6;
     max-width: 550px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 p.animate-lnos-text,   
@@ -575,7 +572,7 @@ p.animate-lnos-text-3 {
     font-weight: 100;
     line-height: 1.6;
     font-size: 1.1em;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 /* ==================== PHOTO GALLERY ==================== */
@@ -678,10 +675,7 @@ p.animate-lnos-text-3 {
     padding: 20px;
     transform: rotateY(180deg);
     position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
+    inset: 0;
 }
 
 /* ==================== PROJECTS SECTION ==================== */
@@ -711,7 +705,7 @@ div.project-description {
     flex-grow: 1;
     max-height: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
     background-color: #FAF9F6;
 }
 
@@ -731,7 +725,7 @@ div.project-description {
     display: inline-block;
     width: 1em !important;
     height: 1em !important;
-    background-color: oklch(15.76% 0.039 0);
+    background-color: oklch(15.76% 0.039 0deg);
     border-radius: 50%;
     margin-right: 0.5em;
     vertical-align: middle;
@@ -755,18 +749,18 @@ div.project-description {
     display: block;
     width: 100%;
     height: 3em;
-    margin: 0 auto 1em auto;
+    margin: 0 auto 1em;
     margin-top: 25px;
     padding-left: 15px;
     color: black;
     background-color: #FAF9F6;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     box-sizing: border-box;
 }
 
 .searchBar:focus {
     outline: none;
-    box-shadow: 0 0 0 0px #ccc;
+    box-shadow: 0 0 0 0 #ccc;
     border: none;
 }
 
@@ -782,7 +776,7 @@ path {
 } 
 
 .selected {
-    --color: oklch(.21 .02 303. 1) !important;
+    --color: oklch(21% .02 303. 1) !important;
 }
 
 .selected:is(path) {
@@ -810,14 +804,14 @@ path {
     grid-template-rows: subgrid;
     grid-row: span 3;
     background-color: #e7e7e7;
-    border-radius: 0px;
+    border-radius: 0;
     padding: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
     transition: background-color 0.4s ease, outline 0.3s ease, transform 0.3s ease;
 }
 
 .projects article:hover {
-    outline: 4px solid rgb(192, 49, 6);
+    outline: 4px solid rgb(192 49 6);
     outline-offset: -2px;
     cursor: pointer;
 }
@@ -845,11 +839,11 @@ path {
     flex-wrap: wrap;
     gap: 5px;
     margin-top: 10px;
-    color: rgb(22, 22, 22);
+    color: rgb(22 22 22);
 }
 
 .tag {
-    background-color: #eeeeee;
+    background-color: #eee;
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 14px;
@@ -873,12 +867,12 @@ span.tag {
     justify-content: center;
     gap: 10px;
     margin: 20px 0;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     margin-bottom: 30px;
 }
 
 .tag-buttons button {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #000;
     border: 2px solid transparent;  
     padding: 10px 16px;
@@ -890,12 +884,12 @@ span.tag {
 }
 
 .tag-buttons button:hover {
-    background-color: #ffffff;
+    background-color: #fff;
     transform: translateY(-2px);
 }
 
 .tag-buttons button.active {
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0 0 0);
     background-color: #343434;
     color: white;
 }
@@ -954,6 +948,7 @@ img.scroll-widget {
     width: 50px;
     height: auto;
     transform-origin: center;
+
     /* animation: rotate 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
@@ -980,8 +975,7 @@ img.scroll-widget {
 /* ==================== MAIN PAGE GRID ==================== */
 #main-page-container {
     display: grid;
-    align-items: center;
-    justify-items: center;
+    place-items: center center;
     height: 22vh;
     padding-left: 10%;
     padding-right: 10%;
@@ -1000,7 +994,7 @@ img.scroll-widget {
 
 #about-heading-background {
     background-image: 
-        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
         url('/images/art/bridge.jpg');
     background-position: center;
     background-size: cover;
@@ -1012,8 +1006,7 @@ img.scroll-widget {
 #what-page-container {
     display: grid;
     position: relative;
-    align-items: center;
-    justify-items: center;
+    place-items: center center;
     height: 10vh;
     margin-top: 20px;
     padding-top: 0;
@@ -1035,7 +1028,7 @@ img.scroll-widget {
 
 #what-heading-background {
     background-image: 
-        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
         url('/images/art/lake.jpg');
     background-position: center;
     background-size: cover;
@@ -1057,12 +1050,11 @@ img.scroll-widget {
 
 #main-page-spin-grid {
     display: grid;
-    gap: 0px;
+    gap: 0;
     width: 80vw;
     height: 55vh;
     margin: 0 auto;
-    align-items: center;
-    justify-items: center;
+    place-items: center center;
 }
 
 .website-block#lnos, 
@@ -1125,7 +1117,7 @@ img.scroll-widget {
 /* ==================== BACKGROUND CONTAINERS ==================== */
 #art-gallery-container {
     background-image: 
-        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
         url('/images/art/piano.jpg');
     background-position: center;
     background-size: cover;
@@ -1134,7 +1126,7 @@ img.scroll-widget {
 
 #photo-gallery-container {
     background-image: 
-        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
         url('/images/photos/icelake.jpg');
     background-position: center;
     background-size: cover;
@@ -1144,7 +1136,7 @@ img.scroll-widget {
 
 #projects-container {
     background-image: 
-        linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
         url('/images/art/store.jpg');
     background-position: center;
     background-size: cover;
@@ -1202,6 +1194,7 @@ img.scroll-widget {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1211,9 +1204,11 @@ img.scroll-widget {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -1229,9 +1224,11 @@ img.scroll-widget {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
@@ -1257,10 +1254,10 @@ button:focus-visible {
 /* ==================== MEDIA QUERIES ==================== */
 
 /* Extra-small devices (phones, less than 600px) */
-@media only screen and (max-width: 600px) {
+@media only screen and (width <= 600px) {
     .cool-col {
         margin-left: 0;
-        margin-right: 0px;
+        margin-right: 0;
         flex: 100%;
         max-width: 100%;
     }
@@ -1335,6 +1332,7 @@ button:focus-visible {
         text-align: left;
         margin: 0 auto;
     }
+
     .animate-about, .animate-about-2, .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3 {
         color: white;
         font-size: 14px;
@@ -1377,7 +1375,7 @@ button:focus-visible {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (width >= 600px) and (width <= 767px) {
     .cool-col {
         flex: 50%;
         max-width: 50%;
@@ -1469,6 +1467,7 @@ button:focus-visible {
     .animate-about, .animate-about-2, .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3 {
         color: white;
     }
+
     #what-page-container {
     transform: translateY(-10vh);
     }
@@ -1476,7 +1475,7 @@ button:focus-visible {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (width >= 768px) and (width <= 1023px) {
     .compass-container {
         max-width: 350px;
         width: 80vw;
@@ -1570,7 +1569,7 @@ button:focus-visible {
 }
 
 /* Large devices (desktops, 1024px and up) */
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+@media only screen and (width >= 1024px) and (width <= 1199px) {
     .compass-container {
         max-width: 400px;
         width: 90vw;
@@ -1658,7 +1657,7 @@ button:focus-visible {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (width >= 1200px) {
     .compass-container {
         max-width: 400px;
         width: 90vw;

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgb(0 0 0 / 85%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,12 +59,12 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8); /* sleek black overlay */
+  background: rgb(0 0 0 / 80%); /* sleek black overlay */
   color: white;
   width: 100%; /* spans the entire photo */
   padding: 10px 15px;
   box-sizing: border-box;
-  font-family: 'Syne', sans-serif;
+  font-family: Syne, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 .photo-viewer-tags {
@@ -87,8 +87,8 @@
 }
 
 .photo-viewer-tags .tag {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgb(255 255 255 / 15%);
+  border: 1px solid rgb(255 255 255 / 30%);
   border-radius: 20px;
   padding: 3px 10px;
   font-size: 0.75rem;
@@ -99,7 +99,7 @@
 }
 
 .photo-viewer-tags .tag:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(255 255 255 / 30%);
 }
 
 .photo-viewer-nav {
@@ -114,7 +114,7 @@
 }
 
 .photo-viewer-nav button {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 60%);
   border: none;
   color: white;
   font-size: 2rem;
@@ -140,7 +140,7 @@
   justify-content: center;    
   width: 45px;              
   height: 45px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 60%);
   border: none;
   color: white;
   font-size: 1.8rem;          
@@ -154,7 +154,7 @@
 }
 
 .close-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255 255 255 / 20%);
   transform: scale(1.1);
 }
 
@@ -176,11 +176,11 @@
 .photo-viewer-description {
   flex: 1;
   max-width: 30%;
-  background: rgba(0,0,0,0.7);
+  background: rgb(0 0 0 / 70%);
   padding: 15px;
   border-radius: 12px;
   color: white;
-  font-family: 'Syne', sans-serif;
+  font-family: Syne, sans-serif;
   overflow-y: auto;
   max-height: 80vh;
 }
@@ -189,7 +189,7 @@
   margin: 0 0 10px;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 .photo-viewer-description p {
