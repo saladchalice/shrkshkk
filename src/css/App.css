@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+* {
+  outline: 1px solid red;
+}
+
+
 *,
 *::before,
 *::after {
@@ -149,7 +154,7 @@ span #emphasis {
 
 #projects.background-container {
     background-position: center -50px; 
-    background: black;
+    background-color: black;
 }
 
 #about.background-container {
@@ -175,8 +180,7 @@ span #emphasis {
     height: 60px;
 
     /* Frosted glass effect */
-    background: rgb(17 17 17 / 100%); /* semi-transparent black */
-    backdrop-filter: blur(10px);       /* frosted blur */
+    background: rgb(17 17 17 / 100%); /* semi-transparent black */       /* frosted blur */
     backdrop-filter: blur(10px); /* Safari support */
     display: flex;
     justify-content: center;
@@ -206,6 +210,12 @@ span #emphasis {
     font-family: Syne, sans-serif;
 }
 
+#navbar a, #navbar .link {
+  display: flex;
+  align-items: center;
+  gap: 5px;  
+}
+
 #navbar a {
     font-family: Syne, sans-serif;
     color: white;
@@ -231,13 +241,6 @@ span #emphasis {
     color: #222; 
     background-color: rgb(255 255 255 / 85%);
     box-shadow: inset 0 0 8px rgb(109 109 109); 
-}
-
-
-#navbar a, #navbar .link {
-  display: flex;
-  align-items: center;
-  gap: 5px;  /* space between icon and text */
 }
 
 
@@ -369,7 +372,6 @@ span #emphasis {
     background-position-x: 100%;
     color: transparent;
     background-clip: text;
-    background-clip: text;
     line-height: 1.6;
     max-width: 80ch;
     font-family: Inter, sans-serif;
@@ -387,7 +389,6 @@ span #emphasis {
     background-size: 200% 100%;
     background-position-x: 100%;
     color: transparent;
-    background-clip: text;
     background-clip: text;
     line-height: 1.6;
     font-size: 18px;
@@ -530,6 +531,7 @@ section#socials a:hover img {
     transform: scale(1.2);
     border: none;
 }
+
 
 img#me:hover {
     box-shadow: 0 0 0 2px white;
@@ -1076,23 +1078,24 @@ img.scroll-widget {
 #bgspinner {
     grid-row: 1;
     grid-column: 2;
-    height: 120%;
+    height: auto;
 }
 
 #bgspinner {
-    height: 60%;
+    height: 65%;
     filter: invert(1);
-    animation: rotate 5s linear infinite;
+    animation: rotate 6s linear infinite;
 }
 
 #tangyuan {
     height: 55%;
+    max-height:350px;
+    align-self: end;
     transition: transform 0.3s ease;
 }
 
 #tangyuan-wrapper {
     position: relative;
-    top: 200px;
     animation: float 2s ease-in-out infinite;
 }
 
