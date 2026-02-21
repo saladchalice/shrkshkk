@@ -162,13 +162,13 @@ function Home() {
       {/* Black space section */}
       <div className="black-space" id="black-space">
         <img
-          src={`${import.meta.env.BASE_URL}images/halftone gradient.png`}
+          src={`${import.meta.env.BASE_URL}images/cathedral.png`}
           alt="halftone gradient"
           className="halftone-gradient"
         />
 
         {/* What Page */}
-        <div id="what-page-container">
+        <div id="main-page-container">
           <div id="what-heading-background"></div>
           <img
             src={`${import.meta.env.BASE_URL}images/whatisthisplace.png`}
@@ -180,51 +180,55 @@ function Home() {
 
 
         {/* Main page spin grid */}
-        <div id="main-page-spin-grid">
-          <div className="intro-container" id="lnos">
-            <section className="text">
-              <p className="animate-lnos-text">
-                <span id="emphasis">hey there, visitor! </span>
-                i made this site to be a centralized location where i can show
-                off all of my work, ranging from my{" "}
-                <span style={{ color: "#cea535" }}>data science projects</span>{" "}
-                to my <span style={{ color: "#d11313" }}>photography</span> to
-                my <span style={{ color: "#0279BB" }}>art</span>!
-              </p>
-              <p>
-                <br />
-              </p>
-              <p className="animate-lnos-text-2">
-                and... that's pretty much it, i guess! the site is a work in
-                progress and i'm adding new elements every day! i would
-                recommend clicking through my art and exploring a few of my web
-                projects on my projects page! besides that, you're free to just
-                scroll and watch my little starfish cat rotate in the bottom
-                corner :D
-              </p>
-            </section>
-          </div>
+        <section>
+          <section id = "main-page-spin-grid">
+              <div className="intro-container">
+              <section className="text">
+                <p className="animate-lnos-text">
+                  <span id="emphasis">hey there, visitor! </span>
+                  i made this site to be a centralized location where i can show
+                  off all of my work, ranging from my{" "}
+                  <span style={{ color: "#cea535" }}>data science projects</span>{" "}
+                  to my <span style={{ color: "#d11313" }}>photography</span> to
+                  my <span style={{ color: "#0279BB" }}>art</span>!
+                </p>
+                <p>
 
-          <img
-            src={`${import.meta.env.BASE_URL}images/spiral.svg`}
-            alt="bgspinner"
-            id="bgspinner"
-          />
+                </p>
+                <p className="animate-lnos-text-2">
+                  and... that's pretty much it, i guess! the site is a work in
+                  progress and i'm adding new elements every day! i would
+                  recommend clicking through my art and exploring a few of my web
+                  projects on my projects page! besides that, you're free to just
+                  scroll and watch my little starfish cat rotate in the bottom
+                  corner :D
+                </p>
+              </section>
+            </div>
 
-          <div id="tangyuan-wrapper">
             <img
-              src={`${import.meta.env.BASE_URL}images/tangyuan.png`}
-              alt="tangyuan"
-              id="tangyuan"
+              src={`${import.meta.env.BASE_URL}images/spiral.svg`}
+              alt="bgspinner"
+              id="bgspinner"
             />
-          </div>
 
-          <img
-            src={`${import.meta.env.BASE_URL}images/what are you looking at.png`}
-            alt="whatareyoulookingat"
-            id="whatareyoulookingat"
-          />
-        </div>
+            <div id="tangyuan-wrapper">
+              <img
+                src={`${import.meta.env.BASE_URL}images/tangyuan.png`}
+                alt="tangyuan"
+                id="tangyuan"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}images/what are you looking at.png`}
+                alt="whatareyoulookingat"
+                id="whatareyoulookingat"
+              />
+            </div>
+
+            
+          </section>
+          
+        </section>
 
         {/* About Section */}
         <div id="main-page-container">

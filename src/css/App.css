@@ -116,8 +116,8 @@ span #emphasis {
     min-height: 100vh;
     width: 100vw;
     overflow: hidden;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
     position: relative;
 }
 
@@ -373,13 +373,15 @@ span #emphasis {
     color: transparent;
     background-clip: text;
     line-height: 1.6;
-    max-width: 80ch;
+    max-width: clamp(300px, 90%, 80ch);
     font-family: Inter, sans-serif;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
     font-weight: 100;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
+    flex: 1;
+    min-width: 0;
 }
 
 .animate-about, 
@@ -544,15 +546,19 @@ img#me:hover {
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 50%;
+    z-index:1;
 }
 
 #intro-container {
     padding-top: 1%;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 section#photo {
     display: flex;
-    align-items: center; 
     justify-content: center; 
     gap: 40px; 
     text-align: center;
@@ -977,32 +983,13 @@ img.scroll-widget {
 /* ==================== MAIN PAGE GRID ==================== */
 #main-page-container {
     display: grid;
-    place-items: center center;
+    justify-items: center;
+    align-items: flex-start;
     height: 22vh;
     padding-left: 10%;
     padding-right: 10%;
-}
-
-#about-handwritten {
-    height: 40%;
-    width: auto;
-}
-
-#about-handwritten, 
-#about-heading-background {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#about-heading-background {
-    background-image: 
-        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
-        url('/images/art/bridge.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 90px;
+    padding-top: 5%;
+    z-index:1;
 }
 
 #what-page-container {
@@ -1017,15 +1004,30 @@ img.scroll-widget {
     box-sizing: border-box;
 }
 
-#what-handwritten {
+#about-handwritten {
     height: 40%;
     width: auto;
+    z-index:2;
 }
 
+#about-handwritten, 
+#about-heading-background, 
 #what-handwritten, 
 #what-heading-background {
     grid-column: 1;
     grid-row: 1;
+}
+
+#about-heading-background {
+    background-image: 
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
+        url('/images/art/bridge.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90px;
+    z-index:1;
 }
 
 #what-heading-background {
@@ -1037,7 +1039,18 @@ img.scroll-widget {
     background-repeat: no-repeat;
     width: 100%;
     height: 90px;
-    box-sizing: border-box;
+    z-index: 1;
+}
+
+#what-handwritten {
+    height: 35%;
+    width: auto;
+    z-index: 2;
+}
+
+
+.black-space-container{
+    max-width:20%;
 }
 
 #what-handwritten, 
@@ -1047,18 +1060,19 @@ img.scroll-widget {
 
 #what-handwritten:hover, 
 #about-handwritten:hover {
-    transform: scale(1.1) translateX(15px);
+    transform: scale(1.05) translateX(15px);
 }
 
 #main-page-spin-grid {
     display: grid;
     gap: 0;
-    width: 80vw;
-    height: 55vh;
+    width: 100%;
+    min-height: 55vh;
     margin: 0 auto;
-    place-items: center center;
-    /* needed for speech */
-    overflow:visible;
+    justify-content: center; 
+    align-items: start;
+    text-align: center;
+    overflow: visible;
 }
 
 .website-block#lnos, 
@@ -1077,19 +1091,33 @@ img.scroll-widget {
 }
 
 #whatareyoulookingat {
-    grid-row:1;
-    grid-column:2;
-    z-index: 100;
-    justify-self:end;
-    align-self:start;
-    
-    /* move right */
+    position: absolute;
 
-    /* animate */
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%) scale(0.6);
+    transform-origin: center;
     opacity:0;
-    transform: translateX(20%) scale(0.6);
+
+    z-index: 800;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+@keyframes jitter {
+  0%   { transform: translate(50%, -50%) scale(1) translate(0, 0); }
+  10%  { transform: translate(50%, -50%) scale(1) translate(-3px, 2px); }
+  20%  { transform: translate(50%, -50%) scale(1) translate(4px, -1px); }
+  30%  { transform: translate(50%, -50%) scale(1) translate(-2px, -3px); }
+  40%  { transform: translate(50%, -50%) scale(1) translate(3px, 3px); }
+  50%  { transform: translate(50%, -50%) scale(1) translate(-4px, 1px); }
+  60%  { transform: translate(50%, -50%) scale(1) translate(2px, -4px); }
+  70%  { transform: translate(50%, -50%) scale(1) translate(-3px, 2px); }
+  80%  { transform: translate(50%, -50%) scale(1) translate(4px, -2px); }
+  90%  { transform: translate(50%, -50%) scale(1) translate(-2px, 3px); }
+  100% { transform: translate(50%, -50%) scale(1) translate(0, 0); }
+}
+
 
 #tangyuan-wrapper,  
 #bgspinner {
@@ -1099,21 +1127,26 @@ img.scroll-widget {
 }
 
 #bgspinner {
-    height: 65%;
+    width: clamp(180px, 25vw, 380px);
+    height:auto;
+
     filter: invert(1);
     animation: rotate 6s linear infinite;
+    z-index: 1;
 }
 
 #tangyuan {
-    height: 55%;
-    max-height:350px;
-    align-self: end;
+    width: clamp(160px, 22vw, 370px);
+    height: auto;
+
     transition: transform 0.3s ease;
 }
 
 #tangyuan-wrapper {
+    width: clamp(220px, 26vw, 400px);
     position: relative;
     animation: float 2s ease-in-out infinite;
+    z-index: 2;
 }
 
 #tangyuan:hover, 
@@ -1121,22 +1154,39 @@ img.scroll-widget {
     transform: scale(1.1) translateY(-10px);
 }
 
-#tangyuan-wrapper:hover ~ #whatareyoulookingat {
+#tangyuan:hover ~ #whatareyoulookingat {
     opacity: 1;
-    transform: scale(1);
+    transform: translate(50%, -50%) scale(1);
+    animation: jitter 0.15s infinite linear;
+     
 }
 
 .halftone-gradient {
     position: absolute;
-    top: -140px;
-    right: -140px;
-    rotate: 220deg;
-    width: 1000px;
-    height: auto;
+    top: 80px;
+    right: 80px;
+    rotate: 0;
+    height: 900px;
+    width: auto;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.4;
+    object-fit: contain;
     user-select: none;
+}
+
+.halftone-gradient::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgb(0 0 0 / 60%) 0%,
+        transparent 60%
+    );
+
+    pointer-events: none;
 }
 
 /* ==================== BACKGROUND CONTAINERS ==================== */
@@ -1275,481 +1325,4 @@ button:focus-visible {
 }
 
 
-
-/* ==================== MEDIA QUERIES ==================== */
-
-/* Extra-small devices (phones, less than 600px) */
-@media only screen and (width <= 600px) {
-    .cool-col {
-        margin-left: 0;
-        margin-right: 0;
-        flex: 100%;
-        max-width: 100%;
-    }
-
-    .main-page .black-space {
-        background-color: #000;
-        min-height: 100vh;
-        width: 100%;
-        overflow: auto;
-    }
-
-    .alt-page .data .black-space {
-        height: 1000px;
-    }
-
-    .alt-page .art .black-space {
-        height: 3000px;
-    }
-
-    .alt-page .about .black-space {
-        background-color: #000;
-        width: 100%;
-        height: 800px;
-    }
-
-    .column {
-        width: 100%;
-    }
-
-    .art-gallery {
-        column-count: 1;
-    }
-
-    #lnos {
-        font-size: 14px;
-
-    }
-
-    .logo {
-        visibility: hidden;
-    }
-
-    #scroll-arrow {
-        left: 50%;
-    }
-
-    #tangyuan, #bgspinner, #welcome {
-        height: 0%;
-    }
-
-    .halftone-gradient {
-        width: 0%;
-    }
-
-    #main-page-spin-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto; /* remove fixed 50vh */
-        gap: 1rem;
-        padding: 1rem 0;
-    }
-
-    #welcome,
-    #bgspinner,
-    #tangyuan {
-        display: none; /* prevents extra vertical space */
-    }
-
-    #lnos {
-        max-width: 95%;       /* same as .animate-about */
-        text-align: left;
-        margin: 0 auto;
-    }
-
-    .animate-about, .animate-about-2, .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3 {
-        color: white;
-        font-size: 14px;
-    }
-
-    #photo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    #photo p {
-        font-size: 14px;
-    }
-
-    #photo img {
-        max-width: 200px;
-        clip-path: circle(50%);
-        height: auto;
-    }
-
-    .page-heading {
-        font-size: 2.5em;
-        margin-top: 25%;
-    }
-
-    #about-me-header {
-        font-size: 2em;
-        margin-top: 25%;
-    }
-
-
-    #about-handwritten,
-    #what-handwritten {
-        max-width: 70%;  /* tighter fit on phones */
-        height: auto;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (width >= 600px) and (width <= 767px) {
-    .cool-col {
-        flex: 50%;
-        max-width: 50%;
-    }
-
-    .compass-container {
-        max-width: 300px;
-        width: 80vw;
-    }
-
-    .center-logo img {
-        width: 100px;
-    }
-
-    .option {
-        width: 100px;
-        height: 100px;
-    }
-
-    .column {
-        width: calc(50% - 15px);
-    }
-
-    .art-gallery {
-        column-count: 2;
-    }
-
-    #lnos {
-        font-size: 0.7rem;
-        max-width: 90ch;
-    }
-
-    .logo {
-        visibility: hidden;
-    }
-
-    #scroll-arrow {
-        left: 50%;
-    }
-
-    #photo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #photo p {
-        font-size: 16px;
-    }
-
-    #photo img {
-        max-width: 250px;
-        height: auto;
-    }
-
-    .page-heading {
-        font-size: 3em;
-        margin-top: 20%;
-    }
-
-    #about-me-header {
-        font-size: 2.5em;
-        margin-top: 20%;
-    }
-
-    #what-handwritten, #about-handwritten {
-        height: 25%;
-        width: auto;
-        
-    }
-
-    #tangyuan, #bgspinner {
-        height: 25%;
-        position: relative;
-    }
-
-     #welcome{
-        height: 3%;
-        position: absolute;
-        top: 12.5%;
-        right: 63%;
-    }
-
-
-    .halftone-gradient {
-        width: 20%;
-    }
-
-    .animate-about, .animate-about-2, .animate-lnos-text, .animate-lnos-text-2, .animate-lnos-text-3 {
-        color: white;
-    }
-
-    #what-page-container {
-    transform: translateY(-10vh);
-    }
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (width >= 768px) and (width <= 1023px) {
-    .compass-container {
-        max-width: 350px;
-        width: 80vw;
-    }
-
-    .center-logo img {
-        width: 110px;
-    }
-
-    .option {
-        width: 110px;
-        height: 110px;
-    }
-
-    .column {
-        width: calc(50% - 15px);
-    }
-
-    .art-gallery {
-        column-count: 3;
-    }
-
-    #scroll-arrow {
-        left: 50%;
-    }
-
-    #photo {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-        gap: 30px;
-    }
-
-    #photo p {
-        font-size: 17px;
-    }
-
-    #photo img {
-        max-width: 300px;
-        height: auto;
-    }
-
-    .page-heading {
-        font-size: 4em;
-        margin-top: 15%;
-    }
-
-    #about-me-header {
-        font-size: 3em;
-        margin-top: 15%;
-    }
-
-    #what-handwritten, #about-handwritten {
-        height: 30%;
-        width: auto;
-    }
-
-    #tangyuan, #bgspinner {
-        height: 35%;
-    }
-
-    #welcome{
-        height: 4%;
-        position: absolute;
-        top: 13.5%;
-        right: 63%;
-    }
-
-    .halftone-gradient {
-        width: 40%;
-    }
-
-    .animate-about, .animate-about-2 {
-        font-size: 17px;
-    }
-
-    #lnos {
-        font-size: 14px;
-        max-width: 90ch;
-    }
-
-    p.animate-lnos-text, p.animate-lnos-text-2{
-        text-align:center;
-        align-items: center;
-    }
-
-    #what-page-container {
-    transform: translateY(-10vh);
-    }
-
-}
-
-/* Large devices (desktops, 1024px and up) */
-@media only screen and (width >= 1024px) and (width <= 1199px) {
-    .compass-container {
-        max-width: 400px;
-        width: 90vw;
-    }
-
-    .center-logo img {
-        width: 125px;
-    }
-
-    .option {
-        width: 125px;
-        height: 125px;
-    }
-
-    .column {
-        width: calc(25% - 15px);
-    }
-
-    .art-gallery {
-        column-count: 4;
-    }
-
-    #photo {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-        gap: 40px;
-    }
-
-    #photo p {
-        font-size: 18px;
-    }
-
-    #photo img {
-        max-width: 350px;
-        height: auto;
-    }
-
-    .page-heading {
-        font-size: 4.5em;
-        margin-top: 10%;
-    }
-
-    #about-me-header {
-        font-size: 3.5em;
-        margin-top: 10%;
-    }
-
-    #what-handwritten, #about-handwritten {
-        height: 35%;
-        width: auto;
-    }
-
-    #tangyuan, #bgspinner {
-        height: 45%;
-    }
-
-    #welcome{
-        height: 6%;
-        position: absolute;
-        top: 12%;
-        right: 63%;
-    }
-
-    .halftone-gradient {
-        width: 60%;
-    }
-
-    .animate-about, .animate-about-2{
-        font-size: 18px;
-    }
-
-    #lnos{
-        font-size: 16px;
-    }
-
-    #what-heading-background {
-        width: 80%;
-    }
-
-    #what-page-container {
-    transform: translateY(-10vh);
-    }
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media only screen and (width >= 1200px) {
-    .compass-container {
-        max-width: 400px;
-        width: 90vw;
-    }
-
-    .center-logo img {
-        width: 125px;
-    }
-
-    .option {
-        width: 125px;
-        height: 125px;
-    }
-
-    .column {
-        width: calc(25% - 15px);
-    }
-
-    .art-gallery {
-        column-count: 4;
-    }
-
-    #photo {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-        gap: 40px;
-    }
-
-    #photo p {
-        font-size: 18px;
-    }
-
-    #photo img {
-        max-width: 350px;
-        height: auto;
-    }
-
-    .page-heading {
-        font-size: 5em;
-        margin-top: 5%;
-    }
-
-    #about-me-header {
-        font-size: 3.5em;
-        margin-top: 5%;
-    }
-
-    #what-handwritten, #about-handwritten {
-        height: 40%;
-        width: auto;
-    }
-
-    #tangyuan, #bgspinner {
-        height: 55%;
-    }
-
-    .animate-about, .animate-about-2 {
-        font-size: 18px;
-    }
-
-    #what-heading-background {
-        width: 100%;
-    }
-
-    #what-page-container {
-    transform: translateY(-10vh);
-    }
-}
 
