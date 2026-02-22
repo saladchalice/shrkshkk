@@ -1060,7 +1060,7 @@ img.scroll-widget {
 #what-handwritten, 
 #about-handwritten {
     transition: transform 0.3s ease;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 
 }
 
@@ -1400,6 +1400,92 @@ button:focus,
 
 button:focus-visible {
   outline: 2px solid #aaa; /* optional: keep keyboard-accessible focus */
+}
+
+/* ==================== MOBILE (small screens) ==================== */
+@media (max-width: 600px) {
+    /* Reduce large paddings inside the dark section so content fits */
+    .main-page .black-space {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /* Stack the main spin grid into a single column and allow it to grow */
+    #main-page-spin-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+        min-height: auto;
+        margin: 0 auto;
+        justify-items: center;
+        align-items: start;
+        overflow: visible;
+    }
+
+    /* Make the intro container fluid and let text determine height */
+    .intro-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ensure primary text is readable and doesn't force overflow */
+    .animate-lnos-text,
+    .animate-lnos-text-2,
+    .animate-lnos-text-3,
+    .animate-about,
+    .animate-about-2 {
+        max-width: 100% !important;
+        padding: 12px !important;
+        font-size: 16px !important;
+        line-height: 1.5;
+        text-align: left;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-clip: text;
+    }
+
+    /* Reduce extra decorative/large elements that break layout on mobile */
+    #bgspinner,
+    #tangyuan-wrapper,
+    .halftone-gradient,
+    #gifs2click,
+    .compass-container {
+        display: none !important;
+    }
+
+    /* Keep handwritten headings visible but smaller */
+    #what-handwritten,
+    #about-handwritten {
+        height: auto;
+        max-width: 85%;
+        transform: none !important;
+    }
+
+    /* Hide the big scroll arrow on small screens to avoid overlaps */
+    .scroll-arrow {
+        display: none !important;
+    }
+
+    /* Make images responsive and never overflow their container */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* tighten spacing for the intro area */
+    #intro-container {
+        padding-top: 6px;
+    }
+
+    img#me{
+        height:0px;
+        width:auto;
+        visibility: hidden;
+    }
 }
 
 

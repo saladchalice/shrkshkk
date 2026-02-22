@@ -4,8 +4,30 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '@google/model-viewer';
 
+// Ensure mobile viewport meta is present and correct at runtime.
+// This helps single-page apps where index.html might miss or alter the viewport tag.
+const ensureViewportMeta = () => {
+  try {
+    const desired = "width=device-width, initial-scale=1, viewport-fit=cover";
+    let meta = document.querySelector('meta[name="viewport"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = desired;
+      document.head.appendChild(meta);
+      return;
+    }
+
+    // Update only when it's different to avoid stomping other app logic
+    if (meta.content !== desired) meta.content = desired;
+  } catch (e) {
+    // running in non-browser environment (SSR) — ignore
+  }
+};
+
 function Home() {
   useEffect(() => {
+    ensureViewportMeta();
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();
 
