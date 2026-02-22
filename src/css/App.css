@@ -1060,7 +1060,7 @@ img.scroll-widget {
 #what-handwritten, 
 #about-handwritten {
     transition: transform 0.3s ease;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 
 }
 
