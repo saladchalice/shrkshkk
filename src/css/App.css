@@ -8,9 +8,9 @@
     box-sizing: border-box;
 }
 
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 
 
 *,
@@ -1002,6 +1002,7 @@ img.scroll-widget {
     padding-left: 10%;
     padding-right: 10%;
     box-sizing: border-box;
+    
 }
 
 #about-handwritten {
@@ -1016,6 +1017,7 @@ img.scroll-widget {
 #what-heading-background {
     grid-column: 1;
     grid-row: 1;
+
 }
 
 #about-heading-background {
@@ -1028,6 +1030,7 @@ img.scroll-widget {
     width: 100%;
     height: 90px;
     z-index:1;
+    
 }
 
 #what-heading-background {
@@ -1046,6 +1049,7 @@ img.scroll-widget {
     height: 35%;
     width: auto;
     z-index: 2;
+
 }
 
 
@@ -1056,6 +1060,8 @@ img.scroll-widget {
 #what-handwritten, 
 #about-handwritten {
     transition: transform 0.3s ease;
+    outline: 1px solid red;
+
 }
 
 #what-handwritten:hover, 
@@ -1133,6 +1139,8 @@ img.scroll-widget {
     filter: invert(1);
     animation: rotate 6s linear infinite;
     z-index: 1;
+    outline: 1px solid cyan;
+
 }
 
 #tangyuan {
@@ -1188,6 +1196,76 @@ img.scroll-widget {
 
     pointer-events: none;
 }
+
+
+
+/* ==================== Extra Hyperlink Gifs ===================== */
+#gifs2click {
+    display:grid;
+    padding-top: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height:200px;
+    width:100%;
+    gap:0px;
+    padding-left: 20px;
+    padding-right:20px;
+
+}
+
+#postit {
+    height: clamp(120px, 20vw, 180px) !important;
+    width: auto;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    transform: translate(-5px, 3px) rotate(-2deg);
+
+}
+
+
+#dithercat {
+    height: clamp(120px, 20vw, 170px) !important;
+    width: auto;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    transform: translate(4px, -2px) rotate(1deg);
+    outline: 1px solid red;
+}
+
+#dile {
+    height: clamp(120px, 20vw, 200px);
+    width: 200px;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+    transform: translate(-3px, -4px) rotate(3deg);
+
+}
+
+#chels {
+    height: clamp(120px, 20vw, 230px);
+    width: auto;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+    transform: translate(-1px, -7px) rotate(-3deg);
+}
+
+#dile:hover {
+    transform: scale(1.2);
+}
+
+#postit:hover{
+    transform: scale(1.1);
+}
+
+#dithercat:hover {
+    transform: scale(1.2);
+}
+
+#chels:hover {
+    transform: scale(1.2);
+}
+
+
+
 
 /* ==================== BACKGROUND CONTAINERS ==================== */
 #art-gallery-container {

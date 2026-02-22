@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import '@google/model-viewer';
 
 function Home() {
   useEffect(() => {
@@ -44,7 +45,7 @@ function Home() {
 
   useEffect(() => {
   const scrollArrow = document.getElementById("scrollArrow");
-  const targetElement = document.getElementById("what-page-container");
+  const targetElement = document.getElementById("main-page-container");
 
   if (scrollArrow && targetElement) {
     const handleScroll = (event) => {
@@ -203,6 +204,28 @@ function Home() {
                   scroll and watch my little starfish cat rotate in the bottom
                   corner :D
                 </p>
+                <div id="gifs2click">
+                  <img src={`${import.meta.env.BASE_URL}images/assets/postit.png`}
+                    alt="postit"
+                    id="postit"
+                  />
+                  <model-viewer
+                    src={`${import.meta.env.BASE_URL}images/assets/dile.glb`}
+                    camera-controls
+                    auto-rotate
+                    shadow-intensity="1"
+                    camera-orbit="0deg 75deg 2m"
+                    id='dile'
+                  />
+                  <img src={`${import.meta.env.BASE_URL}images/assets/dithercat.gif`}
+                    alt="postit"
+                    id="dithercat"
+                  />
+                  <img src={`${import.meta.env.BASE_URL}images/assets/chels.gif`}
+                    alt="postit"
+                    id="chels"
+                  />
+                </div>
               </section>
             </div>
 

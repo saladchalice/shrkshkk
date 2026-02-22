@@ -11,6 +11,7 @@
     "deploy": "npm run build && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
+    "@google/model-viewer": "^4.1.0",
     "create-stylelint": "^0.7.0",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
