@@ -535,35 +535,70 @@ section#socials a:hover img {
 }
 
 
-img#me:hover {
-    box-shadow: 0 0 0 2px white;
-}
 
-#photo img {
-    pointer-events: auto;
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 50%;
-    z-index:1;
-}
 
 #intro-container {
-    padding-top: 1%;
+    min-height: 200px;
+    padding: 2%;
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
+    background-color: #000000c2;
+    opacity:1;
+    border-radius: 5%;;
+    border: 1px dotted white;
+    z-index:1;
 }
 
 section#photo {
     display: flex;
     justify-content: center; 
+    align-items: center;
     gap: 40px; 
     text-align: center;
     padding-top: 0;
 }
+
+#photo-wrapper {
+    position: relative;
+    width: clamp(180px, 30vw, 500px);
+    aspect-ratio: 1/1;
+    padding-left:10%;
+
+}
+
+
+#me {
+    pointer-events: auto;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+#photoframe {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 1;
+
+    transition: transform 1.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#photo-wrapper:hover #photoframe {
+    transform: rotate(320deg) scale(1.13);
+}
+
+
 
 p.animate-about, 
 p.animate-about-2 {
@@ -902,6 +937,26 @@ span.tag {
     color: white;
 }
 
+/* slider */
+
+.tag-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag-slider input[type="range"] {
+    width: 250px;
+    cursor: pointer;
+}
+
+.slider-label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
 /* ==================== LNOS SECTION ==================== */
 #lnos {
     display: flex;
@@ -983,32 +1038,24 @@ img.scroll-widget {
 /* ==================== MAIN PAGE GRID ==================== */
 #main-page-container {
     display: grid;
-    justify-items: center;
-    align-items: flex-start;
-    height: 22vh;
+    place-items:center;
+    height: clamp(180px, 22vh, 400px);
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 5%;
-    z-index:1;
-}
-
-#what-page-container {
-    display: grid;
-    position: relative;
-    place-items: center center;
-    height: 10vh;
-    margin-top: 20px;
-    padding-top: 0;
-    padding-left: 10%;
-    padding-right: 10%;
-    box-sizing: border-box;
-    
+    padding-top: clamp(20px, 2vh, 50px);
+    z-index: 1;
 }
 
 #about-handwritten {
-    height: 40%;
+    height: clamp(60px, 10vh, 180px);
     width: auto;
-    z-index:2;
+    z-index: 2;
+}
+
+#what-handwritten {
+    height: clamp(70px, 13vh, 220px);
+    width: auto;
+    z-index: 2;
 }
 
 #about-handwritten, 
@@ -1020,6 +1067,7 @@ img.scroll-widget {
 
 }
 
+
 #about-heading-background {
     background-image: 
         linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
@@ -1028,9 +1076,8 @@ img.scroll-widget {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 90px;
-    z-index:1;
-    
+    height: clamp(70px, 10vh, 140px);
+    z-index: 1;
 }
 
 #what-heading-background {
@@ -1041,15 +1088,8 @@ img.scroll-widget {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 90px;
+    height: clamp(70px, 10vh, 140px);
     z-index: 1;
-}
-
-#what-handwritten {
-    height: 35%;
-    width: auto;
-    z-index: 2;
-
 }
 
 
@@ -1060,13 +1100,13 @@ img.scroll-widget {
 #what-handwritten, 
 #about-handwritten {
     transition: transform 0.3s ease;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 
 }
 
-#what-handwritten:hover, 
-#about-handwritten:hover {
-    transform: scale(1.05) translateX(15px);
+
+#main-spin-section{
+    padding-top:0px;
 }
 
 #main-page-spin-grid {
@@ -1079,6 +1119,7 @@ img.scroll-widget {
     align-items: start;
     text-align: center;
     overflow: visible;
+    padding-top:0;
 }
 
 .website-block#lnos, 
@@ -1144,7 +1185,7 @@ img.scroll-widget {
 }
 
 #tangyuan {
-    width: clamp(160px, 22vw, 370px);
+    width: clamp(0px, 22vw, 370px);
     height: auto;
 
     transition: transform 0.3s ease;
@@ -1178,10 +1219,12 @@ img.scroll-widget {
     width: auto;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.0;
     object-fit: contain;
     user-select: none;
 }
+
+
 
 .halftone-gradient::after {
     content: "";
@@ -1197,6 +1240,20 @@ img.scroll-widget {
     pointer-events: none;
 }
 
+#cliffs {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    rotate: 0;
+    height:auto;
+    width: 100vw;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
+    object-fit: contain;
+    user-select: none;
+    filter:invert(100%);
+}
 
 
 /* ==================== Extra Hyperlink Gifs ===================== */
@@ -1451,8 +1508,7 @@ button:focus-visible {
     #bgspinner,
     #tangyuan-wrapper,
     .halftone-gradient,
-    #gifs2click,
-    .compass-container {
+    #gifs2click{
         display: none !important;
     }
 
@@ -1483,10 +1539,20 @@ button:focus-visible {
 
     img#me{
         height:0px;
-        width:auto;
+        width:0px;
         visibility: hidden;
     }
+
+    img#photoframe{
+        height:0px;
+        width:0px;
+        visibility: hidden;
+    }
+
+    #photo-wrapper{
+        height:0px;
+        width:0px;
+        display:none;
+    }
 }
-
-
 

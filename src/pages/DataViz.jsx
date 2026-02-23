@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ArtCard from "../components/ArtCard"; 
 import PhotoViewer from "../components/PhotoViewer";
 
-function PhotoPortfolio() {
+function DataViz() {
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
@@ -20,16 +20,16 @@ function PhotoPortfolio() {
 
   // Fetch JSON data on mount
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}lib/photos.json`)
+    fetch(`${import.meta.env.BASE_URL}lib/art.json`)
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch photo projects");
+        if (!res.ok) throw new Error("Failed to fetch art projects");
         return res.json();
       })
       .then((data) => {
         setProjects(data);
         setFilteredProjects(data); // start with all
       })
-      .catch((err) => console.error("Error loading photo projects:", err));
+      .catch((err) => console.error("Error loading art projects:", err));
   }, []);
 
   // Handle filter button clicks
@@ -56,13 +56,13 @@ function PhotoPortfolio() {
   return (
     <div className="alt-page">
       <div className="background-container">
-        <div id="photo-gallery-container">
-          <h2 className="page-heading">my photography</h2>
+        <div id="art-gallery-container">
+          <h2 className="page-heading">my artwork</h2>
         </div>
 
         <div className="page-description">
           <p>
-            check out more of my photos on instagram{" "}
+            check out more of my art on instagram{" "}
             <a
               href="https://www.instagram.com/shrkshkk/"
               target="_blank"
@@ -71,25 +71,36 @@ function PhotoPortfolio() {
             >
               @shrkshkk
             </a>
-            ! and pro-tip: try clicking the photos to view them larger!
+            ! and pro-tip: try clicking the artwork to see more details!
           </p>
         </div>
 
         {/* Tag filter buttons */}
         <div className="tag-buttons">
-          {["2019", "2022", "2023", "2024", "2025", "2026","all"].map((year) => (
-            <button
-              key={year}
-              data-tag={year}
-              onClick={() => handleFilter(year)}
-              className={selectedTag === year ? "active" : ""}
-            >
-              {year}
-            </button>
-          ))}
+          <button
+            data-tag="digital"
+            onClick={() => handleFilter("digital")}
+            className={selectedTag === "digital" ? "active" : ""}
+          >
+            digital
+          </button>
+          <button
+            data-tag="traditional"
+            onClick={() => handleFilter("traditional")}
+            className={selectedTag === "traditional" ? "active" : ""}
+          >
+            traditional
+          </button>
+          <button
+            data-tag="all"
+            onClick={() => handleFilter("all")}
+            className={selectedTag === "all" ? "active" : ""}
+          >
+            all
+          </button>
         </div>
 
-        {/* Render photo cards */}
+        {/* Render project cards */}
         <div className="art-gallery">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
@@ -97,7 +108,7 @@ function PhotoPortfolio() {
                 key={project.id || index}
                 project={project}
                 index={index}
-                onClick={handleOpen} // ✅ pass lightbox open handler
+                onClick={handleOpen}
               />
             ))
           ) : (
@@ -108,7 +119,7 @@ function PhotoPortfolio() {
         {/* Photo Viewer (lightbox) */}
         {viewerOpen && (
           <PhotoViewer
-            photos={filteredProjects} // only show filtered photos
+            photos={filteredProjects} // pass filtered projects, so arrows respect filter
             initialIndex={currentIndex}
             onClose={handleClose}
           />
@@ -118,4 +129,4 @@ function PhotoPortfolio() {
   );
 }
 
-export default PhotoPortfolio;
+export default DataViz;

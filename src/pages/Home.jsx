@@ -190,6 +190,13 @@ function Home() {
           className="halftone-gradient"
         />
 
+        {/* cliffs */}
+        <img
+          src={`${import.meta.env.BASE_URL}images/assets/stipple_cliffs.png`}
+          alt="cliffs"
+          id="cliffs"
+        />
+
         {/* What Page */}
         <div id="main-page-container">
           <div id="what-heading-background"></div>
@@ -203,7 +210,7 @@ function Home() {
 
 
         {/* Main page spin grid */}
-        <section>
+        <section id="main-spin-section">
           <section id = "main-page-spin-grid">
               <div className="intro-container">
               <section className="text">
@@ -338,11 +345,18 @@ function Home() {
               </section>
             </div>
 
-            <img
-              src={`${import.meta.env.BASE_URL}images/photo.png`}
-              alt="me"
-              id="me"
-            />
+            <div id="photo-wrapper">
+              <img
+                src={`${import.meta.env.BASE_URL}images/photo.png`}
+                alt="me"
+                id="me"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}images/assets/frame.png`}
+                alt="frame"
+                id="photoframe"
+              />
+            </div>
           </section>
         </section>
 
