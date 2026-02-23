@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 // icons
@@ -9,6 +9,8 @@ import DataPortfolio from "./pages/DataPortfolio";
 import PhotoPortfolio from "./pages/PhotoPortfolio";
 import ArtPortfolio from "./pages/ArtPortfolio";
 import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import './css/App.css';
 
 
@@ -37,6 +39,10 @@ function Navigation() {
           <FolderGit2 size={16} style={{ marginRight: "6px" }} />
           Projects
         </NavLink>
+        {/* <NavLink to="/blog">
+          <FileText size={16} style={{ marginRight: "6px" }} />
+          Blog
+        </NavLink> */}
         <a 
           href="/images/2025 Resume.pdf" 
           target="_blank" 
@@ -101,6 +107,8 @@ function App() {
             <Route path="/art" element={<ArtPortfolio />} />
             <Route path="/photos" element={<PhotoPortfolio />} />
             <Route path="/projects" element={<DataPortfolio />} />
+            <Route path="/blog" element={<Blog />} />
+           <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </div>
       </div>

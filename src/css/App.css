@@ -156,10 +156,10 @@ span #emphasis {
     background-color: black;
 }
 
-#about.background-container {
-    background-image: 
-        linear-gradient(to bottom, rgb(0 0 0 / 30%), rgb(0 0 0 / 0%)),
-        url('/images/art/dumpling.jpg');
+
+
+#blog.background-container{
+    width:80vw;
 }
 
 .alt-page .black-space {
@@ -1364,6 +1364,18 @@ img.scroll-widget {
     background-repeat: no-repeat;
 }
 
+#blog-container {
+    background-image: 
+        linear-gradient(to top, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%)),
+        url('/images/photos/olympic.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top:10vh;
+
+}
+
+
 /* ==================== TRANSITIONS ==================== */
 .transition {
     position: fixed;
@@ -1509,7 +1521,7 @@ button:focus-visible {
         padding: 12px !important;
         font-size: 16px !important;
         line-height: 1.5;
-        text-align: left;
+        text-align: center;
         margin: 0 auto;
         box-sizing: border-box;
         background-clip: text;
@@ -1575,3 +1587,31 @@ button:focus-visible {
     }
 }
 
+/* ========================== BLOG ======================================== */
+.blog-container {
+  max-width: 50vh;
+  padding: 20px;
+  color:white;
+  background-color: transparent;
+}
+
+.blog-card {
+  color:white;  
+  margin-bottom: 40px;
+  padding:20px;
+  border: 1px solid #ddd;
+
+  color:black;
+  background-color: rgb(231, 217, 198);
+}
+
+.blog-card a {
+    color:black;
+}
+
+.blog-post {
+  max-width: 300px;
+  margin: 100px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}

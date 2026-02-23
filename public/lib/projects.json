@@ -24,13 +24,6 @@
     "tags": ["Data Visualization", "D3.js", "HTML/CSS"]
   },
   {
-    "title": "Northrop Grumman AI Governance: Data Pipelines",
-    "image": "images/data/ng.png",
-    "year": "2024",
-    "description": "Developed a data pipeline to automate the ingestion, cleaning, and transformation of data from various AI services (chatbots and a governance tool).",
-    "tags": ["Data Pipeline", "Python", "SQL", "AWS"]
-  },
-  {
     "title": "Power Outages: Predicting Severity and Evaluating Causes",
     "image": "images/data/power.png",
     "year": "2024",
@@ -39,21 +32,21 @@
     "tags": ["Predictive Modeling", "Python", "Data Analysis", "Data Visualization"]
   },
   {
-    "title": "Developing Environmentally-Aware Algorithms to Recommend Virtual Machine Migration",
+    "title": "Eco-Friendly VM Migration",
     "image": "images/data/azure.png",
     "year": "2021",
     "description": "This project develops two forecasting techniques that consider emissions patterns to recommend to cloud computing users optimal times to migrate cloud resources. Algorithms were trained on cloud computing center data provided by Microsoft Azure as well as historic emissions from WattimeAPI.",
     "tags": ["Forecasting", "Azure", "Python", "Data Analysis"]
   },
   {
-    "title": "Impacts of Urban Walkability and Wage on Car Ownership in California",
+    "title": "Urban Walkability and Wage on Car Ownership in California",
     "image": "images/data/walk.png",
     "year": "2024",
     "description": "Utilized U.S EPA's Smart Location Dataset to analyze Californian areas' relationships between the EPA-rated Walkability (an aggregate index for traffic, access to public transit, and accessibility of labor), wage, and car ownership, modeling it with regression.",
     "tags": ["Regression Analysis", "Python", "Data Analysis", "Data Visualization"]
   },
   {
-    "title": "Structural Topic Analysis of Race-Related Discourse in South African SOTN Speeches",
+    "title": "Race-Related Discourse in South African SOTN Speeches",
     "image": "images/data/zaf.png",
     "year": "2023",
     "description": "Utilized structural topic modeling techniques in RStudio to evaluate trends in topical frequency and significance across all State of the Nation addresses since 1994. Analyzed and tracked topics heavily interlinked with racial discourse and post-apartheid reform to discover their", 

@@ -310,3 +310,5 @@ export function renderArt(projects, containerElement, headingLevel = 'h2') {
     });
   });
 }
+
+

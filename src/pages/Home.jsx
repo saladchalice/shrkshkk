@@ -235,7 +235,7 @@ function Home() {
                 </p>
                 <div id="gifs2click">
                   <a
-                    href="https://github.com/saladchalice"
+                    href="https://saladchalice.github.io/Alt-Around-the-World/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
