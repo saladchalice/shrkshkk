@@ -234,10 +234,17 @@ function Home() {
                   corner :D
                 </p>
                 <div id="gifs2click">
-                  <img src={`${import.meta.env.BASE_URL}images/assets/postit.png`}
-                    alt="postit"
-                    id="postit"
-                  />
+                  <a
+                    href="https://github.com/saladchalice"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/assets/postit.png`}
+                      alt="postit"
+                      id="postit"
+                    />
+                  </a>
                   <model-viewer
                     src={`${import.meta.env.BASE_URL}images/assets/dile.glb`}
                     camera-controls
