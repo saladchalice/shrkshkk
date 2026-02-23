@@ -44,7 +44,7 @@ function Navigation() {
           Blog
         </NavLink> */}
         <a 
-          href="/images/2025 Resume.pdf" 
+          href="https://www.linkedin.com/in/edward-lu-4833781b4/" 
           target="_blank" 
           rel="noopener noreferrer"
         >
@@ -108,7 +108,7 @@ function App() {
             <Route path="/photos" element={<PhotoPortfolio />} />
             <Route path="/projects" element={<DataPortfolio />} />
             <Route path="/blog" element={<Blog />} />
-           <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </div>
       </div>

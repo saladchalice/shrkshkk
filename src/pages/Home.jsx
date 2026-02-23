@@ -142,7 +142,7 @@ function Home() {
           </div>
           <div className="option option-east">
             <a
-              href={`${import.meta.env.BASE_URL}images/2025 Resume.pdf`}
+              href="https://www.linkedin.com/in/edward-lu-4833781b4/"
               target="_blank"
               rel="noopener noreferrer"
             >
