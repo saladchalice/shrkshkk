@@ -1,4 +1,5 @@
 [
+  { "src": "images/art/karlach.jpeg", "name": "karlach", "description":"my monk queen", "tags":["krita","digital","portrait", "fanart","2026"] },
   { "src": "images/art/textless.jpg", "name": "shark of wisdom", "description": "a little shark who has wisdom to offer... ask him at your peril", "tags":["krita", "digital", "landscape", "2023"] },
   { "src": "images/art/flats.png", "name": "flats", "description": "a painting i made in 2022 of a photo of salt flats", "tags": ["krita", "digital", "landscape", "2022"] },
       { "src": "images/art/heights.jpg", "name": "heights", "description":"my favorite piece i've ever made. a study of a landscape in england, plus an awesome krab because why not..", "tags":["csp", "digital","landscape", "2024"] },
