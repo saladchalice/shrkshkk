@@ -43,14 +43,14 @@ function Navigation() {
           <FileText size={16} style={{ marginRight: "6px" }} />
           Blog
         </NavLink> */}
-        <a 
+        {/* <a 
           href="https://www.linkedin.com/in/edward-lu-4833781b4/" 
           target="_blank" 
           rel="noopener noreferrer"
         >
           <FileText size={16} style={{ marginRight: "6px" }} />
           CV
-        </a>
+        </a> */}
       </nav>
     </div>
   );
